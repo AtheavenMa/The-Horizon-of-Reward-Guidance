@@ -1,0 +1,23 @@
+{
+  "source_least_squares_coefficients": [
+    0.5,
+    0.4999999999999999
+  ],
+  "dynamic_coefficients": [
+    0.8852691218130312,
+    0.11473087818696877
+  ],
+  "target_A": {
+    "source_predictor_MSE": 4.5,
+    "dynamic_guidance_MSE": 2.4852498615669814,
+    "static_true_gain": -0.37039999999999995,
+    "dynamic_true_gain": 0.11473087818696877
+  },
+  "target_B": {
+    "source_predictor_MSE": 4.5,
+    "dynamic_guidance_MSE": 7.108479323323357,
+    "static_true_gain": 0.9351999999999998,
+    "dynamic_true_gain": 0.11473087818696877
+  },
+  "two_target_prediction_lower_bound": 4.5
+}

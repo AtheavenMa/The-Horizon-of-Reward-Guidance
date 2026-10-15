@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "horizon-reward-guidance"
+version = "0.1.0"
+description = "Auditable scalar horizon, moving-corridor and preference-certification tools for finite reward adaptation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "The Horizon of Reward Guidance contributors"}]
+keywords = ["reward modeling", "reinforcement learning", "preference learning", "policy gradient", "certification"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[project.optional-dependencies]
+demo = ["numpy>=1.24", "scipy>=1.10", "matplotlib>=3.6"]
+test = ["pytest>=8,<10", "numpy>=1.24", "scipy>=1.10", "matplotlib>=3.6"]
+
+[project.urls]
+Source = "https://github.com/AtheavenMa/The-Horizon-of-Reward-Guidance"
+Documentation = "https://github.com/AtheavenMa/The-Horizon-of-Reward-Guidance/tree/main/docs"
+
+[tool.setuptools]
+py-modules = ["horizon"]
+include-package-data = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

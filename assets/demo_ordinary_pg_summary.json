@@ -1,0 +1,8 @@
+{
+  "analytic_all_controls_failure_upper": 0.010006022973614241,
+  "observed_maximal_speed_contact": 0.007835874324472896,
+  "pointwise_value_lower_over_proof_box": 0.10575039444306417,
+  "required_gain": 0.06,
+  "min_pointwise_on_plotted_path": 0.11297229694229659,
+  "scope": "Local full-support finite Bernoulli-policy system; NOT a global optimal-control result."
+}
