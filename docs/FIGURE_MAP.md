@@ -1,6 +1,6 @@
 # Figure map: all seven manuscript figures
 
-These are the **actual figures generated from the supplied numerical code and ledgers**, not newly invented diagrams. The PNG versions in [`assets/figures/`](../assets/figures) are high-resolution displays. `plotting/figures.py` creates publication-format PDF and PNG copies from saved output data; it does not simulate new observations.
+Seven figures generated from the numerical results in [`results/reference/`](../results/reference), with high-resolution PNGs in [`assets/figures/`](../assets/figures).
 
 | Manuscript figure | Source data / calculation | Generator | Display |
 |---|---|---|---|
@@ -24,7 +24,7 @@ Pointwise rewards continue to be available, but the source-only certificate of t
 
 ![Figure 2: ordinary PG boundary contact](../assets/figures/ordinary_pg.png)
 
-The moving lower safe boundary catches the maximal-speed reward coefficient under ordinary Euclidean policy gradient. The numerical contact time is approximately 0.0078. An analytic local proof, not the image alone, establishes failure for **all** bounded-speed reward controls in the stated neighborhood.
+The moving lower safe boundary catches the maximal-speed reward coefficient under ordinary Euclidean policy gradient. The numerical contact time is approximately 0.0078. The local analytic bound applies to **all** bounded-speed reward controls in the specified neighborhood.
 
 ## Figure 3 — instance_complexity
 
@@ -42,7 +42,7 @@ A repeated comparison can reduce directional uncertainty but leave a nonzero asy
 
 ![Figure 5: weak Gaussian identification](../assets/figures/full_support_separation.png)
 
-With fixed-design Gaussian ratings and nonzero source support, OOD prediction risk becomes sensitive to a weak direction while estimation variance of an identified common gain stays controlled. **These are not the same metric for two compared algorithms.**
+With fixed-design Gaussian ratings and nonzero source support, OOD prediction risk becomes sensitive to a weak direction while estimation variance of an identified common gain stays controlled. The figure plots the two corresponding squared-error measures.
 
 ## Figure 6 — actual_adaptation
 
@@ -56,4 +56,4 @@ An explicit clipped quadratic-calibration rule does not immediately use its maxi
 
 Actual clipped calibration steps change the first uncertified policy-step time under fixed Euler policy updates. Increasing $m$ changes the number of reward optimization steps, not the underlying policy step size or the clipping threshold.
 
-For interpretation and all reported numerical checks, see [Paper Results](PAPER_RESULTS.md) and [Scope](SCOPE.md).
+For numerical results, see [Paper Results](PAPER_RESULTS.md).

@@ -2,7 +2,7 @@
 
 ## 1. Environment and provenance
 
-All experiments operate on **declared synthetic or finite models**, and the provided scripts require no GPU, API token, model downloads, annotation data, or network connection at runtime.
+The experiments run on CPU using NumPy, SciPy, and Matplotlib.
 
 The supplied reference ledger reports the following original environment:
 
@@ -14,7 +14,7 @@ The supplied reference ledger reports the following original environment:
 | Matplotlib | 3.10.8 |
 | Pseudorandom seed | `20260918` |
 
-The declared software dependencies support Python **3.10+**. Monte Carlo figures may vary slightly under different library versions, so the regression checks use explicit numeric tolerances rather than requiring byte-identical PNG or PDF files. The numeric source files are versioned and immutable from the reproduction command's perspective.
+Python **3.10+** is supported. The regression checks use numeric tolerances for Monte Carlo and floating-point variation.
 
 ## 2. Install
 
@@ -57,7 +57,7 @@ python experiments/verify_v10.py --out outputs/paper_reproduction
 python plotting/figures.py --res outputs/paper_reproduction --out outputs/paper_reproduction --venue iclr
 ```
 
-Then it checks newly generated files against the **frozen** [`results/reference/`](../results/reference/) values. The reference location is not a writable output destination; attempts to overwrite it are rejected by the wrapper.
+Then it checks newly generated files against the **frozen** [`results/reference/`](../results/reference/) values.
 
 Success prints something of the form:
 
@@ -65,9 +65,9 @@ Success prints something of the form:
 PASS: full numerical ledger and figure reproduction {'json': 4, 'csv': 5, 'figures': 7}
 ```
 
-And writes `outputs/paper_reproduction/reproduction_status.json`, together with five generated CSV files, four generated JSON ledgers, seven high-resolution PNGs in `png/`, and seven PDF figures. The wrapper validates nested numeric results with a tolerance of `rtol=1e-6` and `atol=2e-7`, accounting for solver and Monte Carlo floating-point differences on supported environments. A changed scientific parameter or missing result is a failure.
+And writes `outputs/paper_reproduction/reproduction_status.json`, together with five generated CSV files, four generated JSON ledgers, seven high-resolution PNGs in `png/`, and seven PDF figures. The wrapper validates nested numeric results with a tolerance of `rtol=1e-6` and `atol=2e-7`, accounting for solver and Monte Carlo floating-point differences on supported environments.
 
-**Why two plotting entry points?** The original experiment directory retains `figures.py` and `paperfig.py` as provenance copies. The public reproduction command uses `plotting/figures.py` for one predictable figure-generation location. Both use the same paper plotting logic.
+The plotting entry point is `plotting/figures.py`; the original copies remain in `experiments/`.
 
 ## 5. Paper claims to code and data
 
@@ -84,15 +84,11 @@ And writes `outputs/paper_reproduction/reproduction_status.json`, together with 
 | Weak Gaussian identification | `experiments/verify_v06.py` (`full_support_check`) | `weak_identification.csv` | 8 Gaussian conditions with 50k draws per condition |
 | All seven paper visuals | `plotting/figures.py` | PNG/PDF files in reproduction output | Figure regeneration from data or declared analytic formula |
 
-Important: `figures.py` reconstructs the **analytic clipped-lag and query-energy curves** from saved parameters when no matching per-point CSV exists. Those two curves are not represented as independent raw observations.
+The clipped-lag and query-energy curves are calculated analytically from saved parameters.
 
-## 6. Paper availability
+## 6. CI and packaging
 
-The full manuscript and source are not distributed in this repository. **arXiv coming soon.** The frozen numerical ledger, figures, experiment scripts, and reproduction commands remain unchanged. No arXiv identifier, accepted venue, or publication status is asserted before the public preprint is available.
-
-## 7. CI and release check
-
-[`tests.yml`](../.github/workflows/tests.yml) runs test and package-build matrices on Python 3.10, 3.12, and 3.13, plus a separate Python 3.13 job that runs the entire numerical-and-figure pipeline. A workflow file alone is not proof of a successful GitHub-hosted run; after pushing to GitHub, check the Actions tab and review failing environments independently.
+[`tests.yml`](../.github/workflows/tests.yml) runs the Python 3.10/3.12/3.13 test matrix and the full numerical reproduction pipeline.
 
 To run a build locally:
 
@@ -100,4 +96,3 @@ To run a build locally:
 python -m build --wheel --sdist
 ```
 
-After creating a repository, publish verified code from a clean branch/PR, check GitHub Actions, and tag a first release only after checks pass. The root `LICENSE` governs original research software and documentation, not the forthcoming manuscript.

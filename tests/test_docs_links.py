@@ -5,7 +5,7 @@ import pytest
 
 ROOT=Path(__file__).resolve().parents[1]
 PAGES=[ROOT/'README.md',ROOT/'README_cn.md',*sorted((ROOT/'docs').glob('*.md')),
-       ROOT/'THIRD_PARTY_NOTICES.md',ROOT/'CONTRIBUTING.md',ROOT/'CHANGELOG.md',ROOT/'RELEASE_CHECKLIST.md']
+       ROOT/'THIRD_PARTY_NOTICES.md',ROOT/'CONTRIBUTING.md',ROOT/'CHANGELOG.md']
 
 
 def find_local_links(markdown:str):

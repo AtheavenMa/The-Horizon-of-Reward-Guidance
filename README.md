@@ -16,7 +16,7 @@
   <img src="assets/figures/closed_loop.png" alt="The source-only reward certificate expires at t=5, while a representative batch of 1200 targeted preference labels extends its validity through t=15" width="850"/>
 </p>
 
-**Figure 1.** The pointwise reward optimum stays available, but the source-only certificate of the moving reward trajectory reaches the required progress threshold at time **5**. In the paper's five-output finite model, an illustrative batch of 1,200 targeted binary preference labels narrows the ambiguity set so that the **same trajectory** remains certified through time **15**. This is a numerical illustration under the stated assumptions, not an experiment training a neural reward model.
+**Figure 1.** The pointwise reward optimum stays available, but the source-only certificate of the moving reward trajectory reaches the required progress threshold at time **5**. In the paper's five-output finite model, an illustrative batch of 1,200 targeted binary preference labels narrows the ambiguity set so that the **same trajectory** remains certified through time **15**.
 
 ---
 
@@ -26,7 +26,7 @@
 - 🔄 **Pointwise is not trajectory feasibility.** A reward may certify progress at every policy state even when no admissible reward path from the initial parameters can maintain that certificate.
 - 📈 **Ordinary policy gradient.** The local separation also occurs with standard Euclidean policy gradient and full-support policies, not only with a constructed preconditioner.
 - 🧮 **Preference-feedback complexity.** Under a bounded Bradley–Terry comparison model, instance-level label complexity scales with distance to the dynamic infeasibility boundary, not merely time.
-- 🧪 **Reproducible finite-model evidence.** CPU-only code, three demos, all original numerical checks and the data for seven paper figures; no model checkpoints or API access required.
+- 🧪 **Reproducible experiments.** CPU-only code, three demos, numerical checks, and source data for seven figures.
 
 ---
 
@@ -49,11 +49,11 @@ The admissible path $`\phi(t)=\rho t`$ attains this bound. In contrast, if the i
 
 Three distinct notions matter:
 
-| Question | Object | What it does **not** establish |
-|---|---|---|
-| **Pointwise feasibility** | Is there a certifying reward at the current policy state? | A continuous, sufficiently fast path to that reward |
-| **Trajectory feasibility** | Is there an admissible path from the declared initialization that stays certified? | A concrete reward optimizer necessarily follows that path |
-| **Statistical certification** | Do source data and new labels exclude dynamically infeasible preference alternatives? | That the physical adaptation speed or control path improved |
+| Concept | Question |
+|---|---|
+| **Pointwise feasibility** | Is a certifying reward available at the current policy state? |
+| **Trajectory feasibility** | Can a bounded-speed reward path remain certified from its initialization? |
+| **Statistical certification** | Can preference feedback establish feasibility for the desired horizon? |
 
 The paper additionally analyzes finite reward-update resources, local ordinary-policy-gradient separation, and the information needed for longer-horizon certification.
 
@@ -72,7 +72,7 @@ The paper additionally analyzes finite reward-update resources, local ordinary-p
 | Minimum post-query certificate on the illustrated trajectory | **0.682** |
 | Required normalized gain | 0.600 |
 
-The post-query certificate includes a fixed feedback-availability time $`t=4`$. The observed binary labels are an **illustrative batch**, not labels gathered from real annotators.
+The example uses feedback available at $`t=4`$ and an illustrative batch of 1,200 binary preference labels.
 
 ### 2. Discrete reward updates are a resource constraint
 
@@ -83,7 +83,7 @@ The post-query certificate includes a fixed feedback-availability time $`t=4`$. 
 | 2 | 7.85 | 10.05 |
 | 3 | Not within 15 | Not within 15 |
 
-This experiment uses a **clipped quadratic reward-calibration rule**, not a Bradley–Terry likelihood optimizer. The policy uses fixed Euler steps of $`0.05`$; all rows share the policy step size, clipping and learning-rate settings. These are finite-step gain measurements, not a continuous-time certification of the simulated optimizer.
+This experiment uses **clipped quadratic reward calibration** with Euler policy steps of $`0.05`$. All rows share the policy step size, clipping and learning-rate settings.
 
 ### 3. Preference certification depends on the boundary gap
 
@@ -131,7 +131,7 @@ print(result.pointwise_feasible)   # True
 print(result.trajectory_feasible)  # False
 ```
 
-For discrete externally specified moving intervals, use [`interval_feasible`](horizon.py) to obtain a feasible path or an infeasible verdict **on the specified time nodes**. For bounded-model Bradley–Terry calculations, use `btl_sample_bounds`, `certify_btl_batch`, or `btl_confidence_interval`. These are mathematical-model utilities, not a general policy/RLHF safety oracle. See the [public API reference](docs/API.md) for precise hypotheses, inputs and return types.
+For discrete externally specified moving intervals, use [`interval_feasible`](horizon.py) to obtain a feasible path or an infeasible verdict **on the specified time nodes**. For bounded-model Bradley–Terry calculations, use `btl_sample_bounds`, `certify_btl_batch`, or `btl_confidence_interval`. See the [public API reference](docs/API.md) for precise hypotheses, inputs and return types.
 
 ---
 
@@ -165,13 +165,13 @@ python demo/demo_ordinary_pg.py
 
 <p align="center"><img src="assets/demo_ordinary_pg.png" alt="Ordinary PG demo" width="750"/></p>
 
-Computes the local analytic all-controls upper bound and numerically locates boundary contact for the reward path moving at maximal speed. The proof of the all-controls claim is in the paper; the plot alone cannot establish it.
+Computes the local analytic all-controls upper bound and numerically locates boundary contact for the reward path moving at maximal speed.
 
 ---
 
 ## 🗺️ Figure Map
 
-All seven manuscript figures, their frozen data sources, and the corresponding plotting functions are indexed in [Figure Map](docs/FIGURE_MAP.md). The published figures are produced from the original numerical scripts and recorded parameters, not invented images.
+All seven figures, data sources, and plotting functions are indexed in the [Figure Map](docs/FIGURE_MAP.md).
 
 ---
 
@@ -190,27 +190,10 @@ python -m pip install pytest
 python -m pytest -q
 ```
 
-The original experiments are preserved in [`experiments/`](experiments), and the paper plotting scripts are in [`plotting/`](plotting). See the [reproduction guide](docs/REPRODUCE.md) and [complete paper results](docs/PAPER_RESULTS.md). The original numerical checks are designed to verify finite-model calculations, not to replace the analytic proofs.
-
----
-
-## ⚠️ Scope and Preprint Status
-
-- This release contains **synthetic finite-output policy and scalar preference models**, not neural reward-model training, PPO, GRPO or LLM benchmarks.
-- Some checks use binary Bradley–Terry labels; a separate weak-identification calculation uses Gaussian scores. Do not conflate their data models.
-- A reward *speed envelope* bounds what any optimizer might do; finding a feasible path does not prove a particular optimizer will track it.
-- The full manuscript is not distributed in this repository. **arXiv coming soon.** All numerical results, figures, demos and verification code remain available.
-- Full results use independent simulation or exact computation where stated. The seven paper figures are illustrations and finite-model numerical evidence; no claim of neural-network empirical validation is made.
+The original experiments are preserved in [`experiments/`](experiments), and the paper plotting scripts are in [`plotting/`](plotting). See the [reproduction guide](docs/REPRODUCE.md) and [complete paper results](docs/PAPER_RESULTS.md).
 
 ---
 
 ## 🙏 Appreciation
 
-We acknowledge the prior work in preference learning, policy optimization, safe control, and information theory cited in the manuscript. Numerical verification of a theorem does not replace its proof or a literature priority review.
-
-## 📜 Citation and License
-
-**Paper preprint: arXiv coming soon.** The manuscript is not included in this repository. Once the public preprint is available, please use its official record for paper citations. [`CITATION.cff`](CITATION.cff) describes the software artifact, not the manuscript author list. The original code and project documentation are [MIT licensed](LICENSE); the forthcoming manuscript and third-party materials have separate copyright and publication terms as described in [Third-party notices](THIRD_PARTY_NOTICES.md).
-
-
-For development and first-public-release steps, see [Contributing](CONTRIBUTING.md), [Changelog](CHANGELOG.md), and the [release checklist](RELEASE_CHECKLIST.md).
+We appreciate the research community's contributions to preference learning, policy optimization, safe control, and information theory.

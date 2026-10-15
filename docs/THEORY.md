@@ -1,6 +1,6 @@
 # Theory and assumptions
 
-This file explains the paper's objects and derives the scalar equations implemented by `horizon.py`. The complete manuscript, including full proofs and precise regularity conditions, will be available with the forthcoming preprint (**arXiv coming soon**). The software does not substitute for the paper's theorems.
+This guide derives the horizon equations, moving-interval condition, ordinary-policy-gradient example, and Bradley–Terry complexity implemented in the project.
 
 ## 1. What is being certified?
 
@@ -38,7 +38,7 @@ Solving the same condition for a desired duration $T>0$ gives the minimum speed 
 
 $$\boxed{\rho_{\min}(T)=\max\{0,\ v-(g-\gamma)/(\eta_0T)\}}.$$
 
-All of these identities hold for the declared scalar model. A finite $|\phi|$ bound can create a new limitation that is **not** represented by `support_horizon`.
+These identities assume nonbinding reward-amplitude constraints.
 
 ## 3. Moving feasible intervals and discrete reachability
 
@@ -53,7 +53,7 @@ In discrete time, suppose intervals at time nodes $k=0,\ldots,n-1$ are $[\ell_k,
 $$R_0=[\ell_0,u_0],\qquad
 R_{k+1}=[\ell_{k+1},u_{k+1}]\cap(R_k+[-s_k,s_k]).$$
 
-An empty intersection implies infeasibility. If all intersections are nonempty, backward selection yields a witness path. This is what `interval_feasible()` implements and what the test suite compares to an independent linear program. **It does not certify what happens between sample nodes** and it is not a solver for the endogenous coupled policy–reward system.
+An empty intersection implies infeasibility. If all intersections are nonempty, backward selection yields a witness path. This is what `interval_feasible()` implements and what the test suite compares to an independent linear program. The result is defined at the sampled time nodes.
 
 ## 4. Theorem 2: ordinary Euclidean policy gradient
 
@@ -74,7 +74,7 @@ u(x,y)=\frac{2\omega_s-\gamma}{\omega_q+2\omega_s}.$$
 
 The pointwise optimum remains $V=\omega_q\omega_s/(\omega_q+\omega_s)$. The proof exhibits a full-support interior initial state where $V>\gamma$ in a neighborhood, but the lower safe boundary moves more quickly than any permissible reward path. The analytic local all-controls upper bound is $0.0100060$, and a maximal-speed numerical trajectory touches the boundary at approximately $0.00783587$.
 
-This is a **local counterexample**. The numerical path does not by itself prove failure for all possible controls; the paper establishes the latter through an analytic neighborhood and speed bound.
+The local analytic neighborhood bound applies to all admissible reward controls; the numerical path illustrates boundary contact.
 
 ## 5. Theorem 3: instance-level Bradley–Terry complexity
 
@@ -98,10 +98,10 @@ The upper and lower bounds match in order for fixed comparison bounds. In the co
 - `certify_btl_batch` checks a *precommitted*, one-sided test against $\delta\ge\delta_c$;
 - `btl_confidence_interval` constructs a *two-sided*, fixed-batch interval for the scalar parameter, truncated to its source set.
 
-The one-sided certification test and two-sided source-set narrowing serve different purposes and have different log-factors. Neither routine supports optional stopping or arbitrary adaptive comparison selection. The paper treats more general sequential comparisons separately; that implementation is retained in the original numerical checks, not exposed as a universal public certification API.
+The one-sided certification test and two-sided source-set narrowing use precommitted fixed batches and have different logarithmic factors. Sequential comparison checks are available in `experiments/`.
 
 ## 6. Finite resource versus actual algorithm
 
-A finite step displacement envelope is a statement of available capacity, not a guarantee that a specific optimizer achieves the envelope. The paper illustrates this distinction using clipped quadratic calibration, which loses certification earlier than an ideal controller with the same maximal speed. A separate experiment allows $m=0,1,2,3$ actual clipped calibration steps per policy step, changing only the number of updates. These are not Bradley–Terry training steps.
+Clipped quadratic calibration exhibits a startup lag and loses certification earlier than an ideal controller with the same maximum speed. The discrete experiment evaluates $m=0,1,2,3$ calibration updates per policy step.
 
-See [Paper Results](PAPER_RESULTS.md) for measurements and [Scope](SCOPE.md) for what is not claimed.
+See [Paper Results](PAPER_RESULTS.md) for numerical measurements.

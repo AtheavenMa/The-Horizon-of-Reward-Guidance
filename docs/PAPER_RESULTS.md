@@ -1,6 +1,6 @@
 # Paper results and numerical evidence
 
-The values below come from the **supplied manuscript** and the frozen numerical ledger [`results/reference/paper_results_v10.json`](../results/reference/paper_results_v10.json), with accompanying CSV files. They are **paper-reported finite-model results**, not measurements of neural reward models or runs of an external RLHF benchmark. The project demos provide smaller, runnable interpretations; they do not generate every original paper result.
+Numerical results from [`results/reference/paper_results_v10.json`](../results/reference/paper_results_v10.json) and the accompanying CSV files, organized by experiment.
 
 ## E1: five-output moving certificate with targeted BTL feedback
 
@@ -24,7 +24,7 @@ The values below come from the **supplied manuscript** and the frozen numerical 
 
 The source-only certificate falls below the required gain beyond $t=5$ even as the pointwise optimum remains available. With the representative fixed-size feedback batch, the compatibility set shrinks, and the *same* trajectory stays certified through $t=15$. See [Figure 1](FIGURE_MAP.md#figure-1--closed_loop).
 
-The feedback observation is illustrative, not a real annotation batch. It does not change the policy/reward path or the reward-speed constraint.
+This example uses a fixed simulated feedback batch and keeps the policy/reward trajectory unchanged.
 
 ## E2: local ordinary Euclidean policy-gradient example
 
@@ -42,7 +42,7 @@ The feedback observation is illustrative, not a real annotation batch. It does n
 | Upper bound for all-controls boundary loss within the box | **0.01000602** |
 | Numerical maximal-speed boundary contact | 0.00783587 |
 
-The *all-controls* statement is an analytic local bound; numerical contact is a supporting illustration. See [Figure 2](FIGURE_MAP.md#figure-2--ordinary_pg).
+The analytic local bound covers all admissible controls; the numerical trajectory gives the contact time. See [Figure 2](FIGURE_MAP.md#figure-2--ordinary_pg).
 
 ## E3: clipped reward-calibration startup loss
 
@@ -53,7 +53,7 @@ The *all-controls* statement is an analytic local bound; numerical contact is a 
 | Exact clipped-calibration deadline | **4.90546511** |
 | Independent numerical ODE deadline | 4.90546511 |
 
-This is an explicitly specified clipped **quadratic guidance calibration** flow, not Bradley–Terry likelihood optimization. Startup transient effects shorten the realized duration relative to the ideal speed-envelope controller. See [Figure 6](FIGURE_MAP.md#figure-6--actual_adaptation).
+The experiment follows a clipped **quadratic guidance calibration** flow. Startup transient effects shorten the realized duration relative to the ideal speed-envelope controller. See [Figure 6](FIGURE_MAP.md#figure-6--actual_adaptation).
 
 ## E4: actual finite reward updates per policy step
 
@@ -77,7 +77,7 @@ The supplied code independently recomputes the paper's four-output example. Sour
 | $r_A$ | 4.5000 | 2.4853 | -0.3704 | **0.1147** |
 | $r_B$ | 4.5000 | 7.1085 | 0.9352 | **0.1147** |
 
-Dynamic guidance is a **worse predictor** for $r_B$, so the method is not claimed to uniformly improve prediction. It identifies a common improvement direction in the finite problem. Data: [`prediction_guidance_separation.json`](../results/reference/prediction_guidance_separation.json). Function: `experiments/separation_check.py`.
+Dynamic guidance has higher OOD MSE for $r_B$ while preserving a positive common improvement direction. Data: [`prediction_guidance_separation.json`](../results/reference/prediction_guidance_separation.json). Function: `experiments/separation_check.py`.
 
 ## Instance-level binary preference queries
 
@@ -92,7 +92,7 @@ Under the paper's informative fixed pure comparison and target error probability
 | Fixed test at truth $\delta=0$: acceptance probability | 0.9869058 |
 | Fixed test at feasibility boundary: acceptance probability | 0.0065814 |
 
-The fixed-N one-sided test is distinct from the two-sided batch used to narrow the source uncertainty set in E1. The lower-bound curve [Figure 3](FIGURE_MAP.md#figure-3--instance_complexity) illustrates the dependence on distance to the dynamic feasibility boundary, not measured annotation costs.
+The fixed-N one-sided test and the two-sided source-set update serve different purposes. [Figure 3](FIGURE_MAP.md#figure-3--instance_complexity) shows the relationship between label complexity and distance to the dynamic feasibility boundary.
 
 ## Additional checks inherited from the v0.6 verification suite
 
@@ -102,12 +102,12 @@ The fixed-N one-sided test is distinct from the two-sided batch used to narrow t
 | Piecewise corridor regression | 150 cases | 100 feasible, 50 infeasible |
 | Reward-gradient displacement and logistic KL inequalities | 10,000 random cases | No violations |
 | Restricted comparison pools | 36 random pools | 28 feasible, 8 infeasible, **0 exhaustive-search mismatches** |
-| Adaptive BTL finite simulation | 100 trajectories, 40 labels, 8 checkpoints | Empirical simultaneous coverage 1.0; conservative bound, not tightness evidence |
+| Adaptive BTL finite simulation | 100 trajectories, 40 labels, 8 checkpoints | Empirical simultaneous coverage 1.0 |
 | Jacobian-vector interface | Numerical identities | Identity error $1.73\times10^{-18}$; finite-difference discrepancy $5.32\times10^{-11}$ |
 | Weak identification with Gaussian scores | 8 conditions, 50,000 replicates each | Maximum relative errors approximately 1.33% (prediction) and 1.61% (identified gain) |
 
 ### Notes on auxiliary figures
 
-[Figure 4](FIGURE_MAP.md#figure-4--query_energy) shows repeated-comparison directional information with an irreducible residual when the query direction is insufficient. [Figure 5](FIGURE_MAP.md#figure-5--full_support_separation) uses **fixed-design Gaussian scores**, not BTL labels, and compares two *different* squared-error quantities. Its curves do not form a conventional algorithm leaderboard.
+[Figure 4](FIGURE_MAP.md#figure-4--query_energy) shows repeated-comparison directional information with an irreducible residual when the query direction is insufficient. [Figure 5](FIGURE_MAP.md#figure-5--full_support_separation) uses **fixed-design Gaussian scores**, not BTL labels, and compares two *different* squared-error quantities. 
 
-For complete numeric precision and output generation, see [`results/reference/`](../results/reference) and [Reproduction](REPRODUCE.md). The numerical verification code and plotting code are separated so graphs cannot silently overwrite or fabricate the CSV observations.
+For complete numeric precision and output generation, see [`results/reference/`](../results/reference) and [Reproduction](REPRODUCE.md).

@@ -1,6 +1,6 @@
 # Python API reference
 
-The supported public module is [`horizon.py`](../horizon.py). Its functions are deliberately small, inspectable, and usable **without NumPy**. Installing the optional `demo` or `test` dependencies enables illustrations and experiments, but these do not become part of the core API.
+The public module [`horizon.py`](../horizon.py) provides scalar horizon analysis, interval feasibility, and Bradley–Terry certification utilities using the Python standard library.
 
 ## `analyze_horizon(...)`
 
@@ -19,7 +19,7 @@ assert not r.trajectory_feasible
 
 All arguments are keyword-only, finite real numbers. `gain > required_gain > 0`, `uncertainty_radius > 0`, `drift_speed >= 0`, `adaptation_speed >= 0`, `target_horizon > 0`. The returned frozen `HorizonResult` contains `support_horizon`, `minimum_required_speed`, `target_horizon`, `pointwise_feasible`, `trajectory_feasible`, `source_certificate_at_target`, `required_gain`, and a flag naming the **nonbinding amplitude assumption**.
 
-This routine is specific to the scalar linear moving-target model, not the general finite-output construction or arbitrary reward networks. If adaptation can match drift, the reported horizon is `math.inf` because the **speed budget by itself** no longer limits the horizon.
+For the scalar linear moving-target model, the horizon is `math.inf` when adaptation can match drift and reward-amplitude constraints are nonbinding.
 
 ## `support_horizon(...)` and `minimum_required_speed(...)`
 
@@ -30,7 +30,7 @@ T0 = support_horizon(1.0, 0.6, 1.0, 0.12, 0.04)
 rho = minimum_required_speed(1.0, 0.6, 1.0, 0.12, 15.0)
 ```
 
-These are exact under the model's parameter and initialization assumptions. No inference over real preference data is performed.
+These expressions are exact under the specified parameter and initialization assumptions.
 
 ## `certified_gain(...)`
 
@@ -41,7 +41,7 @@ gain_t5 = certified_gain(1.0, 1.0, 5.0, 0.04 * 5.0, 0.12)
 assert abs(gain_t5 - 0.6) < 1e-12
 ```
 
-Computes $g-\eta_0|\phi(t)-vt|$. It checks a **specified** coefficient at a **specified** time; it does not validate that the coefficient path is reachable.
+Computes $g-\eta_0|\phi(t)-vt|$ at a specified time and reward coefficient.
 
 ## `interval_feasible(...)`
 
@@ -60,7 +60,7 @@ print(result.witness_path)
 
 Given **discrete** intervals of equal length and exactly `n-1` budgets, tests whether a path exists with `|phi[k+1]-phi[k]| <= budget[k]`. Returns a frozen `CorridorResult` containing `feasible`, `witness_path` (or `None`), and `first_infeasible_index` (or `None`). An optional `initial_value` fixes the first point.
 
-The returned witness applies to the supplied nodes only; the API makes no interpolation or continuous-time claim.
+The witness covers the supplied discrete time nodes.
 
 ## `btl_sample_bounds(...)`
 
@@ -75,7 +75,7 @@ b = btl_sample_bounds(
 print(b.necessary_expected_labels, b.sufficient_fixed_labels)
 ```
 
-Arguments `gap_to_boundary>0`, `0<alpha<1/4`, fixed pure-comparison sensitivity `q>0`, max adaptive query sensitivity `Q>=q`, source interval radius `eta>0`, and fixed logistic `intercept`. Returns the KL information lower bound, **expected** necessary number of labels given max sensitivity, and a conservative sufficient **fixed** count for the identified pure comparison. The results are not predictions of a specific optimizer's actual sample consumption.
+Arguments `gap_to_boundary>0`, `0<alpha<1/4`, fixed pure-comparison sensitivity `q>0`, max adaptive query sensitivity `Q>=q`, source interval radius `eta>0`, and fixed logistic `intercept`. Returns the KL information lower bound, **expected** necessary number of labels given max sensitivity, and a conservative sufficient **fixed** count for the identified pure comparison.
 
 ## `certify_btl_batch(...)`
 
@@ -91,7 +91,7 @@ assert r.certified
 assert r.acceptance_threshold_wins == 638
 ```
 
-Tests against null $\delta\ge\delta_c$ for **independent observations** from one fixed pure BTL pair with positive `sensitivity`. Rejecting the null is evidence of feasibility in this one-dimensional model at the fixed declared error bound. Do not reuse this rule after optional stopping or data-dependent query selection without another validity argument.
+Tests against null $\delta\ge\delta_c$ for **independent observations** from one fixed pure BTL pair with positive `sensitivity`. Rejecting the null is evidence of feasibility in this one-dimensional model at the fixed declared error bound. The test uses a fixed sample size and a precommitted comparison pair.
 
 ## `btl_confidence_interval(...)`
 
@@ -106,8 +106,4 @@ i = btl_confidence_interval(
 print(i.lower_delta, i.upper_delta)  # approximately -0.19246, +0.19246
 ```
 
-Constructs the fixed-size two-sided Hoeffding interval, intersected with the known source-compatible scalar interval. An empty intersection raises `ValueError`; it must not be silently turned into a certificate.
-
-## What is not public API?
-
-The [`experiments/`](../experiments) directory contains preserved manuscript scripts. These are useful for verifying calculations, **not** a stable training or evaluation package. The [`plotting/`](../plotting) directory consumes their CSV/JSON outputs and should not be confused with the numerical generators.
+Constructs the fixed-size two-sided Hoeffding interval, intersected with the known source-compatible scalar interval. An empty intersection raises `ValueError`.
