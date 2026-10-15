@@ -12,3 +12,8 @@ build/
 .coverage
 htmlcov/
 .DS_Store
+
+# Keep unpublished manuscript sources out of the public repository.
+/paper/
+/main.pdf
+/main.tex
