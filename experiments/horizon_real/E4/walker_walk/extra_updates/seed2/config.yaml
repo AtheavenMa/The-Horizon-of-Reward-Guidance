@@ -1,0 +1,6 @@
+domain: walker
+task: walk
+steps: 30000
+seed: 2
+mode: extra_updates
+task_id: dm_control:walker-walk

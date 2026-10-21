@@ -1,0 +1,313 @@
+{
+  "reference_first_loss": 0.012,
+  "reference_min_slack": -0.000618171780482013,
+  "stored_gap": 4.440892098500626e-13,
+  "fixed_path": {
+    "called_interval_feasible": true,
+    "disconnected": false,
+    "feasible": false,
+    "first_infeasible_index": 24,
+    "witness_head": null,
+    "witness": null
+  },
+  "fixed_path_prefix_24": {
+    "called_interval_feasible": true,
+    "disconnected": false,
+    "feasible": true,
+    "first_infeasible_index": null,
+    "witness_head": [
+      0.8428043202033038,
+      0.8428243202033038,
+      0.8428443202033038,
+      0.8428643202033038
+    ]
+  },
+  "prefix_witness_head": [
+    0.8428043202033038,
+    0.8428243202033038,
+    0.8428443202033038,
+    0.8428643202033038
+  ],
+  "feasible_piece_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "feasible_set_at_loss": [
+    [
+      0.8433357484810311,
+      0.9119123554580535
+    ]
+  ],
+  "reachable_phi_at_loss": 0.8432843202033038,
+  "fixed_path_phi_gap": 5.142827772730563e-05,
+  "feasible_widths_head": [
+    0.06994101026498822,
+    0.06988390535918954,
+    0.0698268226509462,
+    0.06976976213387087,
+    0.06971272380237137,
+    0.06965570765155693,
+    0.06959871367308335,
+    0.06954174186352868
+  ],
+  "families": [
+    {
+      "name": "maximal",
+      "min_slack": -0.000618171780482013,
+      "first_loss": 0.012
+    },
+    {
+      "name": "constant_fraction_0.0",
+      "min_slack": -0.0013952791718074287,
+      "first_loss": 0.009000000000000001
+    },
+    {
+      "name": "constant_fraction_0.25",
+      "min_slack": -0.001201002170654275,
+      "first_loss": 0.0095
+    },
+    {
+      "name": "constant_fraction_0.5",
+      "min_slack": -0.001006725272085729,
+      "first_loss": 0.0105
+    },
+    {
+      "name": "constant_fraction_0.75",
+      "min_slack": -0.0008124484743254334,
+      "first_loss": 0.011
+    },
+    {
+      "name": "sprint_then_coast_8",
+      "min_slack": -0.0011949636836105504,
+      "first_loss": 0.01
+    },
+    {
+      "name": "coast_then_sprint_8",
+      "min_slack": -0.0008184868783244759,
+      "first_loss": 0.0105
+    },
+    {
+      "name": "sprint_then_coast_16",
+      "min_slack": -0.0009944893926649434,
+      "first_loss": 0.011
+    },
+    {
+      "name": "coast_then_sprint_16",
+      "min_slack": -0.0010189611559474065,
+      "first_loss": 0.0095
+    },
+    {
+      "name": "sprint_then_coast_24",
+      "min_slack": -0.0007938562150377471,
+      "first_loss": 0.012
+    },
+    {
+      "name": "coast_then_sprint_24",
+      "min_slack": -0.0012195945280856768,
+      "first_loss": 0.009000000000000001
+    }
+  ],
+  "learned_interval": [
+    0.6499217036622524,
+    1.0118023713175432
+  ],
+  "learned_fixed_path_feasible": true,
+  "rows": [
+    {
+      "name": "u0_k24",
+      "steps": 24,
+      "end_time": 0.0115,
+      "rho": 0.04,
+      "min_slack": 1.4741116276584254e-05,
+      "first_loss": null,
+      "source_first_loss": null,
+      "final_phi": 0.8432643202033042,
+      "fixed_path": {
+        "called_interval_feasible": true,
+        "disconnected": false,
+        "feasible": true,
+        "first_infeasible_index": null,
+        "witness_head": [
+          0.8428043202033038,
+          0.8428243202033038,
+          0.8428443202033038,
+          0.8428643202033038
+        ]
+      },
+      "phi_gap_vs_schedule": 0.0
+    },
+    {
+      "name": "u0_k25",
+      "steps": 25,
+      "end_time": 0.012,
+      "rho": 0.04,
+      "min_slack": -6.460070972152954e-05,
+      "first_loss": 0.012,
+      "source_first_loss": 0.012,
+      "final_phi": 0.8432843202033042,
+      "fixed_path": {
+        "called_interval_feasible": true,
+        "disconnected": false,
+        "feasible": false,
+        "first_infeasible_index": 24,
+        "witness_head": null
+      },
+      "phi_gap_vs_schedule": 0.0
+    },
+    {
+      "name": "u0_k32",
+      "steps": 32,
+      "end_time": 0.0155,
+      "rho": 0.04,
+      "min_slack": -0.000618171780482013,
+      "first_loss": 0.012,
+      "source_first_loss": 0.012,
+      "final_phi": 0.8434243202033044,
+      "fixed_path": {
+        "called_interval_feasible": true,
+        "disconnected": false,
+        "feasible": false,
+        "first_infeasible_index": 24,
+        "witness_head": null
+      },
+      "phi_gap_vs_schedule": 0.0
+    },
+    {
+      "name": "u0_rho0",
+      "steps": 32,
+      "end_time": 0.0155,
+      "rho": 0.0,
+      "min_slack": -0.0013952791718074287,
+      "first_loss": 0.009000000000000001,
+      "source_first_loss": 0.009000000000000001,
+      "final_phi": 0.8428043202033038,
+      "fixed_path": {
+        "called_interval_feasible": true,
+        "disconnected": false,
+        "feasible": false,
+        "first_infeasible_index": 18,
+        "witness_head": null
+      },
+      "phi_gap_vs_schedule": 0.0006200000000006201
+    },
+    {
+      "name": "u0_rho08",
+      "steps": 32,
+      "end_time": 0.0155,
+      "rho": 0.08,
+      "min_slack": 0.0001589339748187535,
+      "first_loss": null,
+      "source_first_loss": null,
+      "final_phi": 0.844044320203305,
+      "fixed_path": {
+        "called_interval_feasible": true,
+        "disconnected": false,
+        "feasible": true,
+        "first_infeasible_index": null,
+        "witness_head": [
+          0.8428043202033038,
+          0.8428443202033038,
+          0.8428843202033038,
+          0.8429243202033039
+        ]
+      },
+      "phi_gap_vs_schedule": 0.0006200000000006201
+    },
+    {
+      "name": "u128",
+      "steps": 32,
+      "end_time": 0.0155,
+      "rho": 0.04,
+      "min_slack": 0.0012931109182923728,
+      "first_loss": null,
+      "source_first_loss": 0.012,
+      "final_phi": 0.8434243202033044,
+      "fixed_path": {
+        "called_interval_feasible": true,
+        "disconnected": false,
+        "feasible": true,
+        "first_infeasible_index": null,
+        "witness_head": [
+          0.8428043202033038,
+          0.8428043202033038,
+          0.8428043202033038,
+          0.8428043202033038
+        ]
+      },
+      "phi_gap_vs_schedule": 0.0
+    }
+  ],
+  "natural_enclosure_at_0_012": 0.12215130769455133,
+  "mean_value_upper": [
+    0.06185769720623569,
+    0.06177684345753001,
+    0.061696063569199974,
+    0.06161535750104667,
+    0.06153472521304643,
+    0.061454166666691463,
+    0.06137368182588628,
+    0.06129327065606761,
+    0.06121293312421309,
+    0.06113266919751693,
+    0.061052478846507684,
+    0.06097236204239088,
+    0.060892318759278995,
+    0.060812348970203024,
+    0.060732452652893246,
+    0.06065262978623669,
+    0.06057288034761922,
+    0.060493204319596955,
+    0.06041360168501963,
+    0.060334072429703574,
+    0.06025461653888729,
+    0.06017523400035045,
+    0.06009592480442045,
+    0.06001668894398318,
+    0.05993752641004983,
+    0.059858437199759376,
+    0.05977942130750688,
+    0.059700478732056625,
+    0.05962160947655162,
+    0.05954281354008481,
+    0.05946409092747826,
+    0.05938544164529523
+  ],
+  "derivative_spot_check_gap": 0.0,
+  "first_proved_all_controls_loss": 0.012,
+  "upper_bound_at_0_012": 0.05993752641004983,
+  "upper_bound_width_at_0_012": 2.127119771364039e-06,
+  "crosscheck_controls": 100,
+  "source_sha": "3581a1a0c8862d1027fba8502b7fdd97f0c321a4",
+  "runtime_seconds": 105.91702284291387,
+  "max_rss_kib": 138256
+}

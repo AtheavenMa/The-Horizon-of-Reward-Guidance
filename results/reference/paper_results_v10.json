@@ -1,0 +1,322 @@
+{
+  "paper_version": "1.0",
+  "inherited_v06": {
+    "version": "0.6",
+    "seed": 20260918,
+    "ordinary_pg": {
+      "initial_means": [
+        0.8,
+        0.0
+      ],
+      "initial_phi": 0.8428043202033038,
+      "required_gain": 0.06,
+      "reward_speed_bound": 0.04,
+      "initial_worst_gain": 0.06125919999999993,
+      "initial_pointwise_optimum": 0.11473087818696877,
+      "initial_safe_interval": [
+        0.8418043202033038,
+        0.9109691960931631
+      ],
+      "analytic_ell_dot_lower_in_box": 0.13993980651823285,
+      "analytic_pointwise_optimum_lower_in_box": 0.10575039444306417,
+      "analytic_minimum_probability_in_box": 0.04654999999999999,
+      "analytic_exit_time_lower": 0.0858746382946684,
+      "analytic_all_controls_boundary_time_upper": 0.010006022973614241,
+      "numerical_maximal_speed_boundary_time": 0.007835874324472896,
+      "qualifier": "All-controls bound is local to the stated initial point and box; not a general global optimal-control theorem."
+    },
+    "actual_clipped_algorithm": {
+      "saturation_time": 0.40546510810816455,
+      "analytic_deadline": 4.9054651081081655,
+      "numerical_deadline": 4.90546510807927,
+      "ideal_speed_ball_deadline": 5.000000000000001
+    },
+    "gradient_and_KL": {
+      "largest_observed_step_over_bound": 0.4649973745077862,
+      "largest_kl_minus_quadratic_bound": -8.312301637726059e-12,
+      "trials": 10000
+    },
+    "weighted_discrete_corridors": {
+      "trials": 180,
+      "feasible": 120,
+      "infeasible": 60,
+      "mismatches": 0
+    },
+    "binary_instance_bounds": {
+      "fixed_design_checks": 14,
+      "smallest_power": 0.9912333015950353,
+      "largest_boundary_accept_probability": 0.007668370665890979,
+      "one_sided_1200_labels": {
+        "T": 15.0,
+        "alpha": 0.05,
+        "threshold_wins": 638,
+        "power_at_zero": 0.9869058375789044,
+        "accept_probability_at_boundary": 0.006581387920974646,
+        "probability_radius": 0.03533018229004057
+      },
+      "source_query_KL": 0.0,
+      "qualifier": "The table concerns fixed-N tests; unknown-gap sequential stopping uses a separate anytime construction."
+    },
+    "restricted_query_graphs": {
+      "random_cases": 36,
+      "feasible": 28,
+      "infeasible": 8,
+      "mismatches": 0,
+      "one_dimensional_path_cost": 3,
+      "disconnected_example": "impossible",
+      "priority_note": "Single-demand complete-graph core is equivalent to prior debt-settlement theory (Verhoeff 2004); not claimed new."
+    },
+    "legacy_corridors": {
+      "feasible": 100,
+      "infeasible": 50
+    },
+    "legacy_complete_graphs": {
+      "examples": [
+        {
+          "demand": [
+            1,
+            2,
+            4,
+            -7
+          ],
+          "rank": 1,
+          "exact_pairs": 3,
+          "partition": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "demand": [
+            1,
+            -1,
+            2,
+            -2
+          ],
+          "rank": 1,
+          "exact_pairs": 2,
+          "partition": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "demand": [
+            1,
+            1,
+            -2,
+            0
+          ],
+          "rank": 1,
+          "exact_pairs": 2,
+          "partition": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        {
+          "demand": [
+            1,
+            2,
+            4,
+            8,
+            -15
+          ],
+          "rank": 1,
+          "exact_pairs": 4,
+          "partition": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      ],
+      "random_instances_checked": 16,
+      "three_partition_reduction_witness": [
+        [
+          8,
+          9,
+          13
+        ],
+        [
+          8,
+          10,
+          12
+        ],
+        [
+          9,
+          10,
+          11
+        ],
+        [
+          10,
+          10,
+          10
+        ]
+      ],
+      "min_pairs_in_witness": 12
+    },
+    "multiple_adversaries": {
+      "correct_max_derivative": -1.0,
+      "incorrect_single_adversary_formula": 1.0
+    },
+    "five_output_closed_loop": {
+      "epsilon": 0.04,
+      "shift_speed": 0.12,
+      "reward_speed": 0.04,
+      "source_only_exact_deadline": 5.000000000000001,
+      "pointwise_value_normalized": 1.0,
+      "horizon": 15.0,
+      "minimum_policy_probability": 0.12330143701189328,
+      "minimum_preconditioner_eigenvalue": 1.7546375952926283,
+      "query_labels": 1200,
+      "illustrative_query_wins": 600,
+      "query_delta_interval": [
+        -0.19245962944052997,
+        0.19245962944053022
+      ],
+      "query_time": 4.0,
+      "post_query_min_certificate_normalized": 0.6819999999999999,
+      "fixed_N_recovery_probability_at_delta_zero": 0.9536584799640777,
+      "required_progress_normalized": 0.6,
+      "feedback_model": "Fixed-size batch of independent BTL labels; no claim of zero query latency."
+    },
+    "rank_one_design": {
+      "maximum_identity_error": 9.880984919163893e-15,
+      "initial_energy": 1.3640779331803963,
+      "limiting_energy": 0.8980197405649328,
+      "minimum_continuous_count_for_half_available_reduction": 0.2730027118327247
+    },
+    "adaptive_BTL": {
+      "runs": 100,
+      "labels_per_run": 40,
+      "checkpoints_per_run": 8,
+      "empirical_simultaneous_coverage": 1.0,
+      "nominal_coverage": 0.95,
+      "maximum_error_radius_ratio": 0.4263795829396613,
+      "warning": "Conservative bound: high coverage is not evidence of tightness."
+    },
+    "feature_interface": {
+      "gradient_identity_error": 1.734723475976807e-18,
+      "feature_JVP_finite_difference_error": 5.3244507455548305e-11
+    },
+    "full_support": {
+      "replicates_per_condition": 50000,
+      "conditions": 8,
+      "max_relative_error_prediction": 0.013264887904684386,
+      "max_relative_error_gain": 0.01613523331813793,
+      "feedback_model": "Fixed-design Gaussian scores, not binary preferences."
+    }
+  },
+  "added_discrete_resource_experiment": {
+    "version_added": "1.0",
+    "inherited_model": "v0.6 five-output policy",
+    "h_policy": 0.05,
+    "reward_step_size": 0.01,
+    "gradient_clip": 0.2,
+    "g": 1.0,
+    "gamma": 0.6,
+    "source_radius": 1.0,
+    "policy_drift_v": 0.12,
+    "time_window": [
+      0.0,
+      15.0
+    ],
+    "iterations_per_run": 300,
+    "deterministic": true,
+    "runs": [
+      {
+        "reward_steps_per_policy_step": 0,
+        "max_reward_displacement_per_policy_step": 0.0,
+        "capacity_per_policy_time": 0.0,
+        "observed_max_displacement": 0.0,
+        "first_uncertified_policy_step_time": 3.35,
+        "ideal_budget_envelope_first_uncertified_time": 3.35,
+        "minimum_output_probability": 0.11686156123669385,
+        "minimum_preconditioner_eigenvalue": 1.7596426387591402
+      },
+      {
+        "reward_steps_per_policy_step": 1,
+        "max_reward_displacement_per_policy_step": 0.002,
+        "capacity_per_policy_time": 0.04,
+        "observed_max_displacement": 0.0020000000000000018,
+        "first_uncertified_policy_step_time": 4.55,
+        "ideal_budget_envelope_first_uncertified_time": 5.050000000000001,
+        "minimum_output_probability": 0.12252858579812187,
+        "minimum_preconditioner_eigenvalue": 1.7596426387591402
+      },
+      {
+        "reward_steps_per_policy_step": 2,
+        "max_reward_displacement_per_policy_step": 0.004,
+        "capacity_per_policy_time": 0.08,
+        "observed_max_displacement": 0.0040000000000000036,
+        "first_uncertified_policy_step_time": 7.8500000000000005,
+        "ideal_budget_envelope_first_uncertified_time": 10.05,
+        "minimum_output_probability": 0.127921268365454,
+        "minimum_preconditioner_eigenvalue": 1.7596426387591402
+      },
+      {
+        "reward_steps_per_policy_step": 3,
+        "max_reward_displacement_per_policy_step": 0.006,
+        "capacity_per_policy_time": 0.12,
+        "observed_max_displacement": 0.00599203967002504,
+        "first_uncertified_policy_step_time": null,
+        "ideal_budget_envelope_first_uncertified_time": null,
+        "minimum_output_probability": 0.13237523064394094,
+        "minimum_preconditioner_eigenvalue": 1.7596426387591402
+      }
+    ],
+    "maximum_exact_step_identity_error": 7.05768776754212e-13,
+    "scope": "Exact stepwise mean-gain test in an affine finite-output policy; not continuous interpolation, BTL fitting, PPO, or a neural experiment."
+  },
+  "recomputed_prediction_guidance_separation": {
+    "source_least_squares_coefficients": [
+      0.5,
+      0.4999999999999999
+    ],
+    "dynamic_coefficients": [
+      0.8852691218130312,
+      0.11473087818696877
+    ],
+    "target_A": {
+      "source_predictor_MSE": 4.5,
+      "dynamic_guidance_MSE": 2.4852498615669814,
+      "static_true_gain": -0.37039999999999995,
+      "dynamic_true_gain": 0.11473087818696877
+    },
+    "target_B": {
+      "source_predictor_MSE": 4.5,
+      "dynamic_guidance_MSE": 7.108479323323357,
+      "static_true_gain": 0.9351999999999998,
+      "dynamic_true_gain": 0.11473087818696877
+    },
+    "two_target_prediction_lower_bound": 4.5
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "note": "Synthetic finite-model checks. Graphical illustrations and Monte Carlo are not substitutes for proofs or a priority review."
+}

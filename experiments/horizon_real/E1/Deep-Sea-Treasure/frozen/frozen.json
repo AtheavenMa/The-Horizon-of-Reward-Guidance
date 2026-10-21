@@ -1,0 +1,30 @@
+{
+  "env_id": "deep-sea-treasure-v0",
+  "low": [
+    0.0,
+    -20.0
+  ],
+  "high": [
+    15.100000381469727,
+    -1.0
+  ],
+  "w_star": [
+    0.375,
+    0.625
+  ],
+  "beta": 5.0,
+  "pair_median_abs_half": 0.2032311859948875,
+  "gamma": 0.0,
+  "gamma_pos": 0.005206517836178311,
+  "gamma_note": "0.1 times median positive development finite-step gain",
+  "coverage_development": 0.9666666666666667,
+  "certificate_formal": true,
+  "n_actions": 4,
+  "max_steps": 20,
+  "dim": 2,
+  "positive_development_gains": [
+    0.12037621981839941,
+    0.05206517836178311,
+    0.0075538069667233365
+  ]
+}

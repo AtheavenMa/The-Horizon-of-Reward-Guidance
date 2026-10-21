@@ -1,0 +1,75 @@
+name: Tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements_dev.txt
+          python -m pip install -e . --no-deps
+      - name: Core tests and demos
+        run: python -m pytest -q
+      - name: Public CLI and standalone browser-demo syntax
+        run: |
+          horizon-audit --help
+          horizon-audit validate --manifest examples/08_guidance_audit/finite_computed.json
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          html = Path("demo/horizon_playground.html").read_text(encoding="utf-8")
+          script = re.search(r"<script>(.*?)</script>", html, re.S)
+          assert script, "interactive demo script missing"
+          Path("demo/horizon_playground.check.js").write_text(script.group(1), encoding="utf-8")
+          PY
+          node --check demo/horizon_playground.check.js
+          rm demo/horizon_playground.check.js
+      - name: Build package
+        run: python -m build --wheel --sdist --outdir dist
+      - name: Verify generated package files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          wheels = list(Path('dist').glob('*.whl'))
+          sources = list(Path('dist').glob('*.tar.gz'))
+          assert len(wheels) == len(sources) == 1, (wheels, sources)
+          print('PASS package build', wheels[0].name, sources[0].name)
+          PY
+  paper-reproduction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - name: Install paper numerical dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      - name: Reproduce v1.0 numerical ledger and seven figures
+        run: python experiments/reproduce.py --all
+      - name: Upload generated figures and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-reproduction
+          path: |
+            outputs/paper_reproduction/reproduction_status.json
+            outputs/paper_reproduction/*.json
+            outputs/paper_reproduction/*.csv
+            outputs/paper_reproduction/png/*.png
+          if-no-files-found: ignore

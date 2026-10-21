@@ -1,0 +1,40 @@
+{
+  "parent": "A_source_seed0_step16.pt",
+  "parent_step": 16,
+  "seed": 0,
+  "arm": "K",
+  "optimizer_restored": true,
+  "rng_restored": true,
+  "repeat_decode_identical": true,
+  "no_actor_update_identical": true,
+  "anchor_hashes_match_f2": true,
+  "label_origin": "none",
+  "rm_steps": 0,
+  "label_count": 0,
+  "movement": {
+    "mode": "none",
+    "alpha": null,
+    "per_event_rms": 0.0,
+    "proposal_rms": 0.0,
+    "applied": false,
+    "status": "UNCHANGED",
+    "weight_interpolation_stable": null,
+    "architecture": null
+  },
+  "parent_rouge_l": 0.16543998914773947,
+  "after_rouge_l": 0.16553864903451337,
+  "delta": 9.865988677390525e-05,
+  "reference_kl": 0.0006232644232113671,
+  "mean_tokens": 46.765625,
+  "train_kl_stopped": 0,
+  "human_holdout": {
+    "accuracy": 0.5778894472361809,
+    "nll": 0.6834253591733362,
+    "brier": 0.24438972603133194,
+    "ece": 0.043805623189288774,
+    "heldout_n": 995
+  },
+  "fit_seconds": 1.7220154404640198e-06,
+  "evaluator": "rouge_l_vs_dataset_completion",
+  "guarantee_type": "empirical_proxy"
+}

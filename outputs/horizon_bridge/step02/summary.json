@@ -1,0 +1,529 @@
+{
+  "status": "PASS",
+  "command": "python experiments/bridge/02_preference_feedback.py --out outputs/horizon_bridge/step02",
+  "frozen_trajectory": {
+    "phi": "0.04 t",
+    "c": "0.12 t",
+    "delta_star_informative": 0.0
+  },
+  "sensitivity": 0.816496580927726,
+  "feedback_arrival": 4.0,
+  "true_gain_at_T15": 1.0,
+  "negative_controls": {
+    "eta0_zero_gain_at_0_5_15": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "rho_equal_v_source_gain_at_0_5_15": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "either_recreates_original_loss": false
+  },
+  "rows": [
+    {
+      "name": "source_only",
+      "labels": 0,
+      "true_delta": 0.0,
+      "delta_hat": null,
+      "interval": [
+        -1.0,
+        1.0
+      ],
+      "terminal_certificate": -0.19999999999999973,
+      "path_minimum_feedback_at_4": -0.19999999999999973,
+      "first_strict_loss": 5.025,
+      "exact_probability_terminal_certificate_meets_gamma": 0.0
+    },
+    {
+      "name": "source_comparisons_no_delta_sensitivity",
+      "labels": 1200,
+      "true_delta": 0.0,
+      "delta_hat": null,
+      "interval": [
+        -1.0,
+        1.0
+      ],
+      "terminal_certificate": -0.19999999999999973,
+      "path_minimum_feedback_at_4": -0.19999999999999973,
+      "first_strict_loss": 5.025,
+      "exact_probability_terminal_certificate_meets_gamma": 0.0,
+      "note": "q=0 leaves the likelihood flat on delta, so the source set [-1,1] is unchanged."
+    },
+    {
+      "name": "informative",
+      "labels": 64,
+      "true_delta": 0.0,
+      "delta_hat": 0.0,
+      "interval": [
+        -0.8660317170883104,
+        0.8660317170883104
+      ],
+      "terminal_certificate": -0.03923806050597234,
+      "path_minimum_feedback_at_4": -0.03923806050597234,
+      "first_strict_loss": 5.775,
+      "exact_probability_terminal_certificate_meets_gamma": 0.051710938879906826,
+      "exact_probability_one_sided_test_certifies": 0.0843214557198517
+    },
+    {
+      "name": "informative",
+      "labels": 256,
+      "true_delta": 0.0,
+      "delta_hat": 0.0,
+      "interval": [
+        -0.41989716734169685,
+        0.41989716734169696
+      ],
+      "terminal_certificate": 0.49612339918996373,
+      "path_minimum_feedback_at_4": 0.49612339918996373,
+      "first_strict_loss": 11.925,
+      "exact_probability_terminal_certificate_meets_gamma": 0.286930688297277,
+      "exact_probability_one_sided_test_certifies": 0.3773653740444965
+    },
+    {
+      "name": "informative",
+      "labels": 1200,
+      "true_delta": 0.0,
+      "delta_hat": 0.0,
+      "interval": [
+        -0.19245962944052974,
+        0.19245962944053016
+      ],
+      "terminal_certificate": 0.7690484446713639,
+      "path_minimum_feedback_at_4": 0.682,
+      "first_strict_loss": null,
+      "exact_probability_terminal_certificate_meets_gamma": 0.9768292399820393,
+      "exact_probability_one_sided_test_certifies": 0.9869058375789046
+    },
+    {
+      "name": "fixed_reference_600_of_1200",
+      "labels": 1200,
+      "true_delta": 0.0,
+      "delta_hat": 0.0,
+      "interval": [
+        -0.19245962944052974,
+        0.19245962944053016
+      ],
+      "terminal_certificate": 0.7690484446713639,
+      "path_minimum_feedback_at_4": 0.682,
+      "first_strict_loss": null,
+      "exact_probability_terminal_certificate_meets_gamma": null,
+      "note": "Deterministic published count, not a random draw."
+    },
+    {
+      "name": "infeasible_true_delta",
+      "labels": 1200,
+      "true_delta": 0.4,
+      "delta_hat": 0.3995059480716411,
+      "interval": [
+        0.20440945918888367,
+        0.5997710261099157
+      ],
+      "terminal_certificate": 0.2802747686681013,
+      "path_minimum_feedback_at_4": 0.2802747686681013,
+      "first_strict_loss": 8.35,
+      "exact_probability_terminal_certificate_meets_gamma": 0.00013250603963312855,
+      "exact_probability_one_sided_test_certifies": 0.0003185996469858179
+    }
+  ],
+  "informative_exact": {
+    "64": {
+      "win_probability": 0.5,
+      "median_successes": 32,
+      "median_delta_hat": 0.0,
+      "median_interval": [
+        -0.8660317170883104,
+        0.8660317170883104
+      ],
+      "median_terminal_certificate": -0.03923806050597234,
+      "exact_probability_terminal_certificate_meets_gamma": 0.051710938879906826,
+      "exact_probability_one_sided_test_certifies": 0.0843214557198517,
+      "exact_probability_empty_confidence_set": 5.56267224231974e-10,
+      "mean_terminal_certificate": 0.05126920570179123,
+      "mean_upper_endpoint": 0.7906089952485076
+    },
+    "256": {
+      "win_probability": 0.5,
+      "median_successes": 128,
+      "median_delta_hat": 0.0,
+      "median_interval": [
+        -0.41989716734169685,
+        0.41989716734169696
+      ],
+      "median_terminal_certificate": 0.49612339918996373,
+      "exact_probability_terminal_certificate_meets_gamma": 0.286930688297277,
+      "exact_probability_one_sided_test_certifies": 0.3773653740444965,
+      "exact_probability_empty_confidence_set": 3.650789145282023e-20,
+      "mean_terminal_certificate": 0.4940432261304946,
+      "mean_upper_endpoint": 0.4216306448912547
+    },
+    "1200": {
+      "win_probability": 0.5,
+      "median_successes": 600,
+      "median_delta_hat": 0.0,
+      "median_interval": [
+        -0.19245962944052974,
+        0.19245962944053016
+      ],
+      "median_terminal_certificate": 0.7690484446713639,
+      "exact_probability_terminal_certificate_meets_gamma": 0.9768292399820393,
+      "exact_probability_one_sided_test_certifies": 0.9869058375789046,
+      "exact_probability_empty_confidence_set": 7.957261589417372e-61,
+      "mean_terminal_certificate": 0.7688534994443554,
+      "mean_upper_endpoint": 0.19262208379637052
+    }
+  },
+  "infeasible_exact": {
+    "win_probability": 0.5809315422845895,
+    "median_successes": 697,
+    "median_delta_hat": 0.3995059480716411,
+    "median_interval": [
+      0.20440945918888367,
+      0.5997710261099157
+    ],
+    "median_terminal_certificate": 0.2802747686681013,
+    "exact_probability_terminal_certificate_meets_gamma": 0.00013250603963312855,
+    "exact_probability_one_sided_test_certifies": 0.0003185996469858179,
+    "exact_probability_empty_confidence_set": 3.1893341818858633e-28,
+    "mean_terminal_certificate": 0.2790149945864121,
+    "mean_upper_endpoint": 0.6008208378446568
+  },
+  "smoke_seeds": [
+    {
+      "labels": 64,
+      "seed": 0,
+      "wins": 33,
+      "delta_hat": 0.07657148657046013,
+      "interval": [
+        -0.7805018773134494,
+        0.9536396670501731
+      ],
+      "terminal_certificate": -0.14436760046020747
+    },
+    {
+      "labels": 64,
+      "seed": 1,
+      "wins": 28,
+      "delta_hat": -0.3077960571437491,
+      "interval": [
+        -0.9999999999999999,
+        0.5337689184704624
+      ],
+      "terminal_certificate": 0.35947729783544524
+    },
+    {
+      "labels": 64,
+      "seed": 2,
+      "wins": 34,
+      "delta_hat": 0.15329291742017118,
+      "interval": [
+        -0.6967752513795926,
+        1.0000000000000002
+      ],
+      "terminal_certificate": -0.19999999999999996
+    },
+    {
+      "labels": 64,
+      "seed": 3,
+      "wins": 32,
+      "delta_hat": 0.0,
+      "interval": [
+        -0.8660317170883104,
+        0.8660317170883104
+      ],
+      "terminal_certificate": -0.03923806050597234
+    },
+    {
+      "labels": 64,
+      "seed": 4,
+      "wins": 40,
+      "delta_hat": 0.6256310628828066,
+      "interval": [
+        -0.2198801896596663,
+        1.0000000000000002
+      ],
+      "terminal_certificate": -0.19999999999999996
+    },
+    {
+      "labels": 64,
+      "seed": 5,
+      "wins": 29,
+      "delta_hat": -0.23031600608696914,
+      "interval": [
+        -0.9999999999999999,
+        0.6146053658103543
+      ],
+      "terminal_certificate": 0.262473561027575
+    },
+    {
+      "labels": 64,
+      "seed": 6,
+      "wins": 30,
+      "delta_hat": -0.15329291742017118,
+      "interval": [
+        -0.9999999999999999,
+        0.6967752513795923
+      ],
+      "terminal_certificate": 0.1638696983444894
+    },
+    {
+      "labels": 64,
+      "seed": 7,
+      "wins": 37,
+      "delta_hat": 0.38589389594490586,
+      "interval": [
+        -0.45406147287354737,
+        1.0000000000000002
+      ],
+      "terminal_certificate": -0.19999999999999996
+    },
+    {
+      "labels": 64,
+      "seed": 8,
+      "wins": 31,
+      "delta_hat": -0.07657148657046013,
+      "interval": [
+        -0.9536396670501731,
+        0.7805018773134496
+      ],
+      "terminal_certificate": 0.06339774722386071
+    },
+    {
+      "labels": 64,
+      "seed": 9,
+      "wins": 25,
+      "delta_hat": -0.5446266789705124,
+      "interval": [
+        -0.9999999999999999,
+        0.297289206606208
+      ],
+      "terminal_certificate": 0.6432529520725505
+    },
+    {
+      "labels": 256,
+      "seed": 0,
+      "wins": 117,
+      "delta_hat": -0.21102353929904227,
+      "interval": [
+        -0.6405473131056122,
+        0.2058119053193021
+      ],
+      "terminal_certificate": 0.7530257136168376
+    },
+    {
+      "labels": 256,
+      "seed": 1,
+      "wins": 127,
+      "delta_hat": -0.01913702796566144,
+      "interval": [
+        -0.4396290501589443,
+        0.4002191061511936
+      ],
+      "terminal_certificate": 0.5197370726185677
+    },
+    {
+      "labels": 256,
+      "seed": 2,
+      "wins": 130,
+      "delta_hat": 0.03827639237459441,
+      "interval": [
+        -0.38059211675825394,
+        0.45941754744297963
+      ],
+      "terminal_certificate": 0.4486989430684246
+    },
+    {
+      "labels": 256,
+      "seed": 3,
+      "wins": 127,
+      "delta_hat": -0.01913702796566144,
+      "interval": [
+        -0.4396290501589443,
+        0.4002191061511936
+      ],
+      "terminal_certificate": 0.5197370726185677
+    },
+    {
+      "labels": 256,
+      "seed": 4,
+      "wins": 133,
+      "delta_hat": 0.09573190467071313,
+      "interval": [
+        -0.32199067395760755,
+        0.5191513550589673
+      ],
+      "terminal_certificate": 0.3770183739292394
+    },
+    {
+      "labels": 256,
+      "seed": 5,
+      "wins": 137,
+      "delta_hat": 0.1725144183170362,
+      "interval": [
+        -0.24441012166315507,
+        0.5997671147570168
+      ],
+      "terminal_certificate": 0.28027946229157996
+    },
+    {
+      "labels": 256,
+      "seed": 6,
+      "wins": 137,
+      "delta_hat": 0.1725144183170362,
+      "interval": [
+        -0.24441012166315507,
+        0.5997671147570168
+      ],
+      "terminal_certificate": 0.28027946229157996
+    },
+    {
+      "labels": 256,
+      "seed": 7,
+      "wins": 131,
+      "delta_hat": 0.057420431382064076,
+      "interval": [
+        -0.3610134898277367,
+        0.4792654976506152
+      ],
+      "terminal_certificate": 0.4248814028192619
+    },
+    {
+      "labels": 256,
+      "seed": 8,
+      "wins": 121,
+      "delta_hat": -0.13409025267110042,
+      "interval": [
+        -0.5593103476485455,
+        0.28312970313941926
+      ],
+      "terminal_certificate": 0.660244356232697
+    },
+    {
+      "labels": 256,
+      "seed": 9,
+      "wins": 122,
+      "delta_hat": -0.11490403929316562,
+      "interval": [
+        -0.5391951920896723,
+        0.30254124729353554
+      ],
+      "terminal_certificate": 0.6369505032477574
+    },
+    {
+      "labels": 1200,
+      "seed": 0,
+      "wins": 622,
+      "delta_hat": 0.08985490665918179,
+      "interval": [
+        -0.102309386981322,
+        0.28313343852148554
+      ],
+      "terminal_certificate": 0.6602398737742174
+    },
+    {
+      "labels": 1200,
+      "seed": 1,
+      "wins": 592,
+      "delta_hat": -0.032661798842880736,
+      "interval": [
+        -0.2253581149654356,
+        0.15963029357389924
+      ],
+      "terminal_certificate": 0.8084436477113209
+    },
+    {
+      "labels": 1200,
+      "seed": 2,
+      "wins": 603,
+      "delta_hat": 0.012247550777519203,
+      "interval": [
+        -0.18014117141979635,
+        0.20478781011859543
+      ],
+      "terminal_certificate": 0.7542546278576856
+    },
+    {
+      "labels": 1200,
+      "seed": 3,
+      "wins": 596,
+      "delta_hat": -0.01633017354991903,
+      "interval": [
+        -0.208899474251729,
+        0.17603706969584687
+      ],
+      "terminal_certificate": 0.7887555163649838
+    },
+    {
+      "labels": 1200,
+      "seed": 4,
+      "wins": 635,
+      "delta_hat": 0.14304930415451364,
+      "interval": [
+        -0.049184265605927424,
+        0.33706292425588746
+      ],
+      "terminal_certificate": 0.5955244908929351
+    },
+    {
+      "labels": 1200,
+      "seed": 5,
+      "wins": 616,
+      "delta_hat": 0.0653352162781618,
+      "interval": [
+        -0.12685812834611468,
+        0.258337879546375
+      ],
+      "terminal_certificate": 0.68999454454435
+    },
+    {
+      "labels": 1200,
+      "seed": 6,
+      "wins": 615,
+      "delta_hat": 0.0612500061149527,
+      "interval": [
+        -0.13095192873725145,
+        0.25421054523013037
+      ],
+      "terminal_certificate": 0.6949473457238436
+    },
+    {
+      "labels": 1200,
+      "seed": 7,
+      "wins": 600,
+      "delta_hat": 0.0,
+      "interval": [
+        -0.19245962944052974,
+        0.19245962944053016
+      ],
+      "terminal_certificate": 0.7690484446713639
+    },
+    {
+      "labels": 1200,
+      "seed": 8,
+      "wins": 581,
+      "delta_hat": -0.07759311834557792,
+      "interval": [
+        -0.2707287516890259,
+        0.11458088260717106
+      ],
+      "terminal_certificate": 0.8625029408713948
+    },
+    {
+      "labels": 1200,
+      "seed": 9,
+      "wins": 614,
+      "delta_hat": 0.057165136585258514,
+      "interval": [
+        -0.13504646011335164,
+        0.25008464873683894
+      ],
+      "terminal_certificate": 0.6998984215157933
+    }
+  ],
+  "scope": "Information on a frozen trajectory. No policy or phi update.",
+  "source_sha": "a6d00ff3ae4feb428984fe6b77e4994f343d7b8c",
+  "runtime_seconds": 0.017257198691368103,
+  "max_rss_kib": 99284
+}

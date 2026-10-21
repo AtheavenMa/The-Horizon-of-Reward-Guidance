@@ -1,0 +1,130 @@
+[
+  {
+    "final_true_return": 32.917115494531146,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/normal/seed1",
+    "mode": "normal",
+    "seed": 1,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 41.71699304314475,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/normal/seed2",
+    "mode": "normal",
+    "seed": 2,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 33.16712148312377,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/normal/seed3",
+    "mode": "normal",
+    "seed": 3,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 24.939962413113403,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/extra_updates/seed1",
+    "mode": "extra_updates",
+    "seed": 1,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 45.25375907012126,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/extra_updates/seed2",
+    "mode": "extra_updates",
+    "seed": 2,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 18.286275467557864,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/extra_updates/seed3",
+    "mode": "extra_updates",
+    "seed": 3,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 28.26033801488436,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/diagnosis/seed1",
+    "mode": "diagnosis",
+    "seed": 1,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 35.00877034037214,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/diagnosis/seed2",
+    "mode": "diagnosis",
+    "seed": 2,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 27.571960800565897,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/diagnosis/seed3",
+    "mode": "diagnosis",
+    "seed": 3,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 5.859828170418106,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/cheetah_run/normal/seed1",
+    "mode": "normal",
+    "seed": 1,
+    "domain": "cheetah"
+  },
+  {
+    "final_true_return": 4.809316539099477,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/cheetah_run/diagnosis/seed1",
+    "mode": "diagnosis",
+    "seed": 1,
+    "domain": "cheetah"
+  },
+  {
+    "final_true_return": 23.64865159461626,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/cheetah_run/normal/seed2",
+    "mode": "normal",
+    "seed": 2,
+    "domain": "cheetah"
+  },
+  {
+    "final_true_return": 11.347333725156346,
+    "pairs": 937,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/cheetah_run/diagnosis/seed2",
+    "mode": "diagnosis",
+    "seed": 2,
+    "domain": "cheetah"
+  },
+  {
+    "final_true_return": 31.216069679178077,
+    "pairs": 1873,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/extra_labels/seed1",
+    "mode": "extra_labels",
+    "seed": 1,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 24.986153753752443,
+    "pairs": 1873,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/extra_labels/seed2",
+    "mode": "extra_labels",
+    "seed": 2,
+    "domain": "walker"
+  },
+  {
+    "final_true_return": 22.1596519083241,
+    "pairs": 1873,
+    "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_real/E4/walker_walk/extra_labels/seed3",
+    "mode": "extra_labels",
+    "seed": 3,
+    "domain": "walker"
+  }
+]

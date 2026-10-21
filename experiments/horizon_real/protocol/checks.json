@@ -1,0 +1,20 @@
+{
+  "pytest_passed": true,
+  "reproduction_reference_unchanged": true,
+  "reproduction_note": "experiments/reproduce.py --all passed the figure suite and failed one inherited numeric field: adaptive_BTL.maximum_error_radius_ratio 0.46907304790731597 versus reference 0.4263795829396613. results/reference was not edited.",
+  "restore_hash_match": true,
+  "restore_hash": "748047686ffecb42c953ce02b2f4cc638d39923c9f708f69a530ddc81d019a63",
+  "zero_update_gain_norm": 0.0,
+  "zero_update_parameter_step_norm": 0.0,
+  "zero_update_within_tolerance": true,
+  "teacher_weight_absent_from_checkpoint": true,
+  "checkpoint_keys": [
+    "diffs",
+    "labels",
+    "learned_delta",
+    "phi",
+    "policy_json",
+    "round",
+    "seed"
+  ]
+}

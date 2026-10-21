@@ -1,0 +1,12 @@
+name,value
+T0,1
+ordinary_pg_contact,1
+frozen_policy_labels,1
+population_vs_sampled,1
+public_manifest,1
+empirical_only,1
+censored,1
+invalid_manifest,1
+teacher_blind_query,1
+fork_and_suggestion,1
+reference_untouched,1

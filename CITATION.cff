@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: >-
+  If you use the research software, please cite this software artifact and
+  the corresponding manuscript when its authoritative public citation is available.
+  These metadata describe software stewardship; they do not establish the
+  manuscript's complete author list or publication status.
+type: software
+title: "The Limits of Reward Guidance under Finite Adaptation: Research Code"
+version: 0.2.0
+authors:
+  - family-names: "Ma"
+    given-names: "Haotian"
+repository-code: "https://github.com/AtheavenMa/The-Limits-of-Reward-Guidance-under-Finite-Adaptation"
+license: MIT
+keywords:
+  - preference learning
+  - reward guidance
+  - dynamic feasibility
+  - finite adaptation
+  - certification

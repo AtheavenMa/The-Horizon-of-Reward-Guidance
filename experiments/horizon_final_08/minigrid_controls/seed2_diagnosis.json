@@ -1,0 +1,38 @@
+{
+  "status": "short_diagnostic",
+  "note": "WP07 extra-fit seed 2 reached 0% with weight [0.230, 0.770] and a reinitialized optimizer. This probe restores the optimizer and compares that archived weight with a refit on 8192 steps, not a full 92160-step seed.",
+  "rows": [
+    {
+      "name": "archived_seed2_weight",
+      "weight": [
+        0.23,
+        0.77
+      ],
+      "fork_env_steps": 8192,
+      "final": {
+        "episodes": 100,
+        "goal_success": 0.0,
+        "mean_steps": 256.0,
+        "true_utility": -0.5,
+        "success_count": 0
+      },
+      "optimizer_restored": true
+    },
+    {
+      "name": "refit_same_labels",
+      "weight": [
+        0.6698911864923512,
+        0.33010881350764876
+      ],
+      "fork_env_steps": 8192,
+      "final": {
+        "episodes": 100,
+        "goal_success": 0.0,
+        "mean_steps": 256.0,
+        "true_utility": -0.5,
+        "success_count": 0
+      },
+      "optimizer_restored": true
+    }
+  ]
+}

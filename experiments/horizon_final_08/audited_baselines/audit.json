@@ -1,0 +1,136 @@
+{
+  "rows": [
+    {
+      "object": "Scalar horizon / ordinary PG",
+      "expected": "T0=5 and contact about 0.0078358743",
+      "measured": {
+        "T0": 5.000000000000001,
+        "contact": 0.007835874324472896
+      },
+      "status": "PASS",
+      "path": "horizon.support_horizon and experiments.strengthening_checks.ordinary_pg_check",
+      "restriction": "Analytic scalar model and the stated ordinary-PG box only."
+    },
+    {
+      "object": "16-outcome coupled bound",
+      "expected": "outward-rounded all-controls upper or an explicit downgrade",
+      "measured": {
+        "historical_upper": 0.05993753,
+        "historical_t": 0.012
+      },
+      "status": "PARTIAL",
+      "path": "work_plan/04_Reachability_to_Small_MDP.md",
+      "restriction": "COMPUTATIONAL EVIDENCE. This audit did not independently verify outward rounding, so the upper is not a computer-checked proof."
+    },
+    {
+      "object": "64-outcome zero-regression",
+      "expected": "first coordinates match the 16-outcome gradient when kappa2=0",
+      "measured": {
+        "status": "PASS",
+        "check": "kappa2=0 gradient matches the 16-outcome gradient on the first coordinates"
+      },
+      "status": "PASS",
+      "path": "experiments/bridge/13_three_stage_mdp.py self_check",
+      "restriction": "Checks the zero-extension gradient identity, not a new horizon."
+    },
+    {
+      "object": "Reference files and hashes",
+      "expected": "tracked reference files unchanged; a missing status file is not a pass",
+      "measured": {
+        "before": "5716b94964df4af180a756c08305dade0fde2a24bb8171d79ca0440cee8d5dcc",
+        "after": "5716b94964df4af180a756c08305dade0fde2a24bb8171d79ca0440cee8d5dcc",
+        "reproduction_status_json": "ABSENT"
+      },
+      "status": "PASS",
+      "path": "results/reference",
+      "restriction": "reproduction_status.json is absent. The hash is of the files that are present. Absence is not a pass of that missing file."
+    },
+    {
+      "object": "Human TL;DR label provenance and split",
+      "expected": "train/valid documents disjoint and the final holdout is not the inspected 512",
+      "measured": {
+        "dev_count": 512,
+        "final_count": 995,
+        "dev_docs": 421,
+        "final_docs": 662,
+        "document_overlap": 248,
+        "note": "moved 541 final rows because their documents also appear in the 512 development rows"
+      },
+      "status": "PASS",
+      "path": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_final_08/audited_baselines/human_split.json",
+      "restriction": "Historical human annotations. The original 512 are development only."
+    },
+    {
+      "object": "Pythia WP07 reward movement",
+      "expected": "b=.05 violation recorded as INVALID",
+      "measured": {
+        "present": true,
+        "rows": [
+          {
+            "seed": 0,
+            "anchor_rms": 1.4600081753504435,
+            "exceeds_b": true
+          },
+          {
+            "seed": 1,
+            "anchor_rms": 1.3537794773878484,
+            "exceeds_b": true
+          }
+        ],
+        "status": "INVALID for bounded-budget claim",
+        "reason": "WP07 computed anchor RMS only at the end. 1.4600 and 1.3538 exceed b=0.05 and were not enforced per update."
+      },
+      "status": "FAIL",
+      "path": "experiments/horizon_scale_07/pythia_1b/main.json",
+      "restriction": "NOT A VALID BOUNDED CLAIM. Preserved as history."
+    },
+    {
+      "object": "RewardBench 2 old 502 rows",
+      "expected": "historical scoring rejected as unofficial",
+      "measured": {
+        "present": true,
+        "rm_macro": 0.2090686274509804,
+        "judge_macro": 0.11151960784313725,
+        "status": "unofficial",
+        "reason": "WP07 used every-chosen-beats-every-rejected and exact index-set matching. Those macros are not official RewardBench 2 scores."
+      },
+      "status": "FAIL",
+      "path": "experiments/horizon_scale_07/rb2_4b/summary.json",
+      "restriction": "Do not cite 0.2091 or 0.1115 as official RewardBench 2."
+    },
+    {
+      "object": "Public audit CLI claims",
+      "expected": "stored certificates without probabilities are unverified",
+      "measured": {
+        "frozen_policy_label_check": true
+      },
+      "status": "PASS",
+      "path": "experiments/guidance_audit/finite.py",
+      "restriction": "A prefilled certificate is REPORTED_UNVERIFIED unless outcome probabilities are supplied."
+    }
+  ],
+  "pythia_pools": {
+    "overlap_train_eval": 0,
+    "overlap_train_anchor": 0,
+    "overlap_eval_anchor": 0,
+    "note": "WP07's 128 validation anchors were inspected after training, so F2 does not use them as the final policy set or the movement set."
+  },
+  "dev_choices": {
+    "b": 0.05,
+    "epsilon": 0.0001,
+    "kl_cap_nats_per_token": 0.1,
+    "policy_updates": 64,
+    "minimum_full_seeds": 2,
+    "candidate_optimizer_steps": 64,
+    "fork_policy_updates": 8,
+    "fork_rm_steps_M": 32,
+    "temperature": 0.7,
+    "preferred_max_new_tokens": 64,
+    "train_prompts_per_update": 8,
+    "source_rm_rule": "highest F1 development accuracy, then more training pairs, then lower seed"
+  },
+  "reference_hash_unchanged": true,
+  "runtime_seconds": 0.5910047283396125,
+  "source_sha": "d5377ae30d16e30c6e40b5f0027bd149dae18ed2",
+  "status": "complete"
+}

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reward Guidance in Five Minutes</title>
+<meta name="description" content="A seven-slide, five-minute interactive tour of the limits of preference-based reward guidance under finite reward adaptation.">
+
+<!-- === FONTS === Signal system: Source Serif 4 (voice), DM Sans (substance), IBM Plex Mono (metadata) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500;1,8..60,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ===========================================
+   THEME TOKENS (Signal)
+   Gold is the principal presentation accent. Red and teal are reserved for
+   the data distinction between a constrained reward path and pointwise feasibility.
+   =========================================== */
+:root {
+    --navy: #1C2644; --navy-alt: #232F55; --cream: #F0ECE3; --cream-alt: #E6E0D4;
+    --text-warm: #E2DCD0; --text-muted-dark: #8A96A8; --text-hint-dark: #5E6A80;
+    --ink: #1A2030; --text-muted-light: #5A6270; --text-hint-light: #8E949C;
+    --gold: #C8A870; --gold-deep: #9C7C43;
+    --border-dark: #2E3D5C; --border-light: #CAC4B4;
+    --pos-light: #B5462F; --neg-light: #2F6F73;
+    --pos-dark: #E0735A;  --neg-dark: #58A9AB;
+    --serif: 'Source Serif 4', 'Noto Serif SC', Georgia, serif;
+    --sans: 'DM Sans', 'Noto Sans SC', system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+    --pad-x: 144px; --pad-y: 56px; --gap-md: 24px; --gap-sm: 12px;
+    --ease-slide: cubic-bezier(0.77, 0, 0.175, 1); --ease-in: cubic-bezier(0.16, 1, 0.3, 1);
+    --stage-bg: #10162a;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --stage-bg: #0b1020; } }
+:root[data-theme="dark"] { --stage-bg: #0b1020; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+#editToggle, #editHotzone { display: none !important; }
+
+/* ===========================================
+   FIXED 16:9 STAGE: MANDATORY BASE STYLES (frontend-slides viewport-base.css, verbatim)
+   =========================================== */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--stage-bg, #000);
+}
+.deck-viewport {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background: var(--stage-bg, #000);
+}
+.deck-stage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    transform-origin: 0 0;
+    background: var(--slide-bg, #fff);
+}
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    background: var(--slide-bg, #fff);
+}
+.slide.active,
+.slide.visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+}
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+.deck-controls {
+    position: fixed;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+@media print {
+    html,
+    body {
+        width: 1920px;
+        height: auto;
+        overflow: visible;
+        background: #fff;
+    }
+    .deck-viewport {
+        position: static;
+        overflow: visible;
+        background: #fff;
+    }
+    .deck-stage {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none !important;
+        background: none;
+    }
+    .slide {
+        position: relative;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        width: 1920px;
+        height: 1080px;
+        break-after: page;
+        page-break-after: always;
+    }
+    .slide:last-child {
+        break-after: auto;
+        page-break-after: auto;
+    }
+    .deck-controls {
+        display: none !important;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.2s !important;
+    }
+}
+
+/* ===========================================
+   SURFACES + FRAME
+   =========================================== */
+.slide { transition: opacity 0.45s var(--ease-slide), visibility 0.45s; }
+.slide.dark  { --slide-bg: var(--navy);  background: var(--navy);  color: var(--text-warm); }
+.slide.light { --slide-bg: var(--cream); background: var(--cream); color: var(--ink); }
+.slide.dark::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+}
+.frame { position: relative; height: 100%; display: grid; grid-template-rows: auto 1fr auto; padding: var(--pad-y) var(--pad-x); }
+.chrome, .foot { display: flex; justify-content: space-between; align-items: center; font: 500 14px/1.4 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; }
+.chrome { padding-bottom: var(--gap-sm); margin-bottom: 22px; border-bottom: 1px solid; }
+.foot   { padding-top: var(--gap-sm); margin-top: 18px; border-top: 1px solid; letter-spacing: 0.12em; }
+.dark  .chrome, .dark  .foot { border-color: var(--border-dark);  color: var(--text-muted-dark); }
+.light .chrome, .light .foot { border-color: var(--border-light); color: var(--text-muted-light); }
+.nc { text-transform: none; letter-spacing: 0.02em; }
+.chr-right { display: flex; align-items: center; gap: 22px; }
+
+/* === ROADMAP (chrome left) === */
+.road { display: flex; gap: 22px; }
+.road span { opacity: 0.45; }
+.road span.on { opacity: 1; color: var(--gold); }
+.light .road span.on { color: var(--gold-deep); }
+
+/* ===========================================
+   TYPOGRAPHY
+   =========================================== */
+.kicker { font: 500 15px/1.4 var(--mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 16px; }
+.light .kicker { color: var(--gold-deep); }
+.kicker::after { content: ""; width: 36px; height: 1px; background: var(--gold); }
+.h1 { font: 600 96px/1.06 var(--serif); letter-spacing: -0.01em; }
+.h2 { font: 600 50px/1.14 var(--serif); letter-spacing: -0.005em; margin-top: 16px; }
+.h1 em, .h2 em, .h3 em { font-style: italic; color: var(--gold); font-weight: 500; }
+.light .h2 em, .light .h3 em { color: var(--gold-deep); }
+.h3 { font: 500 30px/1.25 var(--serif); }
+.lead { font: 400 25px/1.5 var(--sans); margin-top: 16px; }
+.body { font: 400 20px/1.6 var(--sans); }
+.caption { font: 400 16px/1.5 var(--sans); }
+.dark  .lead, .dark .caption { color: var(--text-muted-dark); }
+.light .lead, .light .caption { color: var(--text-muted-light); }
+.lead em, .body em, .caption em { font-family: var(--serif); font-style: italic; color: var(--gold); }
+.light .lead em, .light .body em, .light .caption em { color: var(--gold-deep); }
+.lead b, .body b { font-weight: 500; }
+.dark .lead b, .dark .body b { color: var(--text-warm); }
+.light .lead b, .light .body b { color: var(--ink); }
+.label { font: 500 14px/1.4 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; }
+.dark  .label { color: var(--text-muted-dark); }
+.light .label { color: var(--text-muted-light); }
+.stat { font: 600 72px/1 var(--serif); letter-spacing: -0.02em; color: var(--gold); }
+.light .stat { color: var(--gold-deep); }
+.stat small { font: 500 20px/1 var(--mono); letter-spacing: 0.02em; margin-left: 10px; }
+.dark .stat small { color: var(--text-muted-dark); }
+.light .stat small { color: var(--text-muted-light); }
+.math { font-family: var(--serif); font-style: italic; }
+.math sub, .math sup { font-size: 0.66em; }
+.mono { font-family: var(--mono); }
+
+/* === ENTRANCE ANIMATION === */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s var(--ease-in), transform 0.7s var(--ease-in); }
+.slide.visible .reveal { opacity: 1; transform: none; }
+.slide.visible .d1 { transition-delay: 0.06s; } .slide.visible .d2 { transition-delay: 0.14s; }
+.slide.visible .d3 { transition-delay: 0.22s; } .slide.visible .d4 { transition-delay: 0.30s; }
+.slide.visible .d5 { transition-delay: 0.38s; }
+
+/* ===========================================
+   SHARED CONTROLS (toggles, chips, buttons, sliders)
+   =========================================== */
+.seg { display: inline-flex; border: 1px solid; }
+.dark .seg { border-color: var(--border-dark); } .light .seg { border-color: var(--border-light); }
+.seg button { font: 500 14px/1 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 18px; background: transparent; border: 0; border-right: 1px solid; cursor: pointer; }
+.dark .seg button { color: var(--text-muted-dark); border-color: var(--border-dark); }
+.light .seg button { color: var(--text-muted-light); border-color: var(--border-light); }
+.seg button:last-child { border-right: 0; }
+.dark .seg button[aria-pressed="true"] { background: var(--gold); color: var(--navy); }
+.light .seg button[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
+.chipset { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: 500 14px/1 var(--mono); letter-spacing: 0.06em; padding: 11px 14px; background: transparent; border: 1px solid; cursor: pointer; }
+.dark .chip { color: var(--text-warm); border-color: var(--border-dark); }
+.light .chip { color: var(--ink); border-color: var(--border-light); }
+.dark .chip[aria-pressed="true"] { border-color: var(--gold); color: var(--gold); box-shadow: inset 0 -3px 0 var(--gold); }
+.light .chip[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 -3px 0 var(--ink); }
+.btn { font: 500 14px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; padding: 14px 20px; border: 1px solid var(--gold); color: var(--gold); background: transparent; cursor: pointer; }
+.light .btn { border-color: var(--ink); color: var(--ink); }
+.btn.primary { background: var(--gold); color: var(--navy); }
+.light .btn.primary { background: var(--ink); color: var(--cream); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 26px; background: transparent; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { height: 2px; background: #56668C; }
+input[type=range]::-moz-range-track { height: 2px; background: #56668C; }
+.light input[type=range]::-webkit-slider-runnable-track { background: var(--border-light); }
+.light input[type=range]::-moz-range-track { background: var(--border-light); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); margin-top: -9px; border: 0; }
+input[type=range]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: var(--gold); border: 0; }
+.light input[type=range]::-webkit-slider-thumb { background: var(--gold-deep); }
+.light input[type=range]::-moz-range-thumb { background: var(--gold-deep); }
+input[type=range]:disabled { opacity: 0.35; cursor: not-allowed; }
+.hair { border-top: 1px solid; }
+.dark .hair { border-color: var(--border-dark); } .light .hair { border-color: var(--border-light); }
+.sw { width: 16px; height: 12px; display: inline-block; vertical-align: middle; margin-right: 8px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+
+/* === DETAILS DRAWER (press D) === */
+.details-btn { font: 500 13px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; background: transparent; border: 1px solid; padding: 8px 12px; cursor: pointer; }
+.dark .details-btn { color: var(--gold); border-color: var(--gold); } .light .details-btn { color: var(--gold-deep); border-color: var(--gold-deep); }
+.drawer {
+    position: absolute; top: 0; right: 0; bottom: 0; width: 700px; z-index: 20; padding: 64px 64px 56px;
+    transform: translateX(102%); transition: transform 0.45s var(--ease-in); overflow: hidden; display: flex; flex-direction: column;
+}
+.dark .drawer { background: #161E38; border-left: 1px solid var(--border-dark); }
+.light .drawer { background: #E8E3D7; border-left: 1px solid var(--border-light); }
+.slide.drawer-open .drawer { transform: none; }
+.drawer .h3 { margin: 14px 0 10px; }
+.drawer .body { font-size: 18px; line-height: 1.55; }
+.drawer .body p + p { margin-top: 10px; }
+.drawer table { border-collapse: collapse; width: 100%; font: 400 16px/1.3 var(--mono); margin-top: 10px; }
+.drawer td, .drawer th { padding: 6px 8px; text-align: right; border-bottom: 1px solid; }
+.drawer th:first-child, .drawer td:first-child { text-align: left; }
+.dark .drawer td, .dark .drawer th { border-color: var(--border-dark); }
+.light .drawer td, .light .drawer th { border-color: var(--border-light); }
+.drawer th { font-weight: 500; letter-spacing: 0.06em; }
+.drawer .close { position: absolute; top: 22px; right: 26px; }
+.drawer .src { margin-top: auto; padding-top: 14px; font: 400 13px/1.45 var(--mono); letter-spacing: 0.02em; }
+.dark .drawer .src { color: var(--text-hint-dark); } .light .drawer .src { color: var(--text-hint-light); }
+
+/* ===========================================
+   SLIDE 0 — COVER
+   =========================================== */
+.cover { position: relative; height: 100%; padding: 104px var(--pad-x) 80px; display: flex; flex-direction: column; }
+.cover .h1 { margin-top: 30px; max-width: 1520px; }
+.cover .lead { margin-top: 30px; max-width: 1300px; font-size: 28px; }
+.route { margin-top: auto; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--border-dark); }
+.route > div { padding: 22px 22px 0 0; }
+.route .n { font: 600 44px/1 var(--serif); color: var(--gold); }
+.route .t { margin-top: 10px; font: 400 21px/1.35 var(--sans); color: var(--text-warm); }
+.byline { margin-top: 36px; display: flex; justify-content: space-between; font: 500 15px/1.4 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted-dark); }
+.byline b { color: var(--text-warm); font-weight: 500; }
+.keyhint { position: absolute; top: 48px; right: var(--pad-x); font: 500 13px/1.6 var(--mono); letter-spacing: 0.12em; color: var(--text-hint-dark); text-align: right; text-transform: uppercase; }
+.keyhint kbd { font-family: var(--mono); border: 1px solid var(--border-dark); padding: 1px 6px; color: var(--text-muted-dark); }
+
+/* ===========================================
+   PRESENTER NOTES (press N) / HELP (press ?) — outside the stage
+   =========================================== */
+aside.notes { display: none; }
+/* Talk track: every content element carries data-say="N"; the notes explain N in order.
+   Pressing N shows the notes panel AND these numbered badges on the slide. */
+[data-say] { position: relative; }
+body.track .slide.active [data-say]::after {
+    content: attr(data-say); position: absolute; top: -4px; left: -44px; z-index: 30;
+    width: 30px; height: 30px; border-radius: 50%; background: var(--gold); color: var(--navy);
+    font: 600 16px/30px var(--mono); text-align: center; letter-spacing: 0; text-transform: none;
+    box-shadow: 0 0 0 3px rgba(12,17,33,0.35); pointer-events: none;
+}
+#notesPanel ol.track { list-style: none; margin: 4px 0 0; }
+#notesPanel ol.track li { position: relative; padding-left: 38px; margin-top: 10px; }
+#notesPanel ol.track li::before { content: attr(data-for); position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%; background: var(--gold); color: var(--navy); font: 600 14px/26px var(--mono); text-align: center; }
+#notesPanel { position: fixed; top: 0; right: 0; bottom: 0; width: clamp(340px, 30vw, 620px); overflow: auto; z-index: 1002; background: #0C1121; color: #E2DCD0; border-left: 2px solid var(--gold); padding: 20px 24px 84px; font: 400 16px/1.55 var(--sans); display: none; }
+#notesPanel.show { display: block; }
+#notesPanel h4 { font: 500 12px/1.4 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin: 10px 0 4px; }
+#notesPanel p { max-width: none; }
+#notesPanel .zh { color: #B9C2D0; }
+#notesPanel .time { float: right; font: 500 12px/1 var(--mono); color: #8A96A8; letter-spacing: 0.1em; }
+#helpPanel { position: fixed; inset: 0; z-index: 1003; background: rgba(12,17,33,0.86); display: none; align-items: center; justify-content: center; }
+#helpPanel.show { display: flex; }
+#helpPanel .card { background: var(--cream); color: var(--ink); padding: 26px 34px; font: 400 15px/1.8 var(--mono); min-width: 360px; }
+#helpPanel kbd { display: inline-block; min-width: 64px; font-weight: 500; }
+
+/* === DECK CONTROLS === */
+.deck-controls { left: auto; right: 18px; bottom: 18px; transform: none; transition: opacity 0.4s; display: flex; align-items: center; gap: 10px; font: 500 13px/1 var(--mono); letter-spacing: 0.14em; color: #b9bfcc; background: rgba(16,22,42,0.78); padding: 8px 10px; }
+.deck-controls button { background: transparent; border: 1px solid #3a4666; color: #d9d4c8; min-width: 34px; height: 30px; cursor: pointer; font: 500 13px/1 var(--mono); padding: 0 8px; }
+.deck-controls.idle { opacity: 0; pointer-events: none; }
+body.notes-on .deck-controls { bottom: 18px; right: 18px; }
+.progress { position: fixed; left: 0; top: 0; height: 3px; background: var(--gold); z-index: 1001; transition: width 0.4s var(--ease-slide); }
+.rotate-hint { display: none; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1001; font: 500 12px/1.3 var(--mono); letter-spacing: 0.1em; color: #d9d4c8; background: rgba(16,22,42,0.85); padding: 8px 12px; text-align: center; }
+@media (orientation: portrait) and (max-width: 820px) { .rotate-hint { display: block; } }
+
+/* === INLINE EDITING (press E) === */
+.edit-hotzone { position: fixed; top: 0; left: 0; width: 80px; height: 80px; z-index: 10000; cursor: pointer; }
+.edit-toggle { position: fixed; top: 16px; left: 16px; z-index: 10001; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; background: var(--gold); color: var(--navy); border: 0; font: 500 12px/1 var(--mono); letter-spacing: 0.14em; padding: 10px 12px; cursor: pointer; }
+.edit-toggle.show, .edit-toggle.active { opacity: 1; pointer-events: auto; }
+body.editing [data-editable] { outline: 1px dashed var(--gold); outline-offset: 4px; }
+
+/* ===========================================
+   MATH (native MathML), SECTION LINKS, BUTTON RULES (talk_v5)
+   =========================================== */
+math { font-family: "Cambria Math", "STIX Two Math", "Latin Modern Math", "STIX Math", math, serif; font-size: 1.04em; }
+.mline { margin: 8px 0; }
+.mline math { font-size: 1.12em; }
+.eq .mline { font-size: 26px; color: var(--text-warm); margin: 12px 0 4px; }
+.result .mline { font-size: 22px; color: var(--text-warm); margin-top: 4px; }
+.defs .mline { font-size: 22px; margin: 6px 0; }
+.dark .defs .mline { color: var(--text-warm); }
+.light .defs .mline, .light .blk .mline { color: var(--ink); }
+.blk .mline { font-size: 20px; margin: 10px 0 6px; }
+.p1-right .defs .mline { font-size: 21px; color: var(--ink); }
+.drawer .mline { font-size: 21px; margin: 10px 0; }
+.defs .caption { margin-top: 6px; }
+.sel-right .defs { border-bottom: 1px solid var(--border-dark); padding-bottom: 14px; margin-bottom: 18px; }
+#ruleBox { margin-bottom: 4px; }
+/* Only things that can be clicked look like buttons. */
+.pipe .box, .pipe .box.hl { border: 0; padding: 6px 2px; min-width: 0; }
+.pipe .box.hl { color: var(--ink); font-weight: 600; }
+.pipe .arr { padding: 0 14px; }
+.btns.big { margin: 4px 0 18px; padding-top: 0; gap: 16px; }
+.btns.big .btn { font-size: 19px; padding: 18px 34px; letter-spacing: 0.12em; }
+.acc-ctrl.btns.big { margin-top: 24px; }
+/* Section links: the chrome roadmap and the cover route jump to their slide. */
+.road { gap: 6px; }
+.road .nav { background: none; border: 0; padding: 4px 10px; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; opacity: 0.6; cursor: pointer; }
+.road .nav:first-child { padding-left: 0; }
+.road .nav:hover { opacity: 1; text-decoration: underline; text-underline-offset: 5px; }
+.road .nav.on { opacity: 1; color: var(--gold); }
+.light .road .nav.on { color: var(--gold-deep); }
+.route .ri { background: none; border: 0; text-align: left; padding: 22px 22px 0 0; font: 400 23px/1.35 var(--sans); color: var(--text-warm); cursor: pointer; }
+.route .ri:hover { color: var(--gold); text-decoration: underline; text-underline-offset: 6px; }
+.take .h3 { margin-top: 0; }
+.nb { white-space: nowrap; }
+.dash li::before { content: "•"; }
+
+
+/* Horizon tour additions, on top of the same Signal deck used for SAR and RSS. */
+:root { --hz-red:#E0735A; --hz-teal:#58A9AB; }
+.hz-content { display:flex; flex-direction:column; height:100%; min-height:0; }
+.hz-content > .h2 { max-width:1550px; margin-top:10px; font-size:56px; line-height:1.14; }
+.hz-flex { flex:1; min-height:0; display:flex; align-items:stretch; gap:64px; margin-top:40px; }
+.hz-two { display:grid; grid-template-columns:0.95fr 1.05fr; gap:72px; width:100%; }
+.hz-panel { border:1px solid var(--border-light); padding:34px 38px; position:relative; min-width:0; }
+.dark .hz-panel { border-color:var(--border-dark); }
+.hz-panel.deep { background:var(--navy-alt); }
+.hz-caption { font:400 19px/1.5 var(--sans); margin-top:18px; max-width:1130px; }
+.dark .hz-caption { color:var(--text-muted-dark); }
+.light .hz-caption { color:var(--text-muted-light); }
+.hz-step { display:grid; grid-template-columns:66px 1fr; gap:18px; padding:22px 0 28px; border-bottom:1px solid var(--border-light); }
+.hz-step:first-child {padding-top:8px}
+.hz-step:last-child {border-bottom:0}
+.hz-step > span { font:600 44px/1 var(--serif); color:var(--gold-deep); }
+.hz-step h3 {font:500 31px/1.25 var(--serif)}
+.hz-step p {font:400 21px/1.5 var(--sans); color:var(--text-muted-light); margin-top:10px}
+.hz-formula { font:500 43px/1.35 var(--serif); letter-spacing:0; margin:24px 0; }
+.hz-formula sub {font-size:0.65em}
+.hz-gridline {height:1px;background:var(--border-light);margin:20px 0}
+.dark .hz-gridline {background:var(--border-dark)}
+.hz-data {font:500 15px/1.5 var(--mono);letter-spacing:0.06em}
+.dark .hz-data {color:var(--text-muted-dark)}
+.light .hz-data {color:var(--text-muted-light)}
+.hz-metric {font:600 80px/1 var(--serif);letter-spacing:-.025em;color:var(--gold-deep)}
+.dark .hz-metric{color:var(--gold)}
+.hz-metric small{font:500 20px var(--mono)}
+.hz-pair {display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.hz-stat {padding:25px 0;border-top:1px solid var(--border-light)}
+.dark .hz-stat{border-color:var(--border-dark)}
+.hz-stat .h3{font-size:33px}
+.hz-controls {margin-top:28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hz-buttons {display:flex;gap:10px;flex-wrap:wrap}
+.hz-choices {display:flex; gap:12px; margin:25px 0;}
+.hz-button {font:500 16px/1 var(--mono);padding:15px 22px;border:1px solid var(--border-light);background:transparent;color:var(--ink);cursor:pointer}
+.dark .hz-button{border-color:var(--border-dark);color:var(--text-warm)}
+.hz-button[aria-pressed="true"]{background:var(--ink);color:var(--cream)}
+.dark .hz-button[aria-pressed="true"]{background:var(--gold);color:var(--navy)}
+.hz-button:focus-visible {outline:2px solid var(--gold)}
+.hz-range{width:100%;margin:22px 0 14px}
+.hz-svg {display:block;width:100%;max-height:none;overflow:visible}
+.hz-visual {padding:20px 18px 5px}
+.hz-legend{display:flex;gap:25px;flex-wrap:wrap;font:500 15px/1.6 var(--mono);margin-top:10px}
+.hz-legend span::before{content:"";display:inline-block;vertical-align:middle;width:26px;height:3px;margin-right:9px;background:var(--gold)}
+.hz-legend span.path::before{background:var(--hz-red)}
+.hz-legend span.pt::before{background:var(--hz-teal)}
+.hz-huge{font:600 83px/1.08 var(--serif);color:var(--gold);letter-spacing:-.01em}
+.light .hz-huge {color:var(--gold-deep)}
+.hz-lower {font:400 24px/1.5 var(--sans);max-width:530px}
+.hz-note{font:400 16px/1.55 var(--sans);margin-top:16px}
+.dark .hz-note{color:var(--text-muted-dark)}
+.light .hz-note{color:var(--text-muted-light)}
+.hz-linechart{margin-top:4px; width:100%;height:auto}
+.hz-feedback {display:grid;grid-template-columns:850px 1fr;gap:72px;flex:1;min-height:0}
+.hz-barline {display:grid;grid-template-columns:120px 1fr 145px;gap:18px;align-items:center;margin:21px 0}
+.hz-barline .name{font:500 21px var(--serif);white-space:nowrap}
+.hz-barline .track{height:15px;background:rgba(255,255,255,.09);position:relative}
+.hz-barline .fill{height:100%;background:var(--gold)}
+.hz-barline strong{font:600 34px/1 var(--serif)}
+.hz-feedback .hz-barline{grid-template-columns:210px 1fr 145px}
+.hz-survey {font:500 17px/1.5 var(--mono);color:var(--text-muted-dark)}
+.hz-tag{font:500 15px/1.35 var(--mono);text-transform:uppercase;letter-spacing:0.12em;color:var(--gold)}
+.light .hz-tag{color:var(--gold-deep)}
+.hz-take {display:grid;grid-template-columns:repeat(3,1fr);gap:46px;margin-top:45px}
+.hz-take > div {border-top:2px solid var(--gold);padding-top:25px}
+.hz-take .h3 {font-size:34px;line-height:1.25}
+.hz-take .body {font-size:22px;margin-top:18px;color:var(--text-muted-dark)}
+.hz-link{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:5px}
+.hz-subtitle {font:500 24px/1.6 var(--sans);margin:24px 0 0}
+.dark .hz-subtitle{color:var(--text-muted-dark)}
+.light .hz-subtitle{color:var(--text-muted-light)}
+.hz-figure-source {margin-top:auto;font:500 13px/1.5 var(--mono);letter-spacing:0.08em}
+.light .hz-figure-source{color:var(--text-muted-light)}
+.dark .hz-figure-source{color:var(--text-muted-dark)}
+.hz-no-wrap {white-space:nowrap}
+.hz-choice-card{flex:1;border:1px solid var(--border-dark);padding:24px 30px;cursor:pointer;background:transparent;color:inherit;text-align:left}
+.hz-choice-card[aria-pressed="true"]{border-color:var(--gold);box-shadow:inset 0 -4px 0 var(--gold)}
+.hz-choice-card .hz-metric{font-size:48px}
+.hz-cover-kicker{font:500 17px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.hz-cover .h1{font-size:82px;max-width:1550px;line-height:1.08;margin-top:34px}
+.hz-cover .lead{font-size:29px;max-width:1470px;margin-top:34px}
+.hz-cover .route{margin-top:auto}
+.hz-cover .route .ri{font-size:21px}
+.hz-cover .byline{margin-top:26px}
+.hz-footer {display:flex;justify-content:space-between;align-items:center}
+.hz-control-title{font:500 18px/1.5 var(--mono);color:var(--text-muted-light)}
+.dark .hz-control-title{color:var(--text-muted-dark)}
+@media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none} }
+
+</style>
+</head>
+<body><div class="progress" id="progress"></div><div class="rotate-hint">Rotate your phone for a larger view</div><div class="deck-viewport"><main class="deck-stage" id="deckStage">
+<section class="slide dark active visible" data-title="Cover"><div class="cover hz-cover">
+<div class="hz-cover-kicker reveal d1">A research tour · 5 minutes</div>
+<h1 class="h1 reveal d2">The Limits of <em>Reward Guidance</em><br>under Finite Adaptation</h1>
+<p class="lead reveal d3">A reward can guarantee improvement at each policy state, yet no admissible reward trajectory can sustain that guarantee. <b>Why?</b></p>
+<nav class="route reveal d4" aria-label="Five sections"><button class="ri" data-go="2"><span style="display:block;font:600 43px var(--serif);color:var(--gold);margin-bottom:8px">01</span>The problem</button><button class="ri" data-go="3"><span style="display:block;font:600 43px var(--serif);color:var(--gold);margin-bottom:8px">02</span>Two kinds of feasibility</button><button class="ri" data-go="4"><span style="display:block;font:600 43px var(--serif);color:var(--gold);margin-bottom:8px">03</span>The exact horizon</button><button class="ri" data-go="5"><span style="display:block;font:600 43px var(--serif);color:var(--gold);margin-bottom:8px">04</span>What feedback buys</button><button class="ri" data-go="6"><span style="display:block;font:600 43px var(--serif);color:var(--gold);margin-bottom:8px">05</span>What training shows</button></nav>
+<div class="byline reveal d5"><span><b>Haotian Ma</b></span><span>University of Wisconsin–Madison</span></div>
+</div><aside class="notes"><span class="time">~20 s</span><h4>Talk track</h4><ol class="track"><li data-for="1">A reward can exist at every policy state and still be impossible to follow under a finite adaptation budget. That mismatch is the question behind the support horizon.</li><li data-for="2">We will see the uncertainty in preference feedback, the dynamic feasibility problem, the exact horizon, the value of targeted feedback, and what finite policy training actually shows.</li></ol></aside></section><section class="slide light" data-title="The problem">
+<div class="frame"><div class="chrome"><nav class="road" aria-label="Sections"><button class="nav on" data-go="2">Problem</button><button class="nav" data-go="3">Feasibility</button><button class="nav" data-go="4">Horizon</button><button class="nav" data-go="5">Feedback</button><button class="nav" data-go="6">Training</button></nav><span class="chr-right"><button class="details-btn" data-details>Details</button></span></div>
+<div class="hz-content"><h2 class="h2 reveal d2">Preference data can support a guarantee <em>without identifying one true reward</em>.</h2>
+<div class="hz-flex hz-two">
+<div class="reveal d3">
+  <div class="hz-step"><span>01</span><div><h3>We observe preferences</h3><p>Comparisons tell us which outputs people prefer.</p></div></div>
+  <div class="hz-step"><span>02</span><div><h3>Several rewards remain possible</h3><p>The observed comparisons restrict reward uncertainty, but do not remove it.</p></div></div>
+  <div class="hz-step"><span>03</span><div><h3>Improvement must hold for all of them</h3><p>A certificate uses the least favorable reward still compatible with the data.</p></div></div>
+</div>
+<div class="hz-panel reveal d4" data-say="1">
+<div class="hz-tag">One scalar policy state · t = 5</div>
+<div class="hz-formula">Progress = 1 − 0.4δ</div>
+<div class="hz-controls"><span class="hz-control-title">Try a compatible preference δ</span><strong id="deltaVal" class="hz-data">+1.0</strong></div>
+<input id="deltaSlider" class="hz-range" type="range" min="-1" max="1" step="0.1" value="1" aria-label="Compatible preference parameter">
+<div style="display:flex;justify-content:space-between" class="hz-data"><span>−1</span><span>0</span><span>+1</span></div>
+<svg class="hz-svg" viewBox="0 0 720 230" aria-label="Progress for the selected compatible preference and the required threshold"><line x1="55" x2="670" y1="170" y2="170" stroke="var(--border-light)" stroke-width="2"/><line x1="301" x2="301" y1="115" y2="180" stroke="var(--gold-deep)" stroke-dasharray="8 8" stroke-width="2"/><rect id="gainBar" x="55" y="120" width="248" height="50" fill="var(--ink)"/><text x="301" y="99" text-anchor="middle" font-size="18" font-family="var(--mono)" fill="var(--gold-deep)">REQUIRED GAIN 0.60</text><text id="gainText" x="320" y="153" font-family="var(--serif)" font-size="30" fill="var(--ink)">0.60</text><text x="55" y="216" font-size="17" font-family="var(--sans)" fill="var(--text-muted-light)">Progress for the selected δ</text></svg>
+<div class="hz-gridline"></div><div class="hz-pair"><div><div class="label">Worst compatible gain</div><div class="hz-metric" style="font-size:58px">0.60</div></div><div><div class="label">Required gain</div><div class="hz-metric" style="font-size:58px">0.60</div></div></div>
+</div></div>
+</div>
+<div class="foot"><span>REWARD GUIDANCE · FIVE MINUTES</span><span>02 / 07</span></div>
+</div><div class="drawer" aria-label="Details"><button class="details-btn close" data-details>Close</button><h3 class="h3">Certifying robust progress</h3><div class="body"><p>At a fixed policy state, the available preference labels restrict a true preference parameter δ to an uncertainty set. The scalar example uses δ ∈ [−1,1]. The deployed guidance parameter is φ, whereas vt is the moving target associated with the policy state.</p><p>The normalized true progress is j<sub>δ</sub>(t) = g + δ(φ(t) − vt). The minimum over the compatible preferences is L(t) = g − η<sub>0</sub>|φ(t) − vt|.</p><p>For the example at t = 5, g = 1, η<sub>0</sub> = 1, v = 0.12 and φ = 0.2. Thus j<sub>δ</sub>(5) = 1 − 0.4δ, and the worst compatible value is 0.6. The interactive slider changes the unknown true preference, not the feedback dataset.</p></div><div class="src">Source: docs/THEORY.md · exact scalar setting.</div></div><aside class="notes"><span class="time">~38 s</span><h4>Talk track</h4><ol class="track"><li data-for="1">Preferences do not necessarily identify a unique reward. They provide a set of rewards compatible with the observations. To certify a policy update, we require improvement even for the least favorable compatible reward.</li><li data-for="2">Move the slider. Different compatible true preferences give different progress for this one update. At t equals five, even the worst compatible preference gives 0.6, just meeting the required gain.</li></ol></aside></section><section class="slide dark" data-title="Two kinds of feasibility">
+<div class="frame"><div class="chrome"><nav class="road" aria-label="Sections"><button class="nav" data-go="2">Problem</button><button class="nav on" data-go="3">Feasibility</button><button class="nav" data-go="4">Horizon</button><button class="nav" data-go="5">Feedback</button><button class="nav" data-go="6">Training</button></nav><span class="chr-right"><button class="details-btn" data-details>Details</button></span></div>
+<div class="hz-content"><h2 class="h2 reveal d2">A suitable reward can exist at every state.<br><em>But can the deployed reward reach it?</em></h2>
+<div class="hz-flex" style="gap:58px">
+<div style="width:475px;display:flex;flex-direction:column" class="reveal d3">
+  <div class="hz-tag">One changing policy trajectory</div>
+  <div class="hz-controls"><span class="hz-control-title">Time t</span><span id="timeVal" class="hz-huge" style="font-size:68px">10</span></div>
+  <input class="hz-range" id="timeSlider" type="range" min="0" max="15" value="10" step="0.25" aria-label="Policy time">
+  <div class="hz-buttons"><button class="hz-button" data-time="0" aria-pressed="false">t = 0</button><button class="hz-button" data-time="5" aria-pressed="false">t = 5</button><button class="hz-button" data-time="10" aria-pressed="true">t = 10</button><button class="hz-button" data-time="15" aria-pressed="false">t = 15</button></div>
+  <div class="hz-stat" style="margin-top:40px"><div class="label">Pointwise certifying reward</div><div class="h3" id="pointStatus" style="color:var(--gold)">Available</div><div class="hz-note">The center of the moving feasible interval.</div></div>
+  <div class="hz-stat"><div class="label">Admissible trajectory</div><div class="h3" id="pathStatus" style="color:var(--hz-red)">No longer certified</div><div class="hz-note">Starting from zero, the reward can move at most 0.04 per unit time.</div></div>
+</div>
+<div class="hz-panel deep reveal d4" style="flex:1;display:flex;flex-direction:column;justify-content:center" data-say="1">
+  <div class="hz-tag">Rewards that certify progress right now</div>
+  <svg class="hz-svg" id="feasibleSvg" viewBox="0 0 1010 490" role="img" aria-label="Moving feasible reward interval, instantaneously optimal reward, and fastest admissible reward trajectory"></svg>
+  <div class="hz-legend"><span>Available reward interval</span><span class="pt">Pointwise center φ = 0.12t</span><span class="path">Fastest path φ = 0.04t</span></div>
+  <div class="hz-gridline"></div><div class="hz-data" id="intervalText" style="font-size:18px;min-height:32px"></div>
+</div>
+</div>
+</div>
+<div class="foot"><span>REWARD GUIDANCE · FIVE MINUTES</span><span>03 / 07</span></div>
+</div><div class="drawer" aria-label="Details"><button class="details-btn close" data-details>Close</button><h3 class="h3">Pointwise availability versus an admissible reward path</h3><div class="body"><p>The certifying reward interval at time t is [vt − (g − γ)/η<sub>0</sub>, vt + (g − γ)/η<sub>0</sub>], with g = 1, γ = 0.6, η<sub>0</sub> = 1, and v = 0.12. The pointwise choice φ = vt always gives certified gain g = 1.</p><p>All admissible continuous reward trajectories start at φ(0) = 0 and satisfy |φ̇(t)| ≤ ρ = 0.04. The furthest they can move in the positive direction by time t is ρt. At t = 5 this fastest path reaches the lower boundary; at t &gt; 5 no admissible path can keep the certificate. The moving interval itself never disappears.</p><p>This is a model of certified improvement, not a prediction that every actually trained policy must get worse after time five.</p></div><div class="src">Source: docs/THEORY.md · exact scalar result and moving-interval condition.</div></div><aside class="notes"><span class="time">~43 s</span><h4>Talk track</h4><ol class="track"><li data-for="1">The set of rewards that would give a sufficient progress guarantee moves as the policy changes. At each instant we could pick its center independently and be safe. That is pointwise feasibility.</li><li data-for="2">Now impose a finite speed on the deployed reward parameter and an initial value at zero. Scrub from time zero to five to ten. At five the fastest trajectory reaches the interval boundary. At ten it is left behind even though the interval still contains suitable rewards.</li></ol></aside></section><section class="slide light" data-title="The exact horizon">
+<div class="frame"><div class="chrome"><nav class="road" aria-label="Sections"><button class="nav" data-go="2">Problem</button><button class="nav" data-go="3">Feasibility</button><button class="nav on" data-go="4">Horizon</button><button class="nav" data-go="5">Feedback</button><button class="nav" data-go="6">Training</button></nav><span class="chr-right"><button class="details-btn" data-details>Details</button></span></div>
+<div class="hz-content"><h2 class="h2 reveal d2">The guarantee has an <em>exact expiration time</em> when the policy changes faster than the reward adapts.</h2>
+<div class="hz-flex" style="gap:70px">
+<div style="width:995px;display:flex;flex-direction:column" class="reveal d3">
+  <div class="hz-tag">Worst-compatible progress along the fastest reward path</div>
+  <svg class="hz-svg hz-linechart" id="horizonSvg" viewBox="0 0 1020 590" role="img" aria-label="Pointwise progress versus certifiable progress and required threshold, with support horizon"></svg>
+  <div class="hz-legend"><span>Best admissible guarantee</span><span class="pt">Pointwise guarantee</span><span class="path">Required gain</span></div>
+  <div class="hz-caption">The certificate holds through T₀, then falls below the required gain.</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column" class="reveal d4">
+  <div class="hz-tag">Exact scalar support horizon</div>
+  <div class="hz-formula" style="font-size:52px;margin:24px 0 15px">T₀ = <span style="display:inline-block;vertical-align:middle;text-align:center"><span style="display:block;border-bottom:2px solid;padding:0 8px 10px">g − γ</span><span style="display:block;padding-top:8px">η₀(v − ρ)</span></span></div>
+  <div class="hz-gridline"></div>
+  <div class="label">Reward adaptation speed ρ</div>
+  <div class="hz-choices" id="rhoChoices">
+     <button class="hz-button" data-rho="0" aria-pressed="false">0.00</button>
+     <button class="hz-button" data-rho="0.04" aria-pressed="true">0.04</button>
+     <button class="hz-button" data-rho="0.08" aria-pressed="false">0.08</button>
+  </div>
+  <div class="label">Longest certified duration</div>
+  <div class="hz-huge" id="horizonValue" style="color:var(--gold-deep)">5.00</div>
+  <div class="hz-note" style="font-size:20px">g = 1 · γ = 0.6 · η₀ = 1 · policy drift v = 0.12</div>
+  <div class="hz-figure-source">THEOREM · VALID FOR THE STATED SCALAR MODEL</div>
+</div></div>
+</div>
+<div class="foot"><span>REWARD GUIDANCE · FIVE MINUTES</span><span>04 / 07</span></div>
+</div><div class="drawer" aria-label="Details"><button class="details-btn close" data-details>Close</button><h3 class="h3">The exact support horizon theorem</h3><div class="body"><p>The model sets j<sub>δ</sub>(t) = g + δ[φ(t) − vt], δ ∈ [−η<sub>0</sub>,η<sub>0</sub>], φ(0) = 0 and |φ̇| ≤ ρ. The required minimum improvement is γ with 0 &lt; γ &lt; g, η<sub>0</sub> &gt; 0 and 0 ≤ ρ &lt; v.</p><p>The worst-compatible guarantee is L(t) = g − η<sub>0</sub>|φ(t) − vt|. Every admissible path has φ(t) ≤ ρt, and φ(t) = ρt attains the largest guarantee when v &gt; ρ. Thus T<sub>0</sub> = (g − γ)/[η<sub>0</sub>(v − ρ)] is both necessary and sufficient for the support duration.</p><p>Equality is certified at t = T<sub>0</sub>; failure occurs strictly afterward. The formula assumes nonbinding amplitude constraints. When ρ ≥ v, speed alone does not impose a finite horizon under this assumption.</p></div><div class="src">Source: docs/THEORY.md · Theorem 1.</div></div><aside class="notes"><span class="time">~44 s</span><h4>Talk track</h4><ol class="track"><li data-for="1">The scalar model makes the gap exact. The target coefficient moves at speed v while the reward can only adapt at rho. Their difference grows with time, and preference uncertainty turns that lag into a loss of worst-case certified progress.</li><li data-for="2">Choose different adaptation speeds. With rho zero, the guarantee expires at about 3.33. At rho 0.04, it lasts to time five. At rho 0.08, it lasts to time ten. The theorem identifies the exact boundary in this model.</li></ol></aside></section><section class="slide dark" data-title="The value of feedback">
+<div class="frame"><div class="chrome"><nav class="road" aria-label="Sections"><button class="nav" data-go="2">Problem</button><button class="nav" data-go="3">Feasibility</button><button class="nav" data-go="4">Horizon</button><button class="nav on" data-go="5">Feedback</button><button class="nav" data-go="6">Training</button></nav><span class="chr-right"><button class="details-btn" data-details>Details</button></span></div>
+<div class="hz-content"><h2 class="h2 reveal d2">More feedback can extend guidance.<br><em>Its cost depends on the instance.</em></h2>
+<div class="hz-flex hz-feedback">
+<div class="reveal d3">
+<div class="hz-tag">Bradley–Terry comparisons · target horizon T = 15</div>
+<h3 class="h3" style="margin-top:22px;font-size:35px">Necessary expected labels for three feasible preferences</h3>
+<div style="margin-top:45px" id="feedbackBars">
+  <div class="hz-barline" data-delta="-0.2"><div class="name">δ* = −0.2</div><div class="track"><div class="fill" style="width:6.25%"></div></div><strong>112</strong></div>
+  <div class="hz-barline" data-delta="0"><div class="name">δ* = 0</div><div class="track"><div class="fill" style="width:16%"></div></div><strong>286</strong></div>
+  <div class="hz-barline" data-delta="0.2"><div class="name">δ* = +0.2</div><div class="track"><div class="fill" style="width:100%"></div></div><strong>1,789</strong></div>
+</div>
+<div class="hz-caption">Same target horizon. Different distances to the feasibility boundary. Figures rounded from the paper’s expected-label lower bounds.</div>
+<div class="hz-figure-source" style="margin-top:55px">RESULT · PREFERENCE INFORMATION, NOT POLICY RETURN</div>
+</div>
+<div class="hz-panel deep reveal d4" data-say="1" style="display:flex;flex-direction:column;justify-content:center">
+  <div class="hz-tag">Choose the true preference</div>
+  <div class="hz-choices" id="feedbackChoices">
+    <button class="hz-button" data-delta="-0.2" aria-pressed="false">−0.2</button>
+    <button class="hz-button" data-delta="0" aria-pressed="false">0</button>
+    <button class="hz-button" data-delta="0.2" aria-pressed="true">+0.2</button>
+  </div>
+  <div class="label">Distance to dynamic infeasibility dₜ</div>
+  <div class="hz-huge" id="gapValue" style="font-size:88px">0.133</div>
+  <div class="hz-gridline"></div>
+  <div class="label">Necessary expected comparisons</div>
+  <div class="hz-huge" id="labelValue" style="font-size:78px">1,789</div>
+  <div class="hz-subtitle">As the gap narrows, certification becomes statistically harder.</div>
+  <div class="hz-data" style="margin-top:36px">LABEL COMPLEXITY ∝ dₜ⁻² log(1/α)</div>
+</div>
+</div>
+</div>
+<div class="foot"><span>REWARD GUIDANCE · FIVE MINUTES</span><span>05 / 07</span></div>
+</div><div class="drawer" aria-label="Details"><button class="details-btn close" data-details>Close</button><h3 class="h3">What preference feedback can establish</h3><div class="body"><p>The theorem fixes a target time T beyond the source support horizon. For the example, Δ = g − γ = 0.4, a<sub>T</sub> = (v − ρ)T = 1.2, and the dynamic feasibility boundary is δ<sub>c</sub> = Δ/a<sub>T</sub> = 1/3. The instance distance is d<sub>T</sub> = δ<sub>c</sub> − δ*.</p><p>Under the bounded adaptive Bradley–Terry binary-comparison assumptions and appropriate informativeness conditions, expected necessary label count is of order d<sub>T</sub><sup>−2</sup> log(1/α); a matching-order fixed-batch sufficient bound is also derived.</p><p>The values shown for δ* = −0.2, 0, and +0.2 are lower bounds of 111.797, 286.199 and 1788.747 comparisons, respectively. More data can narrow uncertainty and extend a certificate, but not all added labels are equally informative. These are not measurements of final trained policy return.</p></div><div class="src">Sources: docs/RESULTS.md Figure 2 · docs/THEORY.md Theorem 3.</div></div><aside class="notes"><span class="time">~45 s</span><h4>Talk track</h4><ol class="track"><li data-for="1">If reward adaptation has a limit, better preference information can extend what we are able to certify. But a longer target horizon does not uniquely determine the number of labels needed.</li><li data-for="2">The paper measures the instance's distance to the dynamic feasibility boundary. Select the three preferences. For the same target time fifteen, the lower bound ranges from about 112 to almost 1,800 expected comparisons. Closer instances are harder to distinguish reliably.</li></ol></aside></section><section class="slide light" data-title="What training shows">
+<div class="frame"><div class="chrome"><nav class="road" aria-label="Sections"><button class="nav" data-go="2">Problem</button><button class="nav" data-go="3">Feasibility</button><button class="nav" data-go="4">Horizon</button><button class="nav" data-go="5">Feedback</button><button class="nav on" data-go="6">Training</button></nav><span class="chr-right"><button class="details-btn" data-details>Details</button></span></div>
+<div class="hz-content"><h2 class="h2 reveal d2">Reward guidance can change the policy trajectory.<br><em>Better reward estimates are not enough.</em></h2>
+<div class="hz-flex" style="gap:60px">
+<div style="width:430px;display:flex;flex-direction:column;flex-shrink:0" class="reveal d3">
+  <div class="hz-tag">Select a recorded experiment</div>
+  <div class="hz-choices" style="flex-direction:column">
+   <button class="hz-button" data-study="dst" aria-pressed="true" style="text-align:left;font-size:20px;padding:23px">Deep-Sea-Treasure<br><span style="font-size:14px;opacity:.7">160 policy updates · 8 runs</span></button>
+   <button class="hz-button" data-study="pythia" aria-pressed="false" style="text-align:left;font-size:20px;padding:23px">Pythia-1B summarization<br><span style="font-size:14px;opacity:.7">64 updates · 2 seeds</span></button>
+  </div>
+  <div class="hz-stat" style="margin-top:32px"><div class="label">Core distinction</div><div class="h3" style="font-size:34px;margin-top:14px">Reward prediction ≠ policy improvement</div></div>
+  <div class="hz-figure-source">EMPIRICAL MEASUREMENTS · NO NEURAL HORIZON CLAIM</div>
+</div>
+<div class="hz-panel reveal d4" style="flex:1" data-say="1">
+ <div id="studyDst">
+  <div class="hz-tag">Deep-Sea-Treasure · recorded finite training</div>
+  <h3 class="h3" style="font-size:38px;margin-top:22px">The probability of reaching deeper treasures differed.</h3>
+  <div style="margin-top:50px">
+  <div class="label">Probability of a deeper treasure</div>
+  <div class="hz-barline" style="grid-template-columns:300px 1fr 120px"><div class="name" style="font-size:19px">Original preference guidance</div><div class="track" style="background:#ddd5c6;height:19px"><div class="fill" style="width:45.6%;background:var(--gold-deep)"></div></div><strong>45.6%</strong></div>
+  <div class="hz-barline" style="grid-template-columns:300px 1fr 120px"><div class="name" style="font-size:19px">True-reward policy gradient</div><div class="track" style="background:#ddd5c6;height:19px"><div class="fill" style="width:0.8%;min-width:4px;background:var(--ink)"></div></div><strong>0.8%</strong></div>
+  </div>
+  <div class="hz-gridline" style="margin:47px 0 24px"></div>
+  <div class="hz-pair"><div><div class="label">Preference guidance · true return</div><div class="hz-metric">0.683</div></div><div><div class="label">True-reward PG · true return</div><div class="hz-metric" style="color:var(--ink)">0.638</div></div></div>
+  <div class="hz-caption">Different guidance rules produce different finite trajectories. The methods also differ in how guidance is chosen.</div>
+ </div>
+ <div id="studyPythia" style="display:none">
+  <div class="hz-tag">Pythia-1B · bounded reward updates</div>
+  <h3 class="h3" style="font-size:38px;margin-top:22px">Extra AI feedback did not yield a confirmed quality gain.</h3>
+  <div class="hz-pair" style="margin-top:40px"><div><div class="label">Additional AI comparisons</div><div class="hz-metric">96</div></div><div><div class="label">Largest per-event movement</div><div class="hz-metric">0.0497</div></div></div>
+  <div class="hz-gridline"></div>
+  <div class="label">Updated minus fixed reward · held-out ROUGE-L</div>
+  <svg class="hz-svg" viewBox="0 0 910 210" aria-label="Estimate minus 0.0017 with 95 percent paired interval crossing zero">
+   <line x1="55" x2="855" y1="126" y2="126" stroke="var(--border-light)" stroke-width="3"/>
+   <line x1="455" x2="455" y1="55" y2="175" stroke="var(--ink)" stroke-width="2" stroke-dasharray="6 6"/>
+   <line x1="137" x2="703" y1="126" y2="126" stroke="var(--gold-deep)" stroke-width="8" stroke-linecap="round"/><circle cx="421" cy="126" r="13" fill="var(--ink)"/>
+   <text x="137" y="99" font-family="var(--mono)" font-size="22" fill="var(--ink)" text-anchor="middle">−0.0159</text>
+   <text x="703" y="99" font-family="var(--mono)" font-size="22" fill="var(--ink)" text-anchor="middle">+0.0124</text>
+   <text x="455" y="190" font-family="var(--mono)" font-size="18" fill="var(--text-muted-light)" text-anchor="middle">ZERO</text>
+   <text x="421" y="48" font-family="var(--serif)" font-size="34" fill="var(--ink)" text-anchor="middle">−0.0017</text>
+  </svg>
+  <div class="hz-caption">95% paired interval includes zero. The per-update movement limit was met, not a proof of policy improvement.</div>
+ </div>
+</div>
+</div>
+</div>
+<div class="foot"><span>REWARD GUIDANCE · FIVE MINUTES</span><span>06 / 07</span></div>
+</div><div class="drawer" aria-label="Details"><button class="details-btn close" data-details>Close</button><h3 class="h3">What the experiments do and do not establish</h3><div class="body"><p>Deep-Sea-Treasure: after 160 policy updates averaged over eight training runs, original preference information guidance had mean true return 0.683 and deeper-treasure probability 45.6%. Ordinary policy gradient using the true reward yielded return 0.638 and deeper-treasure probability 0.8%. The controllers also differ in how guidance is selected. This experiment identifies trajectory differences, not a universal superiority of incomplete reward knowledge.</p><p>Human TL;DR feedback: Qwen2.5-0.5B reward-model accuracy rose from 50.5% with 257 pairs to 56.3% with 4,098 pairs, but a length-and-overlap logistic baseline reached 58.3% on the independent final holdout.</p><p>Pythia-1B: a policy was updated for 64 steps with a fixed-reward comparison arm. The changing-reward arm added 96 AI-labeled comparisons in three batches and obeyed the per-event score-movement limit of 0.05. Its final held-out ROUGE-L difference was −0.001722, paired 95% interval [−0.015887, +0.012443], across two training seeds. No confirmed gain was observed.</p></div><div class="src">Sources: docs/RESULTS.md Figures 4–6 · docs/FINAL_CLAIMS_08.md.</div></div><aside class="notes"><span class="time">~52 s</span><h4>Talk track</h4><ol class="track"><li data-for="1">The theory is not merely about an abstract optimizer: which reward guides a finite learning run can change the path. In Deep-Sea-Treasure, deeper-treasure behavior differed strongly between the recorded controllers, and their true returns differed as well.</li><li data-for="2">Switch to the Pythia run. Here 96 additional AI-labeled comparisons entered bounded reward updates, but the held-out ROUGE-L interval includes zero. So successful reward adaptation is not the same as demonstrated policy improvement. Neither experiment proves a neural-network support horizon.</li></ol></aside></section><section class="slide dark" data-title="Takeaways">
+<div class="frame"><div class="chrome"><span>Takeaways</span><span class="chr-right"><button class="details-btn" data-details>Details</button></span></div>
+<div class="hz-content"><h2 class="h2 reveal d2">A reward that works <em>now</em><br>may not be a reward we can keep following.</h2>
+<div class="hz-take reveal d3">
+<div><div class="h3">Availability is not <em>reachability</em></div><div class="body">Pointwise certifying rewards may exist even when no bounded-speed reward path can sustain them.</div></div>
+<div><div class="h3">A guarantee has a <em>horizon</em></div><div class="body">The scalar model gives its exact duration; ordinary policy gradient exhibits the same separation locally.</div></div>
+<div><div class="h3">Feedback has an <em>instance-dependent</em> value</div><div class="body">Labels can extend certification, but their required number depends on distance to dynamic infeasibility.</div></div>
+</div>
+<div class="reveal d4" style="margin-top:auto;border-top:1px solid var(--border-dark);padding:29px 0 0;display:flex;align-items:center;justify-content:space-between">
+<div class="h3" style="font-size:29px">The question is not just which reward fits the data. <em>Can it keep up?</em></div>
+<a class="hz-link" style="font:500 18px var(--mono)" href="https://github.com/AtheavenMa/The-Limits-of-Reward-Guidance-under-Finite-Adaptation">RESEARCH CODE ↗</a>
+</div>
+</div>
+<div class="foot"><span>REWARD GUIDANCE · FIVE MINUTES</span><span>07 / 07</span></div>
+</div><div class="drawer" aria-label="Details"><button class="details-btn close" data-details>Close</button><h3 class="h3">Where the claims stop</h3><div class="body"><p>The exact support-horizon formula is proved for the stated scalar model, including the reward-speed and uncertainty assumptions. A local ordinary Euclidean policy-gradient construction also has pointwise feasibility but fails trajectory certification under finite adaptation.</p><p>The Bradley–Terry comparison bounds measure information needed to certify an instance-specific longer horizon. Finite RL and language-model results examine policy behavior and reward-model updates, but do not provide a formal support-horizon theorem for the neural network.</p><p>The interactive scalar graphics use the theorem's illustrative parameters. The Deep-Sea-Treasure and Pythia panels report recorded experimental measurements, not simulated curves.</p></div><div class="src">See docs/THEORY.md · docs/RESULTS.md · docs/FINAL_CLAIMS_08.md.</div></div><aside class="notes"><span class="time">~32 s</span><h4>Talk track</h4><ol class="track"><li data-for="1">The core finding is that reward feasibility at individual states does not imply a feasible path through time. The support horizon says how long existing preference information can certify progress, taking adaptation limits seriously.</li><li data-for="2">Additional feedback matters, but its sample complexity depends on the individual preference. The empirical experiments show differences in finite optimization and limits to the gains from added feedback.</li></ol></aside></section>
+</main></div>
+<div id="notesPanel" aria-live="polite"></div>
+<div id="helpPanel" role="dialog" aria-label="Keyboard help"><div class="card">
+<div><kbd>← →</kbd> previous / next; also space, wheel and swipe</div>
+<div><kbd>Home End</kbd> first / last slide</div>
+<div><kbd>D</kbd> details behind each result</div>
+<div><kbd>N</kbd> presenter notes</div>
+<div><kbd>?</kbd> keyboard help · <kbd>Esc</kbd> close panels</div>
+</div></div>
+<nav class="deck-controls" aria-label="Slide navigation"><button id="prevBtn" aria-label="Previous slide">‹</button><span id="counter">01 / 07</span><button id="nextBtn" aria-label="Next slide">›</button><button id="notesBtn" aria-label="Presenter notes">N</button><button id="helpBtn" aria-label="Keyboard help">?</button></nav>
+<script>
+const $ = (id) => document.getElementById(id);
+class SlidePresentation {
+    constructor() {
+        this.slides = Array.from(document.querySelectorAll('.slide'));
+        this.stage = $('deckStage');
+        this.current = 0; this.wheelLock = false; this.factor = 1;
+        this.initialHash = location.hash;   /* go() rewrites the hash; keep the original for &id=value state */
+        this.setupStageScale(); this.setupKeyboardNav(); this.setupWheelNav(); this.setupTouchNav();
+        $('prevBtn').addEventListener('click', () => this.go(this.current - 1));
+        $('nextBtn').addEventListener('click', () => this.go(this.current + 1));
+        $('notesBtn').addEventListener('click', () => this.toggleNotes());
+        $('helpBtn').addEventListener('click', () => $('helpPanel').classList.toggle('show'));
+        $('helpPanel').addEventListener('click', () => $('helpPanel').classList.remove('show'));
+        document.querySelectorAll('[data-details]').forEach((b) => b.addEventListener('click', () => this.toggleDrawer()));
+        /* deep links: #N = slide N; append d = open details, n = open notes (e.g. #5dn);
+           then &id=value sets a control after init (QA: #6&budget=0.4, #3&revealBtn=click) */
+        const hm = location.hash.match(/^#(\d+)([dn]*)/);
+        this.go(hm ? +hm[1] - 1 : 0);
+        if (hm && hm[2].includes('d')) this.toggleDrawer();
+        if (hm && hm[2].includes('n')) this.toggleNotes();
+        window.addEventListener('hashchange', () => { const k = parseInt(location.hash.slice(1), 10); if (Number.isFinite(k) && k - 1 !== this.current) this.go(k - 1); });
+    }
+    setupStageScale() {
+        /* the stage fits the space left of the walk-through panel when it is open */
+        const scale = () => {
+            const panel = $('notesPanel'), side = panel.classList.contains('show') ? panel.offsetWidth : 0;
+            const W = window.innerWidth - side, H = window.innerHeight;
+            const f = Math.min(W / 1920, H / 1080);
+            this.stage.style.transform = `translate(${(W - 1920 * f) / 2}px, ${(H - 1080 * f) / 2}px) scale(${f})`;
+            this.factor = f;
+        };
+        this.rescale = scale;
+        scale(); window.addEventListener('resize', scale);
+    }
+    isInteractive(el, withSvg) { return !!(el && el.closest && el.closest('input, button, select, textarea, [contenteditable="true"]' + (withSvg ? ', svg' : ''))); }
+    setupKeyboardNav() {
+        document.addEventListener('keydown', (e) => {
+            if (document.body.classList.contains('editing')) return;
+            const k = e.key;
+            if (k === 'Escape') { this.slides[this.current].classList.remove('drawer-open'); $('helpPanel').classList.remove('show'); return; }
+            if (e.target.closest && e.target.closest('input')) return;          /* sliders keep their arrow keys */
+            if (k === 'd' || k === 'D') { this.toggleDrawer(); return; }
+            if (k === 'n' || k === 'N') { this.toggleNotes(); return; }
+            if (k === '?') { $('helpPanel').classList.toggle('show'); return; }
+            if (e.target.closest && e.target.closest('button') && k === ' ') return; /* space activates buttons */
+            if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(k)) { e.preventDefault(); this.go(this.current + 1); }
+            if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(k)) { e.preventDefault(); this.go(this.current - 1); }
+            if (k === 'Home') this.go(0);
+            if (k === 'End') this.go(this.slides.length - 1);
+        });
+    }
+    setupWheelNav() {
+        window.addEventListener('wheel', (e) => {
+            if (this.wheelLock || Math.abs(e.deltaY) < 30 || this.isInteractive(e.target) || e.target.closest('#notesPanel, .drawer')) return;
+            this.wheelLock = true; this.go(this.current + (e.deltaY > 0 ? 1 : -1));
+            setTimeout(() => { this.wheelLock = false; }, 800);
+        }, { passive: true });
+    }
+    setupTouchNav() {
+        let x0 = null, y0 = null;
+        window.addEventListener('touchstart', (e) => {
+            if (this.isInteractive(e.target, true) || e.target.closest('.drawer, #notesPanel')) { x0 = null; return; }
+            x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+        }, { passive: true });
+        window.addEventListener('touchend', (e) => {
+            if (x0 === null) return;
+            const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+            if (Math.abs(dx) > 60 && Math.abs(dx) > 1.5 * Math.abs(dy)) this.go(this.current + (dx < 0 ? 1 : -1));
+            x0 = null;
+        }, { passive: true });
+    }
+    applyHashState() {
+        (this.initialHash.match(/&[\w-]+=[^&]*/g) || []).forEach((kv) => {
+            const [id, val] = kv.slice(1).split('='), el = $(id);
+            if (!el) return;
+            if (val === 'click') el.click(); else { el.value = decodeURIComponent(val); el.dispatchEvent(new Event('input')); }
+        });
+    }
+    toggleDrawer() { const s = this.slides[this.current]; if (s.querySelector('.drawer')) s.classList.toggle('drawer-open'); }
+    toggleNotes() {
+        const on = $('notesPanel').classList.toggle('show');
+        document.body.classList.toggle('notes-on', on);
+        document.body.classList.toggle('track', on);   /* numbered badges follow the notes */
+        this.rescale();
+    }
+    go(i) {
+        this.current = Math.max(0, Math.min(i, this.slides.length - 1));
+        this.slides.forEach((s, k) => {
+            const on = k === this.current;
+            s.classList.toggle('active', on); s.classList.toggle('visible', on);
+            if (!on) s.classList.remove('drawer-open');
+            s.setAttribute('aria-hidden', on ? 'false' : 'true');
+        });
+        const n = String(this.slides.length).padStart(2, '0');
+        $('counter').textContent = `${String(this.current + 1).padStart(2, '0')} / ${n}`;
+        $('progress').style.width = `${(100 * (this.current + 1)) / this.slides.length}%`;
+        const notes = this.slides[this.current].querySelector('aside.notes');
+        $('notesPanel').innerHTML = `<h4>${String(this.current + 1).padStart(2, '0')} · ${this.slides[this.current].dataset.title}</h4>` + (notes ? notes.innerHTML : '');
+        try { history.replaceState(null, '', `#${this.current + 1}`); } catch (e) { /* file:// sandbox */ }
+    }
+}
+
+
+/* Interactive figures use only the scalar parameters and recorded results in the repository. */
+const deltaSlider=$('deltaSlider');
+function updateDelta(){
+ const d=+deltaSlider.value, progress=1-0.4*d;
+ $('deltaVal').textContent=(d>0?'+':'')+d.toFixed(1);
+ $('gainBar').setAttribute('width',String(615*Math.max(0,Math.min(1,progress/1.5))));
+ $('gainText').textContent=progress.toFixed(2);
+ $('gainText').setAttribute('x',String(Math.min(615,65+615*progress/1.5)));
+}
+deltaSlider.addEventListener('input',updateDelta);
+
+function updateTime(){
+ const t=+$('timeSlider').value, v=0.12, rho=0.04, d=(1-0.6)/1;
+ const center=v*t, low=center-d, high=center+d, path=rho*t, ok=(path+1e-9>=low);
+ $('timeVal').textContent=Number.isInteger(t)?String(t):t.toFixed(2);
+ $('pathStatus').textContent=ok?'Certified': 'No longer certified';
+ $('pathStatus').style.color=ok?'var(--gold)':'var(--hz-red)';
+ $('intervalText').textContent='Available interval ['+low.toFixed(2)+', '+high.toFixed(2)+']  ·  Fastest reachable reward '+path.toFixed(2);
+ document.querySelectorAll('[data-time]').forEach(b=>b.setAttribute('aria-pressed',Math.abs(+b.dataset.time-t)<0.001?'true':'false'));
+ const X=x=>60+(x+0.5)/3*880, Y=270, s=[];
+ for(let val=-0.5;val<=2.5001;val+=0.5){
+  s.push('<line x1="'+X(val)+'" y1="190" x2="'+X(val)+'" y2="360" stroke="var(--border-dark)" stroke-width="1"/>');
+  s.push('<text x="'+X(val)+'" y="401" text-anchor="middle" font-size="18" font-family="var(--mono)" fill="var(--text-muted-dark)">'+val.toFixed(1)+'</text>');
+ }
+ s.push('<text x="60" y="430" font-size="19" font-family="var(--sans)" fill="var(--text-muted-dark)">Reward coefficient φ</text>');
+ s.push('<rect x="'+X(low)+'" y="230" width="'+(X(high)-X(low))+'" height="83" fill="rgba(200,168,112,.23)" stroke="var(--gold)" stroke-width="2"/>');
+ s.push('<line x1="'+X(center)+'" x2="'+X(center)+'" y1="155" y2="328" stroke="var(--hz-teal)" stroke-width="4" stroke-dasharray="9 8"/>');
+ s.push('<circle cx="'+X(center)+'" cy="'+Y+'" r="13" fill="var(--hz-teal)" stroke="var(--navy)" stroke-width="3"/>');
+ s.push('<line x1="'+X(path)+'" x2="'+X(path)+'" y1="207" y2="344" stroke="var(--hz-red)" stroke-width="5"/>');
+ s.push('<circle cx="'+X(path)+'" cy="'+Y+'" r="14" fill="var(--hz-red)" stroke="var(--navy)" stroke-width="3"/>');
+ s.push('<text x="'+X(center)+'" y="138" text-anchor="middle" font-family="var(--mono)" font-size="17" fill="var(--hz-teal)">POINTWISE</text>');
+ s.push('<text x="'+X(path)+'" y="185" text-anchor="middle" font-family="var(--mono)" font-size="17" fill="var(--hz-red)">REACHABLE</text>');
+ s.push('<text x="60" y="90" font-family="var(--serif)" font-size="45" fill="var(--gold)">'+(ok?'The reward path remains inside.':'The feasible region outruns the path.')+'</text>');
+ $('feasibleSvg').innerHTML=s.join('');
+}
+$('timeSlider').addEventListener('input',updateTime);
+document.querySelectorAll('[data-time]').forEach(b=>b.addEventListener('click',()=>{$('timeSlider').value=b.dataset.time;updateTime()}));
+
+let rho=0.04;
+function drawHorizon(){
+ const h=0.4/(0.12-rho),X=t=>66+(t/15)*876,Y=g=>505-((g+1)/2.2)*410,s=[];
+ for(const t of [0,5,10,15]){s.push('<line x1="'+X(t)+'" x2="'+X(t)+'" y1="50" y2="505" stroke="var(--border-light)"/>');s.push('<text x="'+X(t)+'" y="546" text-anchor="middle" font-family="var(--mono)" font-size="19" fill="var(--text-muted-light)">'+t+'</text>')}
+ for(const g of [-0.5,0,0.6,1]){s.push('<line x1="66" x2="942" y1="'+Y(g)+'" y2="'+Y(g)+'" stroke="var(--border-light)"/>');s.push('<text x="55" y="'+(Y(g)+6)+'" text-anchor="end" font-family="var(--mono)" font-size="19" fill="var(--text-muted-light)">'+g.toFixed(1)+'</text>')}
+ s.push('<line x1="66" x2="942" y1="'+Y(0.6)+'" y2="'+Y(0.6)+'" stroke="var(--hz-red)" stroke-width="3" stroke-dasharray="12 8"/>');
+ s.push('<line x1="66" x2="942" y1="'+Y(1)+'" y2="'+Y(1)+'" stroke="var(--hz-teal)" stroke-width="3" stroke-dasharray="9 7"/>');
+ s.push('<path d="M'+X(0)+' '+Y(1)+' L'+X(15)+' '+Y(1-15*(0.12-rho))+'" fill="none" stroke="var(--gold-deep)" stroke-width="7" stroke-linecap="round"/>');
+ s.push('<line x1="'+X(h)+'" x2="'+X(h)+'" y1="'+Y(0.6)+'" y2="505" stroke="var(--gold-deep)" stroke-width="3" stroke-dasharray="6 6"/>');
+ s.push('<circle cx="'+X(h)+'" cy="'+Y(0.6)+'" r="12" fill="var(--gold-deep)" stroke="var(--cream)" stroke-width="4"/>');
+ s.push('<text x="'+Math.min(850,X(h)+20)+'" y="'+(Y(0.6)-24)+'" font-family="var(--serif)" font-size="31" fill="var(--gold-deep)">T₀ = '+h.toFixed(2)+'</text>');
+ s.push('<text x="942" y="575" text-anchor="end" font-family="var(--sans)" font-size="18" fill="var(--text-muted-light)">Policy time →</text>');
+ $('horizonSvg').innerHTML=s.join('');
+ $('horizonValue').textContent=h.toFixed(2);
+ document.querySelectorAll('[data-rho]').forEach(b=>b.setAttribute('aria-pressed',Math.abs(+b.dataset.rho-rho)<1e-8?'true':'false'));
+}
+document.querySelectorAll('[data-rho]').forEach(b=>b.addEventListener('click',()=>{rho=+b.dataset.rho;drawHorizon()}));
+
+const feedbackData={
+ '-0.2':{gap:0.5333333333,labels:112},
+ '0':{gap:0.3333333333,labels:286},
+ '0.2':{gap:0.1333333333,labels:1789}
+};
+function updateFeedback(key){
+ const data=feedbackData[key];
+ $('gapValue').textContent=data.gap.toFixed(3);
+ $('labelValue').textContent=data.labels.toLocaleString('en-US');
+ document.querySelectorAll('[data-delta]').forEach(b=>{if(b.tagName==='BUTTON')b.setAttribute('aria-pressed',b.dataset.delta===key?'true':'false')});
+ document.querySelectorAll('#feedbackBars [data-delta]').forEach(row=>{row.style.opacity=row.dataset.delta===key?'1':'.55';row.style.transition='opacity .2s'});
+}
+document.querySelectorAll('#feedbackChoices [data-delta]').forEach(b=>b.addEventListener('click',()=>updateFeedback(b.dataset.delta)));
+
+document.querySelectorAll('[data-study]').forEach(b=>b.addEventListener('click',()=>{
+ const p=b.dataset.study;
+ $('studyDst').style.display=p==='dst'?'block':'none';
+ $('studyPythia').style.display=p==='pythia'?'block':'none';
+ document.querySelectorAll('[data-study]').forEach(btn=>btn.setAttribute('aria-pressed',btn===b?'true':'false'));
+}));
+
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>deck.go(+b.dataset.go-1)));
+const deck=new SlidePresentation();
+updateDelta(); updateTime(); drawHorizon(); updateFeedback('0.2'); deck.applyHashState();
+</script>
+</body></html>

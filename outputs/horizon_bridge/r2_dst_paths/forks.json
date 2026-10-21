@@ -1,0 +1,1298 @@
+[
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.048055452363101936,
+    "final_return": 0.6536102334829634,
+    "final_phi": 0.30943174578949256
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.048055452363101936,
+    "final_return": 0.6536102334829634,
+    "final_phi": 0.30943174578949256
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.07933540344802814,
+    "final_return": 0.6848901845678896,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.0330360197251357,
+    "final_return": 0.6385908008449972,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.01894379722689199,
+    "final_return": 0.6711144058113525,
+    "final_phi": 0.25138305851802595
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.01894379722689199,
+    "final_return": 0.6711144058113525,
+    "final_phi": 0.25138305851802595
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.06585381453614014,
+    "final_return": 0.7180244231206007,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.06612723825824762,
+    "final_return": 0.7182978468427081,
+    "final_phi": 0.8337128332877797
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.008315835638572078,
+    "final_return": 0.6792861006369607,
+    "final_phi": 0.22577202229444865
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.008315835638572078,
+    "final_return": 0.6792861006369607,
+    "final_phi": 0.22577202229444865
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.05936996624144131,
+    "final_return": 0.7303402312398299,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.05936996624144131,
+    "final_return": 0.7303402312398299,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.04789314404117684,
+    "final_return": 0.6534806250411628,
+    "final_phi": 0.30999792854413316
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.04789313793604699,
+    "final_return": 0.6534806189360329,
+    "final_phi": 0.3099979097848888
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.03301466108955886,
+    "final_return": 0.6386021420895448,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.03301466108955886,
+    "final_return": 0.6386021420895448,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.019488689462380582,
+    "final_return": 0.6726155223134342,
+    "final_phi": 0.24902246836675576
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.019488690746440107,
+    "final_return": 0.6726155235974938,
+    "final_phi": 0.24902245017180286
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.06585754861583182,
+    "final_return": 0.7189843814668855,
+    "final_phi": 0.8322241793399818
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.06585754861583182,
+    "final_return": 0.7189843814668855,
+    "final_phi": 0.8322241793399818
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.008523917970888029,
+    "final_return": 0.6810889367549134,
+    "final_phi": 0.22386216191453875
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.008523920552434894,
+    "final_return": 0.6810889393364603,
+    "final_phi": 0.22386216845891865
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.058360523546065024,
+    "final_return": 0.7309255423300904,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.058360523546065024,
+    "final_return": 0.7309255423300904,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.083538991588612,
+    "final_return": 0.7183083808104506,
+    "final_phi": 0.3640988525726255
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.08331844802347121,
+    "final_return": 0.7180878372453098,
+    "final_phi": 0.34570191845704
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.060494174160104275,
+    "final_return": 0.6952635633819428,
+    "final_phi": 0.12000000000000001
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.08289483596068348,
+    "final_return": 0.717664225182522,
+    "final_phi": 0.54
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.01829584931715289,
+    "final_return": 0.7333364828449321,
+    "final_phi": 0.20311983283546206
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.020639441643742207,
+    "final_return": 0.7356800751715215,
+    "final_phi": 0.37230118578142285
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.02176936448401212,
+    "final_return": 0.7368099980117914,
+    "final_phi": 0.46982744483068917
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.021670531034384988,
+    "final_return": 0.7367111645621642,
+    "final_phi": 0.5498274448306892
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.007976647563839201,
+    "final_return": 0.7432987701542906,
+    "final_phi": 0.2111025499163567
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.008813323743441681,
+    "final_return": 0.7441354463338931,
+    "final_phi": 0.3451050719799046
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.009401355392981814,
+    "final_return": 0.7447234779834332,
+    "final_phi": 0.6298274448306893
+  },
+  {
+    "seed": 0,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.00936167644251873,
+    "final_return": 0.7446837990329701,
+    "final_phi": 0.7498274448306894
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.004418563383335572,
+    "final_return": 0.6286708007817982,
+    "final_phi": 0.6314399995506549
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.01175428121487454,
+    "final_return": 0.6360065186133371,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": -0.004132146902310452,
+    "final_return": 0.6201200904961521,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.01175428121487454,
+    "final_return": 0.6360065186133371,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.0011161655385032443,
+    "final_return": 0.6350906190637511,
+    "final_phi": 0.6397648812055796
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.003906847173648864,
+    "final_return": 0.6378813006988967,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": -0.0007142185877068163,
+    "final_return": 0.633260234937541,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.003906847173648864,
+    "final_return": 0.6378813006988967,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.0005562418972419048,
+    "final_return": 0.6371841440155239,
+    "final_phi": 0.6383261358801887
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.0021588122364892826,
+    "final_return": 0.6387867143547713,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": -0.0003265233575110438,
+    "final_return": 0.636301378760771,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 0,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.0021588122364892826,
+    "final_return": 0.6387867143547713,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.04672050154196894,
+    "final_return": 0.6530493163347567,
+    "final_phi": 0.3108168423723315
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.04672050154196894,
+    "final_return": 0.6530493163347567,
+    "final_phi": 0.3108168423723315
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.032255722754301996,
+    "final_return": 0.6385845375470898,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.032255722754301996,
+    "final_return": 0.6385845375470898,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.016846472468713736,
+    "final_return": 0.6699459340567516,
+    "final_phi": 0.2512652321614424
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.016846472468713736,
+    "final_return": 0.6699459340567516,
+    "final_phi": 0.2512652321614424
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": -0.007789432042617062,
+    "final_return": 0.6453100295454208,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.06606361563506935,
+    "final_return": 0.7191630772231072,
+    "final_phi": 0.8690770052535493
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.007512777574303464,
+    "final_return": 0.676472881496139,
+    "final_phi": 0.22724302866767843
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.007512777574303464,
+    "final_return": 0.676472881496139,
+    "final_phi": 0.22724302866767843
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": -0.01999789724318024,
+    "final_return": 0.6489622066786553,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.06134369969029041,
+    "final_return": 0.730303803612126,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.05007117107444614,
+    "final_return": 0.659778302007117,
+    "final_phi": 0.2924382428908514
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.05007116885358054,
+    "final_return": 0.6597782997862514,
+    "final_phi": 0.2924382425460113
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.030005988204523493,
+    "final_return": 0.6397131191371943,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.0312375480654582,
+    "final_return": 0.640944678998129,
+    "final_phi": 0.45623806025943614
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.01811476825245939,
+    "final_return": 0.6774514087250187,
+    "final_phi": 0.23996536569442148
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.018114769929484464,
+    "final_return": 0.6774514104020438,
+    "final_phi": 0.23996536140287233
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.06289179609096351,
+    "final_return": 0.7222284365635229,
+    "final_phi": 0.8147010025836483
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.06279999868010022,
+    "final_return": 0.7221366391526596,
+    "final_phi": 0.8947010025836484
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.007921026055892066,
+    "final_return": 0.6852088979425517,
+    "final_phi": 0.21823533208766624
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.00792102631614211,
+    "final_return": 0.6852088982028017,
+    "final_phi": 0.2182353183126317
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.05562311799378783,
+    "final_return": 0.7329109898804474,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 1,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.05562311799378783,
+    "final_return": 0.7329109898804474,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.002869477169313517,
+    "final_return": 0.630644081691457,
+    "final_phi": 0.6563550618450203
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.008604521210899496,
+    "final_return": 0.636379125733043,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.008604521210899496,
+    "final_return": 0.636379125733043,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.008604521210899496,
+    "final_return": 0.636379125733043,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.0009479815531665547,
+    "final_return": 0.6356556612075325,
+    "final_phi": 0.6629865121387447
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.0033492660091921644,
+    "final_return": 0.6380569456635581,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.0033492660091921644,
+    "final_return": 0.6380569456635581,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.0033492660091921644,
+    "final_return": 0.6380569456635581,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.0004864657918027815,
+    "final_return": 0.6375251232846428,
+    "final_phi": 0.6592707757575782
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.0018852851299149265,
+    "final_return": 0.638923942622755,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.0018852851299149265,
+    "final_return": 0.638923942622755,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.0018852851299149265,
+    "final_return": 0.638923942622755,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.004387005758824003,
+    "final_return": 0.6288336394420295,
+    "final_phi": 0.6260621159812143
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.011581577443092184,
+    "final_return": 0.6360282111262977,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.011581577443092184,
+    "final_return": 0.6360282111262977,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.011581577443092184,
+    "final_return": 0.6360282111262977,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.0013789466003540918,
+    "final_return": 0.6344489487721914,
+    "final_phi": 0.6273066111053825
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.004596103798918505,
+    "final_return": 0.6376661059707558,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.004596103798918505,
+    "final_return": 0.6376661059707558,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.004596103798918505,
+    "final_return": 0.6376661059707558,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.0006509070184838039,
+    "final_return": 0.6368620924683692,
+    "final_phi": 0.6266092548108911
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.002437800835504822,
+    "final_return": 0.6386489862853902,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.002437800835504822,
+    "final_return": 0.6386489862853902,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 1,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.002437800835504822,
+    "final_return": 0.6386489862853902,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.049330025004600264,
+    "final_return": 0.6599532747152488,
+    "final_phi": 0.2915876582959563
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.049330025004600264,
+    "final_return": 0.6599532747152488,
+    "final_phi": 0.2915876582959563
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.029229189856384785,
+    "final_return": 0.6398524395670333,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.03248391193188982,
+    "final_return": 0.6431071616425383,
+    "final_phi": 0.5356268261228331
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.016426324545236848,
+    "final_return": 0.6778227837112082,
+    "final_phi": 0.23715680081489726
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.016426324545236848,
+    "final_return": 0.6778227837112082,
+    "final_phi": 0.23715680081489726
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": -0.01434233024005005,
+    "final_return": 0.6470541289259213,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.06223009297626492,
+    "final_return": 0.7236265521422363,
+    "final_phi": 0.94
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.007604650263722812,
+    "final_return": 0.685797289617748,
+    "final_phi": 0.21657107767394349
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.007604650263722812,
+    "final_return": 0.685797289617748,
+    "final_phi": 0.21657107767394349
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": -0.026975561859344466,
+    "final_return": 0.6512170774946807,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "S",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.05542204910164217,
+    "final_return": 0.7336146884556674,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.047435156558532365,
+    "final_return": 0.6549133449407065,
+    "final_phi": 0.30493376047965287
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.04743515340336013,
+    "final_return": 0.6549133417855343,
+    "final_phi": 0.3049337679213007
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.031409017612529344,
+    "final_return": 0.6388872059947035,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.031409017612529344,
+    "final_return": 0.6388872059947035,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.018924596243750424,
+    "final_return": 0.6728454019727399,
+    "final_phi": 0.24797802936382804
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.018924595906535058,
+    "final_return": 0.6728454016355245,
+    "final_phi": 0.24797801018781995
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.06551351076644496,
+    "final_return": 0.7194343164954344,
+    "final_phi": 0.8287134266097602
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.06543516822560813,
+    "final_return": 0.7193559739545976,
+    "final_phi": 0.8687134266097603
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.007837640371771704,
+    "final_return": 0.6794836560304902,
+    "final_phi": 0.22406094782973554
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.007837642586235205,
+    "final_return": 0.6794836582449537,
+    "final_phi": 0.2240609321932102
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.05947804818475255,
+    "final_return": 0.7311240638434711,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 2,
+    "origin": "I",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.05947804818475255,
+    "final_return": 0.7311240638434711,
+    "final_phi": 1.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.0034096477496414757,
+    "final_return": 0.6324509141732035,
+    "final_phi": 0.6695573126790442
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.007784622349323866,
+    "final_return": 0.6368258887728859,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.007784622349323866,
+    "final_return": 0.6368258887728859,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.007784622349323866,
+    "final_return": 0.6368258887728859,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.0009059731673209948,
+    "final_return": 0.6360494583458629,
+    "final_phi": 0.6762002880701493
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.0030548572294186727,
+    "final_return": 0.6381983424079606,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.0030548572294186727,
+    "final_return": 0.6381983424079606,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.0030548572294186727,
+    "final_return": 0.6381983424079606,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.00047712536764765723,
+    "final_return": 0.6377286903685481,
+    "final_phi": 0.6755560801656385
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.001759374529529012,
+    "final_return": 0.6390109395304294,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.001759374529529012,
+    "final_return": 0.6390109395304294,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "M",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.001759374529529012,
+    "final_return": 0.6390109395304294,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_source",
+    "return_gain": 0.004489862119910981,
+    "final_return": 0.6286194177389072,
+    "final_phi": 0.6287762496406792
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_updated",
+    "return_gain": 0.011880534773289875,
+    "final_return": 0.6360100903922861,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_mle",
+    "return_gain": 0.011880534773289875,
+    "final_return": 0.6360100903922861,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 40,
+    "controller": "A_true",
+    "return_gain": 0.011880534773289875,
+    "final_return": 0.6360100903922861,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_source",
+    "return_gain": 0.0012829517907139154,
+    "final_return": 0.6346757063230846,
+    "final_phi": 0.6308987142745174
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_updated",
+    "return_gain": 0.004351209545850665,
+    "final_return": 0.6377439640782213,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_mle",
+    "return_gain": 0.004351209545850665,
+    "final_return": 0.6377439640782213,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 80,
+    "controller": "A_true",
+    "return_gain": 0.004351209545850665,
+    "final_return": 0.6377439640782213,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_source",
+    "return_gain": 0.0006096700067744765,
+    "final_return": 0.6369950910545819,
+    "final_phi": 0.6308391507211846
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_updated",
+    "return_gain": 0.00232686704020979,
+    "final_return": 0.6387122880880172,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_mle",
+    "return_gain": 0.00232686704020979,
+    "final_return": 0.6387122880880172,
+    "final_phi": 0.0
+  },
+  {
+    "seed": 2,
+    "origin": "O",
+    "update": 120,
+    "controller": "A_true",
+    "return_gain": 0.00232686704020979,
+    "final_return": 0.6387122880880172,
+    "final_phi": 0.0
+  }
+]

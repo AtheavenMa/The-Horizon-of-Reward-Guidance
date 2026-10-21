@@ -1,0 +1,6 @@
+domain: walker
+task: walk
+steps: 30000
+seed: 1
+mode: diagnosis
+task_id: dm_control:walker-walk

@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "rows_frozen": 502,
+  "rm": {
+    "by_subset": {
+      "Ties": 0.029411764705882353,
+      "Math": 0.225,
+      "Precise IF": 0.2375,
+      "Focus": 0.125,
+      "Factuality": 0.35,
+      "Safety": 0.2875
+    },
+    "macro": 0.2090686274509804,
+    "rule": "every chosen completion must outscore every rejected completion",
+    "model": "Qwen2.5-0.5B human_4096"
+  },
+  "judge": {
+    "scored_rows": 502,
+    "frozen_rows": 502,
+    "by_subset": {
+      "Ties": 0.29411764705882354,
+      "Math": 0.0125,
+      "Precise IF": 0.0,
+      "Focus": 0.2,
+      "Factuality": 0.0,
+      "Safety": 0.1625
+    },
+    "macro_on_scored_subsets": 0.11151960784313725,
+    "temperature": 0,
+    "order": "randomized per row with seed 7",
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "subset_not_leaderboard": true
+  },
+  "full_1865": "not_scored",
+  "trained_4b_rm": "NOT RUN until weights trained",
+  "runtime_seconds": 95.96045072097331,
+  "source_sha": "aa7709f54d552b15219cff39695794654f88d690",
+  "guarantee_type": "empirical_proxy"
+}

@@ -1,0 +1,8 @@
+sft: cleanrl/EleutherAI_pythia-1b-deduped__sft__tldr
+teacher: cleanrl/EleutherAI_pythia-1b-deduped__reward__tldr
+teacher_frozen: true
+online_label_source: AI feedback
+human_initialization: cleanrl Pythia-1B TL;DR reward model trained on human comparisons
+independent_quality: token overlap, then Qwen3-4B rubric after the policy is unloaded
+seed: 3
+n_prompts: 12

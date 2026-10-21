@@ -1,0 +1,10 @@
+task,checkpoint,selector,added_pairs,certificate_change_unchanged,uncertainty_change,true_finite_step_gain,query_seconds,reward_shift
+Deep-Sea-Treasure,seed1_round0,Uniform,16,0.01403073,0.1,0.028782895,3.6411919e-05,0.0052294077
+Deep-Sea-Treasure,seed1_round0,Generic uncertainty,16,0,0.1,0.14881056,4.682783e-05,0.13232805
+Deep-Sea-Treasure,seed1_round0,Policy-relevant uncertainty,16,0,0.1,-0.11311106,0.00015018228,0.23626397
+Deep-Sea-Treasure,seed2_round0,Uniform,16,0,-0.1,-0.07123562,2.0161271e-05,0.096375332
+Deep-Sea-Treasure,seed2_round0,Generic uncertainty,16,0,0,0.050877919,2.3215078e-05,0.10399659
+Deep-Sea-Treasure,seed2_round0,Policy-relevant uncertainty,16,0,0.1,-0.0041118421,0.0001280196,0.08205921
+Deep-Sea-Treasure,seed3_round0,Uniform,16,0.0098945626,0.1,-0.074497866,1.7846934e-05,0.18246845
+Deep-Sea-Treasure,seed3_round0,Generic uncertainty,16,0,0,-0.043841494,2.2896565e-05,0.052292586
+Deep-Sea-Treasure,seed3_round0,Policy-relevant uncertainty,16,0,0,0.064400705,0.00012651552,0.12645468

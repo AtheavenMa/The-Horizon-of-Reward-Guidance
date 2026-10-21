@@ -1,0 +1,40 @@
+{
+  "parent": "B_bounded_seed0_step16.pt",
+  "parent_step": 16,
+  "seed": 0,
+  "arm": "H",
+  "optimizer_restored": true,
+  "rng_restored": true,
+  "repeat_decode_identical": true,
+  "no_actor_update_identical": true,
+  "anchor_hashes_match_f2": true,
+  "label_origin": "human TRAIN pairs outside the 4096-document source pool",
+  "rm_steps": 32,
+  "label_count": 32,
+  "movement": {
+    "mode": "weight_interpolation",
+    "alpha": 0.1328125,
+    "per_event_rms": 0.048750534653663635,
+    "proposal_rms": null,
+    "applied": true,
+    "status": "APPLIED",
+    "weight_interpolation_stable": true,
+    "architecture": null
+  },
+  "parent_rouge_l": 0.16159933697854204,
+  "after_rouge_l": 0.16327209823884267,
+  "delta": 0.001672761260300637,
+  "reference_kl": 0.005786448764865781,
+  "mean_tokens": 46.734375,
+  "train_kl_stopped": 0,
+  "human_holdout": {
+    "accuracy": 0.5819095477386935,
+    "nll": 0.6823150378375796,
+    "brier": 0.24398573470410465,
+    "ece": 0.04315511594765153,
+    "heldout_n": 995
+  },
+  "fit_seconds": 15.43706407211721,
+  "evaluator": "rouge_l_vs_dataset_completion",
+  "guarantee_type": "empirical_proxy"
+}

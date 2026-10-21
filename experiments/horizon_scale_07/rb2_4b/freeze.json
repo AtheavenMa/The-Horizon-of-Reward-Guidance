@@ -1,0 +1,18 @@
+{
+  "dataset": "allenai/reward-bench-2",
+  "rows_available": 1865,
+  "rows_frozen": 502,
+  "by_subset": {
+    "Ties": 102,
+    "Math": 80,
+    "Precise IF": 80,
+    "Focus": 80,
+    "Factuality": 80,
+    "Safety": 80
+  },
+  "frozen_before_prediction": true,
+  "full_set_status": "not_scored",
+  "reason": "502-row stratified subset frozen before scoring. Full 1865 is not an official leaderboard number.",
+  "runtime_seconds": 0.13809415884315968,
+  "source_sha": "aa7709f54d552b15219cff39695794654f88d690"
+}

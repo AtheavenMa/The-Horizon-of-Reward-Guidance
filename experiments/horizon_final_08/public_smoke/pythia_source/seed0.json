@@ -1,0 +1,5 @@
+{
+  "seed": 0,
+  "fixed_eval": 0.16630269050943497,
+  "evaluator": "rouge_l_vs_dataset_completion"
+}

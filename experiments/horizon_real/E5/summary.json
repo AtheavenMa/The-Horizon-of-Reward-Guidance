@@ -1,0 +1,174 @@
+[
+  {
+    "task": "push-v3",
+    "method": "baseline",
+    "seed": 1,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 8.360123430731019
+  },
+  {
+    "task": "push-v3",
+    "method": "baseline",
+    "seed": 2,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 4.437430867166862
+  },
+  {
+    "task": "push-v3",
+    "method": "baseline",
+    "seed": 3,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 3.634143280860497
+  },
+  {
+    "task": "push-v3",
+    "method": "extra_updates",
+    "seed": 1,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 5.051362491910154
+  },
+  {
+    "task": "push-v3",
+    "method": "extra_updates",
+    "seed": 2,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 2.727361663855733
+  },
+  {
+    "task": "push-v3",
+    "method": "extra_updates",
+    "seed": 3,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 2.738198388490863
+  },
+  {
+    "task": "push-v3",
+    "method": "extra_feedback",
+    "seed": 1,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 5.429440587199473
+  },
+  {
+    "task": "push-v3",
+    "method": "extra_feedback",
+    "seed": 2,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 3.61486502846663
+  },
+  {
+    "task": "push-v3",
+    "method": "extra_feedback",
+    "seed": 3,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 2.839014816265349
+  },
+  {
+    "task": "push-v3",
+    "method": "diagnosis",
+    "seed": 1,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 9.348188853083201
+  },
+  {
+    "task": "push-v3",
+    "method": "diagnosis",
+    "seed": 2,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 3.5662510407227903
+  },
+  {
+    "task": "push-v3",
+    "method": "diagnosis",
+    "seed": 3,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 3.8854615830134875
+  },
+  {
+    "task": "drawer-open-v3",
+    "method": "baseline",
+    "seed": 1,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 93.51869793162633
+  },
+  {
+    "task": "drawer-open-v3",
+    "method": "baseline",
+    "seed": 2,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 93.05923217376262
+  },
+  {
+    "task": "drawer-open-v3",
+    "method": "baseline",
+    "seed": 3,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 89.80521875302718
+  },
+  {
+    "task": "drawer-open-v3",
+    "method": "extra_feedback",
+    "seed": 1,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 91.91072399262119
+  },
+  {
+    "task": "drawer-open-v3",
+    "method": "extra_feedback",
+    "seed": 2,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 86.13211864179597
+  },
+  {
+    "task": "drawer-open-v3",
+    "method": "extra_feedback",
+    "seed": 3,
+    "steps": 6000,
+    "pairs": 187,
+    "success": 0.0,
+    "return": 82.44132932717739
+  },
+  {
+    "task": "reach-v3",
+    "method": "baseline",
+    "seed": 1,
+    "steps": 2000,
+    "pairs": 62,
+    "success": 0.0,
+    "return": 122.38416329955601,
+    "note": "simpler-task check after Push and Drawer Open success stayed at 0"
+  }
+]

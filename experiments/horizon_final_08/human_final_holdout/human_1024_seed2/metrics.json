@@ -1,0 +1,151 @@
+{
+  "name": "human_1024_seed2",
+  "seed": 2,
+  "train_pairs": 1024,
+  "epochs": 2,
+  "optimizer_steps": 2048,
+  "gpu_seconds": 86.12380143161863,
+  "temperature_frozen_on_dev": 2.0,
+  "dev": {
+    "heldout_n": 512,
+    "accuracy": 0.529296875,
+    "accuracy_ci95": [
+      0.4857530012963346,
+      0.5731065677893363
+    ],
+    "nll": 0.8346356905246921,
+    "brier": 0.28436706687210844,
+    "ece": 0.19531924303942105,
+    "calibration_bins": [
+      {
+        "bin": 0.0,
+        "count": 36,
+        "gap": 0.34739750957750304
+      },
+      {
+        "bin": 0.1,
+        "count": 48,
+        "gap": 0.2675980255007744
+      },
+      {
+        "bin": 0.2,
+        "count": 50,
+        "gap": 0.2346005633473396
+      },
+      {
+        "bin": 0.30000000000000004,
+        "count": 69,
+        "gap": 0.08957245254862134
+      },
+      {
+        "bin": 0.4,
+        "count": 59,
+        "gap": 0.11097950804031498
+      },
+      {
+        "bin": 0.5,
+        "count": 57,
+        "gap": 0.20950241988165336
+      },
+      {
+        "bin": 0.6000000000000001,
+        "count": 57,
+        "gap": 0.15994365696321455
+      },
+      {
+        "bin": 0.7000000000000001,
+        "count": 51,
+        "gap": 0.14494633908365295
+      },
+      {
+        "bin": 0.8,
+        "count": 52,
+        "gap": 0.23973553226544309
+      },
+      {
+        "bin": 0.9,
+        "count": 33,
+        "gap": 0.2811267014705774
+      }
+    ],
+    "length_correlation": 0.20088141477999552,
+    "truncation_rate": 0.001953125,
+    "documents": 421,
+    "ci_unit": "document bootstrap, not independent seeds",
+    "temperature": 1.0
+  },
+  "final": {
+    "heldout_n": 995,
+    "accuracy": 0.542713567839196,
+    "accuracy_ci95": [
+      0.0,
+      1.0
+    ],
+    "nll": 0.5652788132429123,
+    "brier": 0.20433277248911855,
+    "ece": 0.39441421627998346,
+    "calibration_bins": [
+      {
+        "bin": 0.0,
+        "count": 51,
+        "gap": 0.398708235541491
+      },
+      {
+        "bin": 0.1,
+        "count": 90,
+        "gap": 0.21477556112739773
+      },
+      {
+        "bin": 0.2,
+        "count": 118,
+        "gap": 0.1903553475010193
+      },
+      {
+        "bin": 0.30000000000000004,
+        "count": 125,
+        "gap": 0.10508833408355717
+      },
+      {
+        "bin": 0.4,
+        "count": 100,
+        "gap": 0.06252233862876894
+      },
+      {
+        "bin": 0.5,
+        "count": 105,
+        "gap": 0.060426558199382974
+      },
+      {
+        "bin": 0.6000000000000001,
+        "count": 128,
+        "gap": 0.1202194131910801
+      },
+      {
+        "bin": 0.7000000000000001,
+        "count": 102,
+        "gap": 0.17661524111149363
+      },
+      {
+        "bin": 0.8,
+        "count": 101,
+        "gap": 0.2525780590453951
+      },
+      {
+        "bin": 0.9,
+        "count": 75,
+        "gap": 0.38473836501439407
+      }
+    ],
+    "length_correlation": 0.17806564092963856,
+    "truncation_rate": 0.003015075376884422,
+    "documents": 662,
+    "ci_unit": "document bootstrap, not independent seeds",
+    "temperature": 2.0
+  },
+  "accuracy": 0.529296875,
+  "split": "dev",
+  "train_lora": true,
+  "label_source": "human",
+  "equal_compute_note": "extra_257 uses 16 epochs so its optimizer steps match one pass over 4098 pairs. The examples are not the same, so this is a step-normalized contrast.",
+  "guarantee_type": "empirical_proxy"
+}

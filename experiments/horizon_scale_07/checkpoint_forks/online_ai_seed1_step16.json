@@ -1,0 +1,13 @@
+{
+  "seed": 1,
+  "parent_step": 16,
+  "branch": "online_ai",
+  "policy_updates": 16,
+  "new_human_labels": 0,
+  "new_ai_labels": 32,
+  "reward_optimizer_steps": 2,
+  "final_mean_reward": -6.8046875,
+  "guarantee_type": "empirical_proxy",
+  "warning": "no-guarantee",
+  "label_source": "AI feedback"
+}

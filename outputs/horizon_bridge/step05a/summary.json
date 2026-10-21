@@ -1,0 +1,157 @@
+{
+  "contact_time": 0.008,
+  "exact": {
+    "first_source_loss": 0.008,
+    "first_updated_loss": 0.008,
+    "first_instantaneous_source_loss": 0.008,
+    "pointwise_min": 0.11355472114308944,
+    "pointwise_above_gamma": true,
+    "true_finite_step_gain_near_contact": 0.11602958826828491,
+    "terminal_true_return": 0.6756382645167296,
+    "terminal_source_certificate": 0.05939034212909533,
+    "terminal_updated_certificate": 0.05939034212909533,
+    "max_gradient_error": 0.0,
+    "mean_gradient_error": 0.0,
+    "max_phi_step": 2.0000000000020002e-05,
+    "phi_within_budget": true
+  },
+  "half": {
+    "first_source_loss": 0.008,
+    "first_updated_loss": 0.008,
+    "first_instantaneous_source_loss": 0.008,
+    "pointwise_min": 0.11355478499946235,
+    "pointwise_above_gamma": true,
+    "true_finite_step_gain_near_contact": 0.11603515954750065,
+    "terminal_true_return": 0.6756381953771019,
+    "terminal_source_certificate": 0.05936386485760892,
+    "terminal_updated_certificate": 0.05936386485760892,
+    "max_gradient_error": 0.0,
+    "mean_gradient_error": 0.0,
+    "max_phi_step": 1.0000000000065512e-05,
+    "phi_within_budget": true
+  },
+  "sampled": {
+    "256": {
+      "losses": [
+        0.0,
+        0.0005,
+        0.0,
+        0.0005,
+        0.0005
+      ],
+      "mean_loss": 0.00030000000000000003,
+      "loss_std": 0.0002449489742783178,
+      "censored": 0,
+      "max_steps_from_exact": 16.0,
+      "true_gain_mean": 0.11365997069940903,
+      "true_gain_values": [
+        0.11394207604564777,
+        0.11728616821038429,
+        0.11412204438876472,
+        0.12276560780022372,
+        0.10018395705202465
+      ],
+      "max_gradient_error": 0.15061426479940573,
+      "mean_gradient_error": 0.048415109227797695,
+      "pointwise_above_gamma": true,
+      "pointwise_min": 0.113510334500814
+    },
+    "2048": {
+      "losses": [
+        0.001,
+        0.0005,
+        0.0,
+        0.001,
+        0.0015
+      ],
+      "mean_loss": 0.0008,
+      "loss_std": 0.0005099019513592785,
+      "censored": 0,
+      "max_steps_from_exact": 16.0,
+      "true_gain_mean": 0.11348784375480037,
+      "true_gain_values": [
+        0.11378482600976625,
+        0.11218319018357903,
+        0.1121880475434267,
+        0.11826839391093635,
+        0.11101476112629349
+      ],
+      "max_gradient_error": 0.04412691786167258,
+      "mean_gradient_error": 0.017548753344084695,
+      "pointwise_above_gamma": true,
+      "pointwise_min": 0.11354304777355856
+    },
+    "8192": {
+      "losses": [
+        0.001,
+        0.0005,
+        0.0,
+        0.001,
+        0.002
+      ],
+      "mean_loss": 0.0009000000000000001,
+      "loss_std": 0.0006633249580710799,
+      "censored": 0,
+      "max_steps_from_exact": 16.0,
+      "true_gain_mean": 0.11522901876999114,
+      "true_gain_values": [
+        0.11391590965548204,
+        0.11544269044883038,
+        0.11175976735366966,
+        0.11836170088264097,
+        0.11666502550933266
+      ],
+      "max_gradient_error": 0.026358660575714395,
+      "mean_gradient_error": 0.008615031109590405,
+      "pointwise_above_gamma": true,
+      "pointwise_min": 0.11354908295398315
+    },
+    "2097152": {
+      "losses": [
+        0.003,
+        0.0035,
+        0.002,
+        0.003,
+        0.004
+      ],
+      "mean_loss": 0.0031,
+      "loss_std": 0.00066332495807108,
+      "censored": 0,
+      "max_steps_from_exact": 12.0,
+      "true_gain_mean": 0.11592752580682486,
+      "true_gain_values": [
+        0.11587985189676075,
+        0.11582547680433208,
+        0.11603075098287619,
+        0.11585110344736194,
+        0.11605044590279334
+      ],
+      "max_gradient_error": 0.0016483988850174128,
+      "mean_gradient_error": 0.0005548083336585057,
+      "pointwise_above_gamma": true,
+      "pointwise_min": 0.11355479467876547
+    }
+  },
+  "initial_source_certificate": 0.06125919999999993,
+  "initial_true_return": 0.674243456162643,
+  "continuous_contact": 0.007835874324472896,
+  "all_controls_upper": 0.010006022973614241,
+  "status": "PASS",
+  "stage": "5A",
+  "command": "python experiments/bridge/06_online_bandit.py --stage 5A --out outputs/horizon_bridge/step05a",
+  "phi0": 0.8428043202033038,
+  "a_star_evaluator_only": 0.8428043202033038,
+  "gamma": 0.06,
+  "rho": 0.04,
+  "h": 0.0005,
+  "steps": 24,
+  "feedback_step": 8,
+  "source_set": [
+    -1.0,
+    2.0
+  ],
+  "scope": "Four-outcome Theorem 2 bridge. No Walker, Meta-World, or language run.",
+  "source_sha": "7807ac1c43d8a3cbd7bd1b7b50694887f8a3a1fa",
+  "runtime_seconds": 4.0535352397710085,
+  "max_rss_kib": 1691600
+}

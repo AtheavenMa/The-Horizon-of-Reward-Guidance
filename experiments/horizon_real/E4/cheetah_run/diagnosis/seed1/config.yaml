@@ -1,0 +1,6 @@
+domain: cheetah
+task: run
+steps: 30000
+seed: 1
+mode: diagnosis
+task_id: dm_control:cheetah-run

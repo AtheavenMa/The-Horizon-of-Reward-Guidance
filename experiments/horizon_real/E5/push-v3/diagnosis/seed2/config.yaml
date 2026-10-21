@@ -1,0 +1,4 @@
+task: push-v3
+method: diagnosis
+seed: 2
+steps: 6000

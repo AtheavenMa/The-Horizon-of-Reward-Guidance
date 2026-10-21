@@ -1,0 +1,13 @@
+{
+  "seed": 1,
+  "parent_step": 16,
+  "branch": "reveal_32",
+  "policy_updates": 16,
+  "new_human_labels": 32,
+  "new_ai_labels": 0,
+  "reward_optimizer_steps": 4,
+  "final_mean_reward": -5.9140625,
+  "guarantee_type": "empirical_proxy",
+  "warning": "no-guarantee",
+  "label_source": "human historical"
+}

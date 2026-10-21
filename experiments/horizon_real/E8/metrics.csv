@@ -1,0 +1,5 @@
+task,baseline,comparison,labels_matched,compute_matched,difference,replicated,baseline_mean,comparison_mean
+Walker Walk,normal,diagnosis,True,True,-5.653 (sd 5.136),True,35.933743,30.280356
+Cheetah Run,normal,diagnosis,True,True,-6.676 (sd 8.644),True,14.75424,8.0783251
+verifiable instructions / Qwen2.5-1.5B,Fixed-feature reward baseline,Policy-relevant selection,True,True,-2.776e-17 (sd 0.04082),True,,
+TL;DR / Pythia-1B,Fixed learned reward,Fixed-period new feedback,True,True,-0.001562 (sd 0.01666),True,,

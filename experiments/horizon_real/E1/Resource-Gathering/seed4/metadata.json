@@ -1,0 +1,25 @@
+{
+  "git_sha": "8078a36b586d443be059169aa9bf9b52b52043ef",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "config_keys": [
+    "beta",
+    "certificate_formal",
+    "coverage_development",
+    "dim",
+    "env_id",
+    "gamma",
+    "gamma_note",
+    "gamma_pos",
+    "high",
+    "low",
+    "max_steps",
+    "n_actions",
+    "n_pairs",
+    "pair_median_abs_half",
+    "positive_development_gains",
+    "rounds",
+    "seed",
+    "w_star"
+  ]
+}

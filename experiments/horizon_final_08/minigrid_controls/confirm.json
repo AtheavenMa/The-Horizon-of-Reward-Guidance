@@ -1,0 +1,224 @@
+{
+  "status": "complete",
+  "stage": "confirm",
+  "rows": [
+    {
+      "name": "oracle",
+      "seed": 0,
+      "optimizer_restored": true,
+      "parent_env_steps": 8192,
+      "fork_env_steps": 92160,
+      "deployed_weight": [
+        0.5,
+        0.5
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 14.0,
+        "true_utility": 0.47265625,
+        "success_count": 100
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "source_only",
+      "seed": 0,
+      "optimizer_restored": true,
+      "parent_env_steps": 8192,
+      "fork_env_steps": 92160,
+      "deployed_weight": [
+        0.657837706645406,
+        0.342162293354594
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "new_32",
+      "seed": 0,
+      "optimizer_restored": true,
+      "parent_env_steps": 8192,
+      "fork_env_steps": 92160,
+      "deployed_weight": [
+        0.5932166264987161,
+        0.4067833735012839
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "new_pairs": 32,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "extra_fit_same_source",
+      "seed": 0,
+      "optimizer_restored": true,
+      "parent_env_steps": 8192,
+      "fork_env_steps": 92160,
+      "deployed_weight": [
+        0.999,
+        0.0010000000000000009
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 14.0,
+        "true_utility": 0.47265625,
+        "success_count": 100
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "oracle",
+      "seed": 1,
+      "optimizer_restored": true,
+      "parent_env_steps": 8192,
+      "fork_env_steps": 92160,
+      "deployed_weight": [
+        0.5,
+        0.5
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "source_only",
+      "seed": 1,
+      "optimizer_restored": true,
+      "parent_env_steps": 8192,
+      "fork_env_steps": 92160,
+      "deployed_weight": [
+        0.5342821381686285,
+        0.46571786183137154
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "new_32",
+      "seed": 1,
+      "optimizer_restored": true,
+      "parent_env_steps": 8192,
+      "fork_env_steps": 92160,
+      "deployed_weight": [
+        0.49802157348446907,
+        0.5019784265155309
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "new_pairs": 32,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "extra_fit_same_source",
+      "seed": 1,
+      "optimizer_restored": true,
+      "parent_env_steps": 8192,
+      "fork_env_steps": 92160,
+      "deployed_weight": [
+        0.8329616244002038,
+        0.16703837559979617
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    }
+  ],
+  "doorkey": {
+    "env": "MiniGrid-DoorKey-6x6-v0",
+    "status": "NOT LEARNED",
+    "learned": false,
+    "source": "experiments/horizon_scale_07/minigrid/doorkey.json",
+    "oracle_40k_goal_success": 0.0,
+    "claim": "DoorKey is removed from any Horizon claim. No new sweep was run."
+  },
+  "seed2_diagnosis": {
+    "status": "short_diagnostic",
+    "note": "WP07 extra-fit seed 2 reached 0% with weight [0.230, 0.770] and a reinitialized optimizer. This probe restores the optimizer and compares that archived weight with a refit on 8192 steps, not a full 92160-step seed.",
+    "rows": [
+      {
+        "name": "archived_seed2_weight",
+        "weight": [
+          0.23,
+          0.77
+        ],
+        "fork_env_steps": 8192,
+        "final": {
+          "episodes": 100,
+          "goal_success": 0.0,
+          "mean_steps": 256.0,
+          "true_utility": -0.5,
+          "success_count": 0
+        },
+        "optimizer_restored": true
+      },
+      {
+        "name": "refit_same_labels",
+        "weight": [
+          0.6698911864923512,
+          0.33010881350764876
+        ],
+        "fork_env_steps": 8192,
+        "final": {
+          "episodes": 100,
+          "goal_success": 0.0,
+          "mean_steps": 256.0,
+          "true_utility": -0.5,
+          "success_count": 0
+        },
+        "optimizer_restored": true
+      }
+    ]
+  },
+  "runtime_seconds": 114.68854488432407,
+  "source_sha": "d5377ae30d16e30c6e40b5f0027bd149dae18ed2",
+  "guarantee_type": "empirical_proxy",
+  "passed": true
+}

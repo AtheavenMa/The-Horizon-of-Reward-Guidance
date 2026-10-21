@@ -1,0 +1,19 @@
+{
+  "env": "MiniGrid-DoorKey-6x6-v0",
+  "untrained": {
+    "episodes": 30,
+    "goal_success": 0.0,
+    "mean_steps": 360.0,
+    "true_utility": -0.5,
+    "success_count": 0
+  },
+  "oracle_40k": {
+    "episodes": 30,
+    "goal_success": 0.0,
+    "mean_steps": 360.0,
+    "true_utility": -0.5,
+    "success_count": 0
+  },
+  "learned": false,
+  "env_steps": 40192
+}

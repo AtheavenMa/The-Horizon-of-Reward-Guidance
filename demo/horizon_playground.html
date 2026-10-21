@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An interactive introduction to The Limits of Reward Guidance under Finite Adaptation.">
+<title>Explore The Limits of Reward Guidance under Finite Adaptation</title>
+<style>
+:root{--ink:#192b44;--muted:#596b82;--blue:#2278ce;--violet:#7b54c9;--border:#e0e6ed;--bg:#f7f9fc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
+main{max-width:1120px;margin:auto;padding:48px 24px}a{color:var(--blue)}
+.overline{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--blue)}
+h1{font-size:clamp(29px,4vw,46px);letter-spacing:-.045em;line-height:1.15;margin:10px 0 15px}
+.lead{max-width:780px;color:var(--muted);font-size:17px;line-height:1.6;margin:0 0 27px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:19px}
+.stat,.panel{border:1px solid var(--border);border-radius:16px;background:white;box-shadow:0 8px 30px rgba(25,43,68,.035)}
+.stat{padding:20px}.stat label{display:block;font-size:12px;color:var(--muted);margin-bottom:10px}.stat strong{display:block;font-size:29px;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.stat small{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+.layout{display:grid;grid-template-columns:305px minmax(0,1fr);gap:18px;align-items:start}
+.panel{padding:23px}.panel h2{font-size:18px;margin:0 0 7px;letter-spacing:-.025em}
+.intro{font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 22px}
+.setting{margin:0 0 22px}.setting-head{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:650;margin-bottom:9px}
+.setting output{font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--blue);cursor:pointer}input:focus-visible,button:focus-visible{outline:3px solid #7bb6ef;outline-offset:2px}
+.hint{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+.toggle{border-top:1px solid var(--border);padding-top:16px;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:650}
+.toggle input{height:18px;width:18px;accent-color:var(--violet)}
+.fresh{background:#f5f1ff;border-radius:12px;padding:17px 14px 1px;margin:16px 0 0}.fresh input{accent-color:var(--violet)}
+button{display:block;width:100%;background:white;border:1px solid #cad5e2;color:var(--ink);padding:11px;border-radius:10px;font-weight:700;cursor:pointer}
+button:hover{background:#f2f6fc}.legend{display:flex;flex-wrap:wrap;gap:10px 16px;color:var(--muted);font-size:12px;margin-bottom:15px}
+.legend i{display:inline-block;height:3px;width:20px;border-radius:4px;vertical-align:middle;margin-right:5px}
+svg{width:100%;height:auto;display:block;background:#fcfdff;border:1px solid #eaf0f6;border-radius:12px}
+.note{font-size:12px;line-height:1.65;color:var(--muted);margin:16px 0 0}
+.explain{padding:15px 17px;border-radius:12px;background:#f0f6ff;line-height:1.6;font-size:13px;margin-top:19px}
+footer{font-size:12px;margin-top:26px;color:var(--muted);line-height:1.6}
+@media(max-width:830px){.layout{grid-template-columns:1fr}main{padding:26px 16px}.panel{padding:19px}}
+@media(max-width:550px){.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:1/-1}.stat{padding:15px}.stat strong{font-size:24px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="overline">THE LIMITS OF REWARD GUIDANCE UNDER FINITE ADAPTATION · INTERACTIVE DEMO</div>
+<h1>When does yesterday's feedback stop being enough?</h1>
+<p class="lead">As an AI policy changes, its old reward signal may become too slow or uncertain to keep guiding the next step. Change the settings and watch how much progress the old feedback can still promise.</p>
+</header>
+<div class="stats">
+<div class="stat"><label>With original feedback</label><strong id="old-horizon">5.0</strong><small>Last supported time</small></div>
+<div class="stat"><label>With the selected feedback</label><strong id="new-horizon">26.0</strong><small>Last continuously supported time</small></div>
+<div class="stat"><label>By the end of the example</label><strong id="status">Supported</strong><small id="status-detail">Through time 15</small></div>
+</div>
+<div class="layout">
+<section class="panel" aria-label="Change the example">
+<h2>Explore the trade-off</h2><p class="intro">Move a slider, or reset to the illustrative paper example.</p>
+<div class="setting"><div class="setting-head"><label for="drift">How quickly the policy changes</label><output id="drift-out">0.12</output></div><input type="range" id="drift" min=".02" max=".2" step=".01" value=".12"><div class="hint"><span>Slower</span><span>Faster</span></div></div>
+<div class="setting"><div class="setting-head"><label for="speed">How quickly reward can adapt</label><output id="speed-out">0.04</output></div><input type="range" id="speed" min="0" max=".2" step=".01" value=".04"><div class="hint"><span>Slower</span><span>Faster</span></div></div>
+<div class="setting"><div class="setting-head"><label for="uncertainty">Uncertainty in old feedback</label><output id="uncertainty-out">1.00</output></div><input type="range" id="uncertainty" min=".2" max="1.5" step=".05" value="1"><div class="hint"><span>More certain</span><span>Less certain</span></div></div>
+<label class="toggle"><input type="checkbox" id="feedback" checked> Add new preference feedback</label>
+<div id="fresh-controls" class="fresh">
+<div class="setting"><div class="setting-head"><label for="time">When the new feedback arrives</label><output id="time-out">4.0</output></div><input type="range" id="time" min="0" max="12" step=".5" value="4"></div>
+<div class="setting"><div class="setting-head"><label for="narrow">Uncertainty after new feedback</label><output id="narrow-out">0.192</output></div><input type="range" id="narrow" min=".1" max="1" step=".001" value=".19246"></div>
+</div>
+<button type="button" id="reset">Reset to the paper example</button>
+</section>
+<section class="panel">
+<h2>How much improvement can we still promise?</h2>
+<p class="intro">A line below the gray minimum means we can no longer guarantee enough progress.</p>
+<div class="legend"><span><i style="background:#2278ce"></i>Old feedback</span><span><i style="background:#7b54c9"></i>With new feedback</span><span><i style="background:#748197"></i>Required minimum</span></div>
+<svg id="chart" viewBox="0 0 780 365" role="img" aria-label="Live curves of guaranteed progress over policy time">
+<g id="grid"></g>
+<path id="old-path" fill="none" stroke="#2278ce" stroke-width="3.5" stroke-linecap="round"></path>
+<path id="new-path" fill="none" stroke="#7b54c9" stroke-width="3.5" stroke-linecap="round"></path>
+<path id="threshold" fill="none" stroke="#748197" stroke-width="2" stroke-dasharray="7 6"></path>
+<line id="marker" y1="22" y2="317" stroke="#ab90de" stroke-dasharray="3 6"></line>
+<text id="marker-label" y="35" font-size="12" fill="#7955be" font-weight="600">New feedback</text>
+<text x="403" y="356" text-anchor="middle" font-size="12" fill="#596b82">Policy time</text>
+<text x="15" y="167" transform="rotate(-90 15 167)" text-anchor="middle" font-size="12" fill="#596b82">Guaranteed progress</text>
+</svg>
+<div class="explain" id="explain" aria-live="polite"></div>
+<p class="note">This is a controlled mathematical example, not a neural training curve. At the default settings, the narrower preference range comes from an illustrative fixed batch of 1,200 binary comparisons. Moving the sliders explores what-if settings.</p>
+</section>
+</div>
+<footer><a href="../README.md">Research overview</a> · <a href="../docs/RESULTS.md">Main results</a> · <a href="../docs/THEORY.md">Theory and assumptions</a> · No server, Python or GPU required.</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var g=1,required=.6,T=15,W=688,X=59,Y=20,H=297;
+var fields=["drift","speed","uncertainty","time","narrow"];
+var defaults={drift:.12,speed:.04,uncertainty:1,time:4,narrow:.19246};
+function el(id){return document.getElementById(id)}
+function val(id){return +el(id).value}
+function x(t){return X+W*t/T}
+function y(v){return Y+(1.1-Math.min(1.1,Math.max(0,v)))*H/1.1}
+function fmt(t){return !Number.isFinite(t)?"∞":t.toFixed(1)}
+function support(eta,gap){return gap<=0?Infinity:(g-required)/(eta*gap)}
+function gain(t,s,after){return g-Math.max(0,s.drift-s.speed)*t*(after?s.newEta:s.uncertainty)}
+function path(fn,start,end){
+  var parts=[],steps=250;
+  for(var j=0;j<=steps;j++){var t=start+(end-start)*j/steps;parts.push((j?"L":"M")+x(t).toFixed(2)+" "+y(fn(t)).toFixed(2))}
+  return parts.join(" ")
+}
+function grid(){
+  var html="";
+  [0,.2,.4,.6,.8,1].forEach(function(v){html+='<line x1="'+X+'" x2="'+(X+W)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke="#e6ecf3"/><text x="48" y="'+(y(v)+4)+'" text-anchor="end" font-size="11" fill="#596b82">'+v.toFixed(1)+'</text>'});
+  [0,3,6,9,12,15].forEach(function(t){html+='<text x="'+x(t)+'" y="336" text-anchor="middle" font-size="11" fill="#596b82">'+t+'</text>'});
+  el("grid").innerHTML=html;
+}
+function render(){
+  var s={drift:val("drift"),speed:val("speed"),uncertainty:val("uncertainty"),time:val("time"),newEta:Math.min(val("narrow"),val("uncertainty")),enabled:el("feedback").checked};
+  ["drift","speed","uncertainty","time"].forEach(function(id){el(id+"-out").textContent=s[id].toFixed(id==="time"?1:2)});
+  el("narrow-out").textContent=s.newEta.toFixed(3);
+  el("fresh-controls").style.display=s.enabled?"block":"none";
+  var gap=Math.max(0,s.drift-s.speed),old=support(s.uncertainty,gap);
+  var fresh=s.enabled&&s.time<=old?support(s.newEta,gap):old;
+  el("old-horizon").textContent=fmt(old);el("new-horizon").textContent=fmt(fresh);
+  var good=fresh>=T;
+  el("status").textContent=good?"Supported":"Not supported";
+  el("status").style.color=good?"#157556":"#a04e4e";
+  el("status-detail").textContent=good?"Through time 15":"Until about time "+fmt(fresh);
+  el("old-path").setAttribute("d",path(function(t){return gain(t,s,false)},0,T));
+  var line="";
+  if(s.enabled){
+    line=path(function(t){return gain(t,s,false)},0,s.time);
+    line+=" L"+x(s.time).toFixed(2)+" "+y(gain(s.time,s,true)).toFixed(2);
+    line+=" "+path(function(t){return gain(t,s,true)},s.time,T).replace(/^M/,"L");
+  }
+  el("new-path").setAttribute("d",line);
+  el("marker").style.display=s.enabled?"":"none";el("marker-label").style.display=s.enabled?"":"none";
+  el("marker").setAttribute("x1",x(s.time));el("marker").setAttribute("x2",x(s.time));
+  el("marker-label").setAttribute("x",Math.min(x(s.time)+9,645));
+  el("threshold").setAttribute("d","M"+X+" "+y(required)+" L"+(X+W)+" "+y(required));
+  var message=gap===0?"The reward can keep up. The guarantee has no finite deadline in this example.":!s.enabled?
+    "With no new feedback, guaranteed progress falls below the minimum around time "+fmt(old)+".":s.time>old?
+    "The feedback arrives after the original guarantee has already failed. It cannot restore an unbroken guarantee.":good?
+    "Fresh feedback arrives soon enough. Reduced uncertainty keeps the guarantee above the minimum through time 15.":
+    "The new feedback helps, but the reward still cannot keep up for the full example. Support ends near time "+fmt(fresh)+".";
+  el("explain").textContent=message;
+  el("chart").setAttribute("aria-label","Old feedback horizon "+fmt(old)+", updated horizon "+fmt(fresh)+", minimum gain 0.6.");
+}
+grid();
+fields.forEach(function(id){el(id).addEventListener("input",render)});
+el("feedback").addEventListener("change",render);
+el("reset").addEventListener("click",function(){fields.forEach(function(id){el(id).value=defaults[id]});el("feedback").checked=true;render()});
+render();
+})();
+</script>
+</body>
+</html>

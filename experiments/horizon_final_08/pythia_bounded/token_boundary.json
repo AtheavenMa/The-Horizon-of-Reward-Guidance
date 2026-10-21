@@ -1,0 +1,6 @@
+{
+  "direct_equals_glued": true,
+  "separate_prompt_length": 9,
+  "direct_length": 12,
+  "policy_loss_uses": "token ids of the prompt concatenated with generated continuation ids"
+}

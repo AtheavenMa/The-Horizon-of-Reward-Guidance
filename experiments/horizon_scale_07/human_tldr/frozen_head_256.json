@@ -1,0 +1,77 @@
+{
+  "heldout_n": 512,
+  "accuracy": 0.5078125,
+  "nll": 0.8831822785482473,
+  "brier": 0.3032548595673542,
+  "calibration_bins": [
+    {
+      "bin": 0.0,
+      "count": 35,
+      "mean_pred": 0.05184111066139719,
+      "mean_label": 0.45714285714285713
+    },
+    {
+      "bin": 0.1,
+      "count": 49,
+      "mean_pred": 0.1542341266663707,
+      "mean_label": 0.4489795918367347
+    },
+    {
+      "bin": 0.2,
+      "count": 63,
+      "mean_pred": 0.24635206565024362,
+      "mean_label": 0.4126984126984127
+    },
+    {
+      "bin": 0.30000000000000004,
+      "count": 53,
+      "mean_pred": 0.35233389768960344,
+      "mean_label": 0.4339622641509434
+    },
+    {
+      "bin": 0.4,
+      "count": 73,
+      "mean_pred": 0.4472566994085704,
+      "mean_label": 0.6301369863013698
+    },
+    {
+      "bin": 0.5,
+      "count": 64,
+      "mean_pred": 0.5501823909580708,
+      "mean_label": 0.515625
+    },
+    {
+      "bin": 0.6000000000000001,
+      "count": 50,
+      "mean_pred": 0.6460006392002106,
+      "mean_label": 0.54
+    },
+    {
+      "bin": 0.7000000000000001,
+      "count": 54,
+      "mean_pred": 0.7486593745372914,
+      "mean_label": 0.37037037037037035
+    },
+    {
+      "bin": 0.8,
+      "count": 35,
+      "mean_pred": 0.8492974758148193,
+      "mean_label": 0.5142857142857142
+    },
+    {
+      "bin": 0.9,
+      "count": 36,
+      "mean_pred": 0.9403623938560486,
+      "mean_label": 0.6388888888888888
+    }
+  ],
+  "length_correlation": 0.10434541823356465,
+  "truncation_rate": 0.001953125,
+  "guarantee_type": "empirical_proxy",
+  "optimizer_steps": 2056,
+  "name": "frozen_head_256",
+  "pairs": 257,
+  "epochs": 8,
+  "train_lora": false,
+  "label_source": "human"
+}

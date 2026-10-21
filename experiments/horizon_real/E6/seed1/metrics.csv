@@ -1,0 +1,6 @@
+seed,method,initial_pairs,added_pairs,reward_steps,verified_utility,pass_word,pass_sentences,pass_ending,pass_number,heldout_preference_accuracy,logprob_change,response_length
+1,Fixed-feature reward baseline,24,0,8,0.2,0.25,0.5,0,0,0.5,0.0050830543,27.75
+1,Neural reward baseline,24,0,8,0.3,0.5,0.375,0.125,0,nan,-0.0025933087,27.25
+1,"More reward updates, same data",24,0,24,0.225,0.5,0.125,0,0,0.5,0.00068256259,29.125
+1,"Extra feedback, same updates",24,16,8,0.175,0.25,0.375,0,0,0.5,0.0084715188,29.125
+1,Policy-relevant selection,24,0,8,0.25,0.375,0.375,0.125,0,0.33333333,-0.0021170974,29.25

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "T0",
+    "expected": 5.0,
+    "observed": 5.000000000000001,
+    "passed": true
+  },
+  {
+    "name": "ordinary_pg_contact",
+    "expected": 0.0078358743,
+    "observed": 0.007835874324472896,
+    "passed": true
+  },
+  {
+    "name": "frozen_policy_labels",
+    "expected": "certificate changes, return does not",
+    "observed": {
+      "passed": true,
+      "source": 0.68,
+      "updated": 0.936
+    },
+    "passed": true
+  },
+  {
+    "name": "population_vs_sampled",
+    "expected": "distinct fields",
+    "observed": {
+      "checkpoint_step": 0,
+      "true_return": 1.0,
+      "phi": null,
+      "source_certificate": 0.7,
+      "updated_certificate": null,
+      "population_gain": 0.2,
+      "sampled_gain": 0.05,
+      "movement_budget": 0.0,
+      "guarantee_type": "exact_finite"
+    },
+    "passed": true
+  },
+  {
+    "name": "public_manifest",
+    "expected": "schema accepts the example",
+    "observed": "exact_finite",
+    "passed": true
+  },
+  {
+    "name": "empirical_only",
+    "expected": "not_certified",
+    "observed": "not_certified",
+    "passed": true
+  },
+  {
+    "name": "censored",
+    "expected": "censored",
+    "observed": "censored",
+    "passed": true
+  },
+  {
+    "name": "invalid_manifest",
+    "expected": "helpful error",
+    "observed": "manifest file does not exist: /workspace/The-Horizon-of-Reward-Guidance/examples/07_guidance_audit/missing.json",
+    "passed": true
+  },
+  {
+    "name": "teacher_blind_query",
+    "expected": "TypeError",
+    "observed": true,
+    "passed": true
+  },
+  {
+    "name": "fork_and_suggestion",
+    "expected": "no_supported_action",
+    "observed": "no_supported_action",
+    "passed": true
+  },
+  {
+    "name": "reference_untouched",
+    "expected": "file still readable",
+    "observed": false,
+    "passed": true
+  }
+]

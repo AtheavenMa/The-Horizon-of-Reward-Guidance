@@ -1,0 +1,346 @@
+{
+  "labels": 128,
+  "primary_label_seed": 100,
+  "primary_fit": {
+    "delta_hat": 0.2959425242521041,
+    "a_hat": 0.7959425242521041,
+    "interval": [
+      0.6499217036622524,
+      1.0118023713175432
+    ],
+    "empty": false,
+    "wins": 98,
+    "labels": 128,
+    "informative": true,
+    "win_probability": 0.7975767524052352,
+    "seed": 100
+  },
+  "sampled": {
+    "source_only_bounded_robust": {
+      "seeds": 5,
+      "source_losses": [
+        0.003,
+        0.0035,
+        0.002,
+        0.003,
+        0.004
+      ],
+      "updated_losses": [
+        0.003,
+        0.0035,
+        0.002,
+        0.003,
+        0.004
+      ],
+      "source_loss_mean": 0.0031,
+      "updated_loss_censored": 0,
+      "true_gain_near_contact_mean": 0.11592752580682486,
+      "true_gain_near_contact": [
+        0.11587985189676075,
+        0.11582547680433208,
+        0.11603075098287619,
+        0.11585110344736194,
+        0.11605044590279334
+      ],
+      "terminal_updated": [
+        0.05913863805995234,
+        0.05897492510564817,
+        0.05907608576860568,
+        0.059686234702205354,
+        0.05964272783431923
+      ],
+      "terminal_source": [
+        0.05913863805995234,
+        0.05897492510564817,
+        0.05907608576860568,
+        0.059686234702205354,
+        0.05964272783431923
+      ],
+      "pointwise_above_gamma": true,
+      "within_budget": true,
+      "max_gradient_error": 0.001648398885017433
+    },
+    "information_bounded_robust": {
+      "seeds": 5,
+      "source_losses": [
+        0.003,
+        0.0035,
+        0.002,
+        0.003,
+        0.004
+      ],
+      "updated_losses": [
+        0.003,
+        0.0035,
+        0.002,
+        0.003,
+        null
+      ],
+      "source_loss_mean": 0.0031,
+      "updated_loss_censored": 1,
+      "true_gain_near_contact_mean": 0.11592752580682486,
+      "true_gain_near_contact": [
+        0.11587985189676075,
+        0.11582547680433208,
+        0.11603075098287619,
+        0.11585110344736194,
+        0.11605044590279334
+      ],
+      "terminal_updated": [
+        0.1073827507305225,
+        0.10746729245614262,
+        0.1074969854868435,
+        0.10754807120227916,
+        0.107571113949545
+      ],
+      "terminal_source": [
+        0.05913863805995234,
+        0.05897492510564817,
+        0.05907608576860568,
+        0.059686234702205354,
+        0.05964272783431923
+      ],
+      "pointwise_above_gamma": true,
+      "within_budget": true,
+      "max_gradient_error": 0.001648398885017433
+    },
+    "information_bounded_point": {
+      "seeds": 5,
+      "source_losses": [
+        0.003,
+        0.0035,
+        0.002,
+        0.003,
+        0.004
+      ],
+      "updated_losses": [
+        0.003,
+        0.0035,
+        0.002,
+        0.003,
+        null
+      ],
+      "source_loss_mean": 0.0031,
+      "updated_loss_censored": 1,
+      "true_gain_near_contact_mean": 0.11594516896753504,
+      "true_gain_near_contact": [
+        0.11589743967532762,
+        0.11584313750301334,
+        0.11604839991186111,
+        0.11586886113779116,
+        0.11606800660968197
+      ],
+      "terminal_updated": [
+        0.1072929141598955,
+        0.10737710896968622,
+        0.10740671231390664,
+        0.10745761867614334,
+        0.10748084901379684
+      ],
+      "terminal_source": [
+        0.058335257177244415,
+        0.05817268182495283,
+        0.05827206323427703,
+        0.05888382578422835,
+        0.05883918606075511
+      ],
+      "pointwise_above_gamma": true,
+      "within_budget": true,
+      "max_gradient_error": 0.0016483259215989024
+    }
+  },
+  "information_only": {
+    "seeds": 5,
+    "source_losses": [
+      0.008,
+      0.008,
+      0.008,
+      0.008,
+      0.008
+    ],
+    "updated_losses": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "source_loss_mean": 0.008,
+    "updated_loss_censored": 5,
+    "true_gain_near_contact_mean": 0.11602958826828491,
+    "true_gain_near_contact": [
+      0.11602958826828491,
+      0.11602958826828491,
+      0.11602958826828491,
+      0.11602958826828491,
+      0.11602958826828491
+    ],
+    "terminal_updated": [
+      0.10748804219584684,
+      0.11008337692230974,
+      0.09494483674021836,
+      0.1004406404974123,
+      0.10748804219584684
+    ],
+    "terminal_source": [
+      0.05939034212909533,
+      0.05939034212909533,
+      0.05939034212909533,
+      0.05939034212909533,
+      0.05939034212909533
+    ],
+    "pointwise_above_gamma": true,
+    "within_budget": true,
+    "max_gradient_error": 0.0,
+    "per_seed": [
+      {
+        "first_source_loss": 0.008,
+        "first_updated_loss": null,
+        "first_instantaneous_source_loss": 0.008,
+        "pointwise_min": 0.11355472114308944,
+        "pointwise_above_gamma": true,
+        "true_finite_step_gain_near_contact": 0.11602958826828491,
+        "terminal_true_return": 0.6756382645167296,
+        "terminal_source_certificate": 0.05939034212909533,
+        "terminal_updated_certificate": 0.10748804219584684,
+        "max_gradient_error": 0.0,
+        "mean_gradient_error": 0.0,
+        "max_phi_step": 2.0000000000020002e-05,
+        "phi_within_budget": true,
+        "a_hat": 0.7959425242521041,
+        "interval": [
+          0.6499217036622524,
+          1.0118023713175432
+        ],
+        "covers_a_star": true
+      },
+      {
+        "first_source_loss": 0.008,
+        "first_updated_loss": null,
+        "first_instantaneous_source_loss": 0.008,
+        "pointwise_min": 0.11355472114308944,
+        "pointwise_above_gamma": true,
+        "true_finite_step_gain_near_contact": 0.11602958826828491,
+        "terminal_true_return": 0.6756382645167296,
+        "terminal_source_certificate": 0.05939034212909533,
+        "terminal_updated_certificate": 0.11008337692230974,
+        "max_gradient_error": 0.0,
+        "mean_gradient_error": 0.0,
+        "max_phi_step": 2.0000000000020002e-05,
+        "phi_within_budget": true,
+        "a_hat": 0.7643423325335151,
+        "interval": [
+          0.6246679527059594,
+          0.9584795800233521
+        ],
+        "covers_a_star": true
+      },
+      {
+        "first_source_loss": 0.008,
+        "first_updated_loss": null,
+        "first_instantaneous_source_loss": 0.008,
+        "pointwise_min": 0.11355472114308944,
+        "pointwise_above_gamma": true,
+        "true_finite_step_gain_near_contact": 0.11602958826828491,
+        "terminal_true_return": 0.6756382645167296,
+        "terminal_source_certificate": 0.05939034212909533,
+        "terminal_updated_certificate": 0.09494483674021836,
+        "max_gradient_error": 0.0,
+        "mean_gradient_error": 0.0,
+        "max_phi_step": 2.0000000000020002e-05,
+        "phi_within_budget": true,
+        "a_hat": 0.9070765991846208,
+        "interval": [
+          0.7310500490592848,
+          1.269510450300928
+        ],
+        "covers_a_star": true
+      },
+      {
+        "first_source_loss": 0.008,
+        "first_updated_loss": null,
+        "first_instantaneous_source_loss": 0.008,
+        "pointwise_min": 0.11355472114308944,
+        "pointwise_above_gamma": true,
+        "true_finite_step_gain_near_contact": 0.11602958826828491,
+        "terminal_true_return": 0.6756382645167296,
+        "terminal_source_certificate": 0.05939034212909533,
+        "terminal_updated_certificate": 0.1004406404974123,
+        "max_gradient_error": 0.0,
+        "mean_gradient_error": 0.0,
+        "max_phi_step": 2.0000000000020002e-05,
+        "phi_within_budget": true,
+        "a_hat": 0.8665842671983568,
+        "interval": [
+          0.7029109190401399,
+          1.1565956906879067
+        ],
+        "covers_a_star": true
+      },
+      {
+        "first_source_loss": 0.008,
+        "first_updated_loss": null,
+        "first_instantaneous_source_loss": 0.008,
+        "pointwise_min": 0.11355472114308944,
+        "pointwise_above_gamma": true,
+        "true_finite_step_gain_near_contact": 0.11602958826828491,
+        "terminal_true_return": 0.6756382645167296,
+        "terminal_source_certificate": 0.05939034212909533,
+        "terminal_updated_certificate": 0.10748804219584684,
+        "max_gradient_error": 0.0,
+        "mean_gradient_error": 0.0,
+        "max_phi_step": 2.0000000000020002e-05,
+        "phi_within_budget": true,
+        "a_hat": 0.7959425242521041,
+        "interval": [
+          0.6499217036622524,
+          1.0118023713175432
+        ],
+        "covers_a_star": true
+      }
+    ]
+  },
+  "population_exact_robust": {
+    "first_source_loss": 0.008,
+    "first_updated_loss": null,
+    "first_instantaneous_source_loss": 0.008,
+    "pointwise_min": 0.11355472114308944,
+    "pointwise_above_gamma": true,
+    "true_finite_step_gain_near_contact": 0.11602958826828491,
+    "terminal_true_return": 0.6756382645167296,
+    "terminal_source_certificate": 0.05939034212909533,
+    "terminal_updated_certificate": 0.10748804219584684,
+    "max_gradient_error": 0.0,
+    "mean_gradient_error": 0.0,
+    "max_phi_step": 2.0000000000020002e-05,
+    "phi_within_budget": true,
+    "within_budget": true
+  },
+  "controls": {
+    "known_preference_updated_loss": null,
+    "known_preference_source_loss": 0.006500000000000001,
+    "known_preference_terminal_updated": 0.115745281012547,
+    "large_rho_source_loss": null,
+    "large_rho_terminal_source": 0.11353741002917417
+  },
+  "exact_reference_loss": 0.008,
+  "exact_true_gain_near_contact": 0.11602958826828491,
+  "status": "PASS",
+  "stage": "5C",
+  "command": "python experiments/bridge/06_online_bandit.py --stage 5C --out outputs/horizon_bridge/step05c",
+  "phi0": 0.8428043202033038,
+  "a_star_evaluator_only": 0.8428043202033038,
+  "gamma": 0.06,
+  "rho": 0.04,
+  "h": 0.0005,
+  "steps": 24,
+  "feedback_step": 8,
+  "source_set": [
+    -1.0,
+    2.0
+  ],
+  "scope": "Four-outcome Theorem 2 bridge. No Walker, Meta-World, or language run.",
+  "source_sha": "7807ac1c43d8a3cbd7bd1b7b50694887f8a3a1fa",
+  "runtime_seconds": 11.66660025715828,
+  "max_rss_kib": 4102808
+}

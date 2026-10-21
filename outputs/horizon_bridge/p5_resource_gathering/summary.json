@@ -1,0 +1,111 @@
+{
+  "self_check": {
+    "enemy_death_rate": 0.105,
+    "uniform_mu": [
+      -0.06775885411092587,
+      0.01729679036876077,
+      0.026611526115154223
+    ],
+    "uniform_gap": [
+      -0.0052411458890741225,
+      -0.006296790368760772,
+      0.0003884738848457768
+    ],
+    "spec_cap": 100,
+    "horizon": 40
+  },
+  "cosine": {
+    "256": 0.44775561689382165,
+    "512": 0.45094471934649316
+  },
+  "episodes_per_update": 256,
+  "development_oracle_40": {
+    "start": 0.20587450292065954,
+    "end": 0.22531265904460318,
+    "seconds": 1.7603334123268723
+  },
+  "robust_region_checked": true,
+  "robust_region_gap": 0.0018707562350869789,
+  "robust_status": "numerically checked union-bound region",
+  "methods": {
+    "oracle": {
+      "n": 5,
+      "return_0": 0.20587450292065954,
+      "final_mean": 0.5820667666046303,
+      "final_sd": 0.033521828531681286,
+      "mu_change": [
+        0.017279581764060838,
+        -0.0001658603846613066,
+        0.6212825323468181
+      ],
+      "w_error_mean": null,
+      "heldout_nll_mean": null,
+      "fit_gap_mean": null,
+      "labels": 0
+    },
+    "source": {
+      "n": 5,
+      "return_0": 0.20587450292065954,
+      "final_mean": 0.22616887006616465,
+      "final_sd": 0.0031350532167796555,
+      "mu_change": [
+        0.01828686166243535,
+        -0.0009409643781732834,
+        0.028041979481087866
+      ],
+      "w_error_mean": 0.3265986323710904,
+      "heldout_nll_mean": 0.686237962650089,
+      "fit_gap_mean": 0.0,
+      "labels": 32
+    },
+    "fisher": {
+      "n": 5,
+      "return_0": 0.20587450292065954,
+      "final_mean": 0.4603955655913479,
+      "final_sd": 0.1697542887838603,
+      "mu_change": [
+        0.004945397126076931,
+        0.0038339234524517735,
+        0.421275330924971
+      ],
+      "w_error_mean": 0.37849511267418107,
+      "heldout_nll_mean": 0.685571310861474,
+      "fit_gap_mean": 2.518927348660327e-06,
+      "labels": 96
+    },
+    "uniform": {
+      "n": 5,
+      "return_0": 0.20587450292065954,
+      "final_mean": 0.43526517873745413,
+      "final_sd": 0.21714750255467963,
+      "mu_change": [
+        0.009508905453105614,
+        0.002751018445448644,
+        0.378231151728473
+      ],
+      "w_error_mean": 0.8078415210537608,
+      "heldout_nll_mean": 0.689777905907859,
+      "fit_gap_mean": 6.505216377661327e-06,
+      "labels": 96
+    },
+    "robust": {
+      "n": 5,
+      "return_0": 0.20587450292065954,
+      "final_mean": 0.21707957827900884,
+      "final_sd": 0.0007996049620104353,
+      "mu_change": [
+        0.01054750434775114,
+        0.005145740275722992,
+        0.013444044056090822
+      ],
+      "w_error_mean": 0.2849472410769947,
+      "heldout_nll_mean": 0.6856947731495392,
+      "fit_gap_mean": 4.657693104093141e-06,
+      "labels": 96
+    }
+  },
+  "note": "Horizon is the frozen cap 40. The installed wrapper cap is 100 and is not the evaluator.",
+  "source_sha": "f06a38a444f0449484d23f868ceccd53baa031bd",
+  "runtime_seconds": 310.39664688240737,
+  "max_rss_kib": 100976
+}

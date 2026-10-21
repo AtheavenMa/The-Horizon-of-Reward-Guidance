@@ -1,0 +1,41 @@
+E4 walker normal seed 1 steps 30000
+/venv/main/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+32.917115494531146 pairs 937
+E4 walker normal seed 2 steps 30000
+41.71699304314475 pairs 937
+E4 walker normal seed 3 steps 30000
+33.16712148312377 pairs 937
+E4 walker extra_updates seed 1 steps 30000
+24.939962413113403 pairs 937
+E4 walker extra_updates seed 2 steps 30000
+45.25375907012126 pairs 937
+E4 walker extra_updates seed 3 steps 30000
+18.286275467557864 pairs 937
+E4 walker extra_labels seed 1 steps 30000
+67.39231772466806 pairs 937
+E4 walker extra_labels seed 2 steps 30000
+25.897081785327952 pairs 937
+E4 walker extra_labels seed 3 steps 30000
+30.53584972184455 pairs 937
+E4 walker diagnosis seed 1 steps 30000
+28.26033801488436 pairs 937
+E4 walker diagnosis seed 2 steps 30000
+35.00877034037214 pairs 937
+E4 walker diagnosis seed 3 steps 30000
+27.571960800565897 pairs 937
+E4 cheetah normal/diagnosis seed 1
+WARNING:absl:compiler attribute 'settotalmass' is deprecated and will be removed in a future release: scale the masses and densities in the model, or call mj_setTotalmass and mj_setConst on the compiled model
+WARNING:absl:compiler attribute 'settotalmass' is deprecated and will be removed in a future release: scale the masses and densities in the model, or call mj_setTotalmass and mj_setConst on the compiled model
+cheetah normal 5.859828170418106
+WARNING:absl:compiler attribute 'settotalmass' is deprecated and will be removed in a future release: scale the masses and densities in the model, or call mj_setTotalmass and mj_setConst on the compiled model
+WARNING:absl:compiler attribute 'settotalmass' is deprecated and will be removed in a future release: scale the masses and densities in the model, or call mj_setTotalmass and mj_setConst on the compiled model
+cheetah diagnosis 4.809316539099477
+E4 cheetah normal/diagnosis seed 2
+WARNING:absl:compiler attribute 'settotalmass' is deprecated and will be removed in a future release: scale the masses and densities in the model, or call mj_setTotalmass and mj_setConst on the compiled model
+WARNING:absl:compiler attribute 'settotalmass' is deprecated and will be removed in a future release: scale the masses and densities in the model, or call mj_setTotalmass and mj_setConst on the compiled model
+cheetah normal 23.64865159461626
+WARNING:absl:compiler attribute 'settotalmass' is deprecated and will be removed in a future release: scale the masses and densities in the model, or call mj_setTotalmass and mj_setConst on the compiled model
+WARNING:absl:compiler attribute 'settotalmass' is deprecated and will be removed in a future release: scale the masses and densities in the model, or call mj_setTotalmass and mj_setConst on the compiled model
+cheetah diagnosis 11.347333725156346
+EXIT:0

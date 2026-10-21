@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "scope": "exact five-output finite-step reference; not a new RL benchmark",
+  "mesh": [
+    {
+      "dt": 0.2,
+      "first_uncertified": 5.2,
+      "expected_exact_horizon": 5.0,
+      "max_identity_error": 1.3562762024577069e-13,
+      "max_c_error": 1.3322676295501878e-15,
+      "min_probability": 0.12321557200155725,
+      "min_M_eigenvalue": 1.7546375952926279,
+      "source_gain_at_T15": -0.20000000000000107,
+      "true_gain_at_T15": 1.0,
+      "pointwise_gain_at_T15": 1.0
+    },
+    {
+      "dt": 0.1,
+      "first_uncertified": 5.1000000000000005,
+      "expected_exact_horizon": 5.0,
+      "max_identity_error": 2.9831692671677956e-13,
+      "max_c_error": 1.3322676295501878e-15,
+      "min_probability": 0.12325850450672525,
+      "min_M_eigenvalue": 1.7546375952926279,
+      "source_gain_at_T15": -0.20000000000000107,
+      "true_gain_at_T15": 1.0,
+      "pointwise_gain_at_T15": 1.0
+    },
+    {
+      "dt": 0.05,
+      "first_uncertified": 5.050000000000001,
+      "expected_exact_horizon": 5.0,
+      "max_identity_error": 6.032396804300788e-13,
+      "max_c_error": 1.3322676295501878e-15,
+      "min_probability": 0.12327997075930924,
+      "min_M_eigenvalue": 1.7546375952926279,
+      "source_gain_at_T15": -0.20000000000000107,
+      "true_gain_at_T15": 1.0,
+      "pointwise_gain_at_T15": 1.0
+    },
+    {
+      "dt": 0.025,
+      "first_uncertified": 5.025,
+      "expected_exact_horizon": 5.0,
+      "max_identity_error": 1.248029457556754e-12,
+      "max_c_error": 1.3322676295501878e-15,
+      "min_probability": 0.12329070388560125,
+      "min_M_eigenvalue": 1.7546375952926279,
+      "source_gain_at_T15": -0.20000000000000107,
+      "true_gain_at_T15": 1.0,
+      "pointwise_gain_at_T15": 1.0
+    }
+  ],
+  "feedback": {
+    "comparison": "informative fixed Bradley-Terry pair, sensitivity sqrt(2/3)",
+    "label_count": 1200,
+    "positive_labels": 600,
+    "confidence": 0.95,
+    "confidence_interval_delta": [
+      -0.19245962944052997,
+      0.19245962944053022
+    ],
+    "T": 15.0,
+    "source_gain_at_T": -0.19999999999999973,
+    "updated_gain_same_trajectory_at_T": 0.7690484446713638,
+    "gamma": 0.6
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "parent": "B_bounded_seed1_step48.pt",
+  "parent_step": 48,
+  "seed": 1,
+  "arm": "A",
+  "optimizer_restored": true,
+  "rng_restored": true,
+  "repeat_decode_identical": true,
+  "no_actor_update_identical": true,
+  "anchor_hashes_match_f2": true,
+  "label_origin": "32 on-policy pairs labeled by the frozen AI teacher",
+  "rm_steps": 32,
+  "label_count": 32,
+  "movement": {
+    "mode": "weight_interpolation",
+    "alpha": 0.15234375,
+    "per_event_rms": 0.048988934606313705,
+    "proposal_rms": null,
+    "applied": true,
+    "status": "APPLIED",
+    "weight_interpolation_stable": true,
+    "architecture": null
+  },
+  "parent_rouge_l": 0.15910505516414275,
+  "after_rouge_l": 0.1573131074040292,
+  "delta": -0.0017919477601135436,
+  "reference_kl": -0.0008537665976291464,
+  "mean_tokens": 47.328125,
+  "train_kl_stopped": 0,
+  "human_holdout": {
+    "accuracy": 0.5819095477386935,
+    "nll": 0.6826493062266153,
+    "brier": 0.24404574746805746,
+    "ece": 0.04534702676175227,
+    "heldout_n": 995
+  },
+  "fit_seconds": 15.436067819595337,
+  "evaluator": "rouge_l_vs_dataset_completion",
+  "guarantee_type": "empirical_proxy"
+}

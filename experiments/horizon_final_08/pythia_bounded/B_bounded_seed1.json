@@ -1,0 +1,119 @@
+{
+  "seed": 1,
+  "method": "B_bounded",
+  "new_ai_labels": 96,
+  "updates": 64,
+  "events": [
+    {
+      "mode": "weight_interpolation",
+      "alpha": 0.0859375,
+      "per_event_rms": 0.04855009913444519,
+      "accepted": true,
+      "weight_interpolation_stable": true,
+      "step": 16,
+      "new_ai_labels": 32,
+      "label_source": "AI feedback",
+      "initial_margins_rms_vs_source": 0.0,
+      "applied": true,
+      "status": "APPLIED"
+    },
+    {
+      "mode": "weight_interpolation",
+      "alpha": 0.12890625,
+      "per_event_rms": 0.04871184751391411,
+      "accepted": true,
+      "weight_interpolation_stable": true,
+      "step": 32,
+      "new_ai_labels": 32,
+      "label_source": "AI feedback",
+      "initial_margins_rms_vs_source": 0.04855009913444519,
+      "applied": true,
+      "status": "APPLIED"
+    },
+    {
+      "mode": "weight_interpolation",
+      "alpha": 0.18359375,
+      "per_event_rms": 0.04972265288233757,
+      "accepted": true,
+      "weight_interpolation_stable": true,
+      "step": 48,
+      "new_ai_labels": 32,
+      "label_source": "AI feedback",
+      "initial_margins_rms_vs_source": 0.08846073597669601,
+      "applied": true,
+      "status": "APPLIED"
+    }
+  ],
+  "max_per_event_rms": 0.04972265288233757,
+  "cumulative_rms_vs_initial": 0.11275269091129303,
+  "curve": [
+    {
+      "rouge_l": 0.1608561651395194,
+      "mean_tokens": 46.828125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.45260825093760654,
+      "reference_kl_mean_per_token": 0.0,
+      "sampled_rouge_l": 0.14197155642866163,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 0
+    },
+    {
+      "rouge_l": 0.15847642343398463,
+      "mean_tokens": 46.7734375,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.4536610343061956,
+      "reference_kl_mean_per_token": -0.0004774104645548505,
+      "sampled_rouge_l": 0.14521151405821414,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 16,
+      "reference_kl_on_train_batch": 0.0019081504142377526
+    },
+    {
+      "rouge_l": 0.15776492618470406,
+      "mean_tokens": 47.125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.45613143631436315,
+      "reference_kl_mean_per_token": -0.0020670767876254104,
+      "sampled_rouge_l": 0.14417852591597227,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 32,
+      "reference_kl_on_train_batch": -0.0003073085827054456
+    },
+    {
+      "rouge_l": 0.15910505516414275,
+      "mean_tokens": 47.2265625,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.45918539800574615,
+      "reference_kl_mean_per_token": -0.0017815294049796648,
+      "sampled_rouge_l": 0.14168545181333986,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 48,
+      "reference_kl_on_train_batch": 0.000672222173307091
+    },
+    {
+      "rouge_l": 0.16146917312893122,
+      "mean_tokens": 47.125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.4613821138211382,
+      "reference_kl_mean_per_token": 0.0012335445653661736,
+      "sampled_rouge_l": 0.14214750151117236,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 64,
+      "reference_kl_on_train_batch": 0.002703665173612535
+    }
+  ],
+  "fixed_eval": 0.16146917312893122,
+  "evaluator": "rouge_l_vs_dataset_completion",
+  "kl_steps_stopped": 0,
+  "guarantee_type": "empirical_proxy",
+  "empirical_reuse_endpoint": "CENSORED",
+  "censor_reason": "No DEV-frozen failure of independent ROUGE-L was declared as a neural support horizon, and none is inferred.",
+  "max_new_tokens": 64,
+  "label_source": "AI feedback",
+  "historical_wp07_B": "NOT A VALID BOUNDED CLAIM"
+}

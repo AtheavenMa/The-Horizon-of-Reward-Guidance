@@ -1,0 +1,14 @@
+{
+  "b": 0.05,
+  "epsilon": 0.0001,
+  "kl_cap_nats_per_token": 0.1,
+  "policy_updates": 64,
+  "minimum_full_seeds": 2,
+  "candidate_optimizer_steps": 64,
+  "fork_policy_updates": 8,
+  "fork_rm_steps_M": 32,
+  "temperature": 0.7,
+  "preferred_max_new_tokens": 64,
+  "train_prompts_per_update": 8,
+  "source_rm_rule": "highest F1 development accuracy, then more training pairs, then lower seed"
+}

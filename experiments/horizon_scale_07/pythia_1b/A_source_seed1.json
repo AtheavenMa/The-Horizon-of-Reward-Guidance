@@ -1,0 +1,46 @@
+{
+  "seed": 1,
+  "method": "A_source",
+  "new_ai_labels": 0,
+  "updates": 64,
+  "anchor_rms": 0.0,
+  "exceeds_b": false,
+  "exceeds_b0": false,
+  "final_mean_reward": -8.34765625,
+  "trace_every_16": [
+    {
+      "step": 16,
+      "mean_reward": -6.619140625,
+      "mean_logp": -63.6875,
+      "new_ai_labels": 0,
+      "finite": true
+    },
+    {
+      "step": 32,
+      "mean_reward": -7.296875,
+      "mean_logp": -120.625,
+      "new_ai_labels": 0,
+      "finite": true
+    },
+    {
+      "step": 48,
+      "mean_reward": -7.21484375,
+      "mean_logp": -93.375,
+      "new_ai_labels": 0,
+      "finite": true
+    },
+    {
+      "step": 64,
+      "mean_reward": -8.34765625,
+      "mean_logp": -113.5625,
+      "new_ai_labels": 0,
+      "finite": true
+    }
+  ],
+  "gate_echo": {
+    "nonempty": true,
+    "finite": true
+  },
+  "guarantee_type": "empirical_proxy",
+  "label_source": "human source RM"
+}

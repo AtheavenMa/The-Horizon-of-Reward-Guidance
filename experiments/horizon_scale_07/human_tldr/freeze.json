@@ -1,0 +1,24 @@
+{
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "source": "openai/summarize_from_feedback comparisons, reddit TL;DR only",
+  "train_rows": 92858,
+  "valid1_rows": 33082,
+  "train_docs": 14767,
+  "nested_docs": {
+    "256": 35,
+    "1024": 181,
+    "4096": 736
+  },
+  "nested_pairs": {
+    "256": 257,
+    "1024": 1024,
+    "4096": 4098
+  },
+  "uniform_docs": 630,
+  "uniform_pairs": 4148,
+  "validation_pairs_frozen": 2048,
+  "train_valid_doc_overlap": 0,
+  "source_sha": "aa7709f54d552b15219cff39695794654f88d690",
+  "runtime_seconds": 1.2327629523351789,
+  "guarantee_type": "empirical_proxy"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "protocol": "protocol-compatible independent replica",
+  "official_leaderboard_submission": false,
+  "reward_bench_commit": "59f6ff7005a9f9484727ca27f5383420875e5dbf",
+  "fixture": {
+    "cases": 8,
+    "mismatches": [],
+    "passed": true
+  },
+  "frozen_4b_judge": {
+    "status": "NOT RUN",
+    "reason": "The official generative V2 script scores with vLLM. vLLM is not installed, so the frozen 4B judge was not given a homemade score.",
+    "vllm_installed": false
+  },
+  "qwen15_transfer": "NOT RUN",
+  "historical_macros_not_official": {
+    "rm": 0.2090686274509804,
+    "judge": 0.11151960784313725,
+    "status": "unofficial historical"
+  },
+  "runtime_seconds": 15.324229688383639,
+  "source_sha": "d5377ae30d16e30c6e40b5f0027bd149dae18ed2",
+  "passed": true,
+  "guarantee_type": "empirical_proxy",
+  "scalar_rm_path": "scalar_rm.json",
+  "macro_on_502": 0.21849101796407597,
+  "per_subset": {
+    "Factuality": 0.375,
+    "Focus": 0.1625,
+    "Math": 0.253125,
+    "Precise IF": 0.2625,
+    "Safety": 0.25,
+    "Ties": 0.00782110778445594
+  }
+}

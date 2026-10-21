@@ -1,0 +1,105 @@
+{
+  "status": "complete",
+  "stage": "pilot",
+  "rows": [
+    {
+      "name": "oracle",
+      "seed": 0,
+      "optimizer_restored": true,
+      "parent_env_steps": 1024,
+      "fork_env_steps": 1024,
+      "deployed_weight": [
+        0.5,
+        0.5
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 0.0,
+        "mean_steps": 256.0,
+        "true_utility": -0.5,
+        "success_count": 0
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "source_only",
+      "seed": 0,
+      "optimizer_restored": true,
+      "parent_env_steps": 1024,
+      "fork_env_steps": 1024,
+      "deployed_weight": [
+        0.4124384128962218,
+        0.5875615871037783
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 0.0,
+        "mean_steps": 256.0,
+        "true_utility": -0.5,
+        "success_count": 0
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "new_32",
+      "seed": 0,
+      "optimizer_restored": true,
+      "parent_env_steps": 1024,
+      "fork_env_steps": 1024,
+      "deployed_weight": [
+        0.33914479196109454,
+        0.6608552080389054
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 0.0,
+        "mean_steps": 256.0,
+        "true_utility": -0.5,
+        "success_count": 0
+      },
+      "new_pairs": 32,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "extra_fit_same_source",
+      "seed": 0,
+      "optimizer_restored": true,
+      "parent_env_steps": 1024,
+      "fork_env_steps": 1024,
+      "deployed_weight": [
+        0.41172415857332095,
+        0.5882758414266791
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 0.0,
+        "mean_steps": 256.0,
+        "true_utility": -0.5,
+        "success_count": 0
+      },
+      "new_pairs": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    }
+  ],
+  "doorkey": {
+    "env": "MiniGrid-DoorKey-6x6-v0",
+    "status": "NOT LEARNED",
+    "learned": false,
+    "source": "experiments/horizon_scale_07/minigrid/doorkey.json",
+    "oracle_40k_goal_success": 0.0,
+    "claim": "DoorKey is removed from any Horizon claim. No new sweep was run."
+  },
+  "seed2_diagnosis": {
+    "status": "not_run"
+  },
+  "runtime_seconds": 14.413679292425513,
+  "source_sha": "d5377ae30d16e30c6e40b5f0027bd149dae18ed2",
+  "guarantee_type": "empirical_proxy",
+  "passed": true
+}

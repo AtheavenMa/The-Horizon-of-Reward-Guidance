@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "status": "complete",
+  "rows": [
+    {
+      "seed": 0,
+      "method": "A_source",
+      "new_ai_labels": 0,
+      "updates": 64,
+      "anchor_rms": 0.0,
+      "exceeds_b": false,
+      "exceeds_b0": false,
+      "final_mean_reward": -6.5078125,
+      "trace_every_16": [
+        {
+          "step": 16,
+          "mean_reward": -7.62890625,
+          "mean_logp": -70.53125,
+          "new_ai_labels": 0,
+          "finite": true
+        },
+        {
+          "step": 32,
+          "mean_reward": -7.72265625,
+          "mean_logp": -120.3125,
+          "new_ai_labels": 0,
+          "finite": true
+        },
+        {
+          "step": 48,
+          "mean_reward": -6.85546875,
+          "mean_logp": -92.9375,
+          "new_ai_labels": 0,
+          "finite": true
+        },
+        {
+          "step": 64,
+          "mean_reward": -6.5078125,
+          "mean_logp": -122.6875,
+          "new_ai_labels": 0,
+          "finite": true
+        }
+      ],
+      "gate_echo": {
+        "nonempty": true,
+        "finite": true
+      },
+      "guarantee_type": "empirical_proxy",
+      "label_source": "human source RM"
+    },
+    {
+      "seed": 0,
+      "method": "B_online_ai",
+      "new_ai_labels": 96,
+      "updates": 64,
+      "anchor_rms": 1.4600081753504435,
+      "exceeds_b": true,
+      "exceeds_b0": true,
+      "final_mean_reward": -5.375,
+      "trace_every_16": [
+        {
+          "step": 16,
+          "mean_reward": -7.58203125,
+          "mean_logp": -69.125,
+          "new_ai_labels": 32,
+          "finite": true
+        },
+        {
+          "step": 32,
+          "mean_reward": -6.7578125,
+          "mean_logp": -122.75,
+          "new_ai_labels": 64,
+          "finite": true
+        },
+        {
+          "step": 48,
+          "mean_reward": -5.796875,
+          "mean_logp": -91.6875,
+          "new_ai_labels": 96,
+          "finite": true
+        },
+        {
+          "step": 64,
+          "mean_reward": -5.375,
+          "mean_logp": -122.375,
+          "new_ai_labels": 96,
+          "finite": true
+        }
+      ],
+      "gate_echo": {
+        "nonempty": true,
+        "finite": true
+      },
+      "guarantee_type": "empirical_proxy",
+      "label_source": "human source RM plus AI feedback"
+    },
+    {
+      "seed": 1,
+      "method": "A_source",
+      "new_ai_labels": 0,
+      "updates": 64,
+      "anchor_rms": 0.0,
+      "exceeds_b": false,
+      "exceeds_b0": false,
+      "final_mean_reward": -8.34765625,
+      "trace_every_16": [
+        {
+          "step": 16,
+          "mean_reward": -6.619140625,
+          "mean_logp": -63.6875,
+          "new_ai_labels": 0,
+          "finite": true
+        },
+        {
+          "step": 32,
+          "mean_reward": -7.296875,
+          "mean_logp": -120.625,
+          "new_ai_labels": 0,
+          "finite": true
+        },
+        {
+          "step": 48,
+          "mean_reward": -7.21484375,
+          "mean_logp": -93.375,
+          "new_ai_labels": 0,
+          "finite": true
+        },
+        {
+          "step": 64,
+          "mean_reward": -8.34765625,
+          "mean_logp": -113.5625,
+          "new_ai_labels": 0,
+          "finite": true
+        }
+      ],
+      "gate_echo": {
+        "nonempty": true,
+        "finite": true
+      },
+      "guarantee_type": "empirical_proxy",
+      "label_source": "human source RM"
+    },
+    {
+      "seed": 1,
+      "method": "B_online_ai",
+      "new_ai_labels": 96,
+      "updates": 64,
+      "anchor_rms": 1.3537794773878484,
+      "exceeds_b": true,
+      "exceeds_b0": true,
+      "final_mean_reward": -5.609375,
+      "trace_every_16": [
+        {
+          "step": 16,
+          "mean_reward": -6.04296875,
+          "mean_logp": -63.65625,
+          "new_ai_labels": 32,
+          "finite": true
+        },
+        {
+          "step": 32,
+          "mean_reward": -6.298828125,
+          "mean_logp": -119.171875,
+          "new_ai_labels": 64,
+          "finite": true
+        },
+        {
+          "step": 48,
+          "mean_reward": -6.94140625,
+          "mean_logp": -90.09375,
+          "new_ai_labels": 96,
+          "finite": true
+        },
+        {
+          "step": 64,
+          "mean_reward": -5.609375,
+          "mean_logp": -120.75,
+          "new_ai_labels": 96,
+          "finite": true
+        }
+      ],
+      "gate_echo": {
+        "nonempty": true,
+        "finite": true
+      },
+      "guarantee_type": "empirical_proxy",
+      "label_source": "human source RM plus AI feedback"
+    }
+  ],
+  "budget_b": 0.05,
+  "budget_b0": 0.0,
+  "train_docs": 256,
+  "val_docs": 128,
+  "updates": 64,
+  "online_labels_method_B": 96,
+  "online_label_source": "AI feedback",
+  "initial_reward": "S2 human_256",
+  "runtime_seconds": 772.2203230503947,
+  "source_sha": "aa7709f54d552b15219cff39695794654f88d690",
+  "guarantee_type": "empirical_proxy"
+}

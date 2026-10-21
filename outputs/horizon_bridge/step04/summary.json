@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "command": "python experiments/bridge/04_ordinary_pg.py --out outputs/horizon_bridge/step04",
+  "table": {
+    "continuous": {
+      "contact": 0.007835874324472896,
+      "all_controls_upper": 0.010006022973614241,
+      "pointwise_lower_in_box": 0.10575039444306417,
+      "initial_worst": 0.06125919999999993
+    },
+    "finite": {
+      "0.0005": {
+        "contact": 0.008,
+        "last_certified": 0.0075,
+        "min_pointwise_in_box": 0.1127784723123688
+      },
+      "0.00025": {
+        "contact": 0.008,
+        "last_certified": 0.00775,
+        "min_pointwise_in_box": 0.1127786945692671
+      }
+    },
+    "exact_theta_euler_h_5e-4": {
+      "contact": 0.008,
+      "min_pointwise": 0.11277870599936397
+    },
+    "batch": {
+      "sigma_one_sample": 0.19356140783008513,
+      "formula_n": 149865,
+      "accuracy_controlled_n": 4795680,
+      "formula_checkpoint_errors_not_recomputed_here": false,
+      "accurate_checkpoint_max_error": 0.0007377651337662974,
+      "accurate_checkpoint_mean_error": 0.00032981846254858565,
+      "exact_gradient": [
+        0.30340955527318925,
+        0.15719567979669624
+      ],
+      "margin_met": true
+    },
+    "checkpoint_error_mean": {
+      "small": 0.09012406039592401,
+      "accurate": 0.00032981846254858565
+    },
+    "checkpoint_error_max": {
+      "small": 0.18602425010541884,
+      "accurate": 0.0007377651337662974
+    },
+    "sampled_small": {
+      "mean": 0.008,
+      "std": 0.0005590169943749478,
+      "values": [
+        0.0085,
+        0.0075,
+        0.008,
+        0.008,
+        0.007,
+        0.008,
+        0.009000000000000001,
+        0.008
+      ],
+      "max_gradient_error": 0.3422470246336526,
+      "min_pointwise": 0.11349735404895626
+    },
+    "sampled_accurate": {
+      "mean": 0.008,
+      "std": 0.0,
+      "values": [
+        0.008,
+        0.008,
+        0.008,
+        0.008
+      ],
+      "max_gradient_error": 0.0007977903036018836,
+      "min_pointwise": 0.1135545547902149
+    },
+    "btl_weight": [
+      0.8123066667941541,
+      0.22853266856931473
+    ],
+    "btl_phi_hat": 0.7804342507006526,
+    "btl_phi_error": -0.062370069502651115,
+    "btl_fed": {
+      "mean": 0.0,
+      "std": 0.0,
+      "values": [
+        0.0,
+        0.0
+      ],
+      "max_gradient_error": 0.000571493392359785,
+      "min_pointwise": 0.1145483011496264
+    },
+    "margin": 0.001,
+    "formula_checkpoint_error_mean": 0.001988540975893364,
+    "formula_checkpoint_error_max": 0.004206225983254517
+  },
+  "scope": "Theorem 2 ordinary Euclidean PG. Sampling replaces only the expected gradient.",
+  "source_sha": "a6d00ff3ae4feb428984fe6b77e4994f343d7b8c",
+  "runtime_seconds": 18.189651364460588,
+  "max_rss_kib": 312152
+}

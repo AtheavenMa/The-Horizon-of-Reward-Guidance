@@ -1,0 +1,310 @@
+{
+  "env": "MiniGrid-Empty-8x8-v0",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "total_env_steps_per_fork": 100352,
+  "rows": [
+    {
+      "name": "extra_fit_same_source",
+      "seed": 0,
+      "deployed_weight": [
+        0.37549704446961424,
+        0.6245029555303858
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 300,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "extra_fit_same_source",
+      "seed": 1,
+      "deployed_weight": [
+        0.871572076080687,
+        0.12842792391931301
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 14.0,
+        "true_utility": 0.47265625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 300,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "extra_fit_same_source",
+      "seed": 2,
+      "deployed_weight": [
+        0.2300485243747039,
+        0.7699514756252961
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 0.0,
+        "mean_steps": 256.0,
+        "true_utility": -0.5,
+        "success_count": 0
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 300,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "new_32",
+      "seed": 0,
+      "deployed_weight": [
+        0.5027114729783176,
+        0.49728852702168236
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 32,
+      "fit_steps": 30,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "new_32",
+      "seed": 1,
+      "deployed_weight": [
+        0.5359917749549549,
+        0.46400822504504513
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 32,
+      "fit_steps": 30,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "new_32",
+      "seed": 2,
+      "deployed_weight": [
+        0.48504911158643954,
+        0.5149508884135605
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 32,
+      "fit_steps": 30,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "oracle",
+      "seed": 0,
+      "deployed_weight": [
+        0.5,
+        0.5
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "oracle",
+      "seed": 1,
+      "deployed_weight": [
+        0.5,
+        0.5
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "oracle",
+      "seed": 2,
+      "deployed_weight": [
+        0.5,
+        0.5
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 0,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "source_only",
+      "seed": 0,
+      "deployed_weight": [
+        0.4870523211974919,
+        0.512947678802508
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 30,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "source_only",
+      "seed": 1,
+      "deployed_weight": [
+        0.5432477189446001,
+        0.4567522810553999
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 30,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    },
+    {
+      "name": "source_only",
+      "seed": 2,
+      "deployed_weight": [
+        0.43385383910706055,
+        0.5661461608929395
+      ],
+      "final": {
+        "episodes": 100,
+        "goal_success": 1.0,
+        "mean_steps": 11.0,
+        "true_utility": 0.478515625,
+        "success_count": 100
+      },
+      "information_only_same_policy": true,
+      "env_steps_after_fork": 92160,
+      "parent_env_steps": 8192,
+      "source_pairs": 32,
+      "new_pairs": 0,
+      "fit_steps": 30,
+      "guarantee_type": "empirical_proxy",
+      "teacher": "synthetic_btl_evaluator_only"
+    }
+  ],
+  "learned": true,
+  "doorkey": {
+    "env": "MiniGrid-DoorKey-6x6-v0",
+    "untrained": {
+      "episodes": 30,
+      "goal_success": 0.0,
+      "mean_steps": 360.0,
+      "true_utility": -0.5,
+      "success_count": 0
+    },
+    "oracle_40k": {
+      "episodes": 30,
+      "goal_success": 0.0,
+      "mean_steps": 360.0,
+      "true_utility": -0.5,
+      "success_count": 0
+    },
+    "learned": false,
+    "env_steps": 40192
+  },
+  "scope": "empirical_proxy",
+  "assembled_from_seed_files": true,
+  "note": "Synthetic BTL labels are not human. DoorKey did not learn in 40k steps, so it is not interpreted as a horizon."
+}

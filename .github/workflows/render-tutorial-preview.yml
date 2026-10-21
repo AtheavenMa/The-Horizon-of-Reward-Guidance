@@ -1,0 +1,38 @@
+name: Render tutorial preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - docs/index.html
+      - scripts/render_tutorial_preview.py
+      - .github/workflows/render-tutorial-preview.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install screenshot dependencies
+        run: |
+          python -m pip install "playwright>=1.50,<2" "pillow>=10,<13"
+          python -m playwright install --with-deps chromium
+      - name: Capture actual slides 1, 4, 6
+        run: python scripts/render_tutorial_preview.py
+      - name: Commit the three-slide contact sheet
+        run: |
+          git add assets/tour_preview.png
+          if git diff --cached --quiet; then
+            echo "Preview already current"
+          else
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "assets: refresh three-slide five-minute tutorial preview"
+            git push
+          fi

@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "command": "python experiments/bridge/05_contextual_bandit.py --out outputs/horizon_bridge/step05",
+  "updates": 8,
+  "step_size": 0.0005,
+  "samples_per_update": 8192,
+  "hidden_preference_used_for_labels_and_true_gain_only": true,
+  "initial_true_gain": 0.674243456162643,
+  "initial_source_certificate": 0.06125919999999993,
+  "initial_pointwise": 0.11473087818696877,
+  "variants": {
+    "exact_four_output": {
+      "step": 8,
+      "x": 0.8004361517986547,
+      "y": 0.0006285025685422132,
+      "guidance_phi": 0.8429643202033038,
+      "true_gain": 0.6747098446713296,
+      "source_certificate": 0.060614297047973276,
+      "pointwise": 0.114337199070159,
+      "gradient_error": 0.0
+    },
+    "sampled_policy_gradient": {
+      "step": 8,
+      "x": 0.8004350799904533,
+      "y": 0.0006224033709155979,
+      "guidance_phi": 0.8429643202033038,
+      "true_gain": 0.6747079825792298,
+      "source_certificate": 0.06061637340668838,
+      "pointwise": 0.11433816643414739,
+      "gradient_error": 0.01203068668976816,
+      "agreement_abs_x": 1.0718082014138375e-06
+    },
+    "btl_fitted_reward_256": {
+      "step": 8,
+      "x": 0.8002697787568135,
+      "y": 0.0005146504880546854,
+      "guidance_phi": 0.801952329768106,
+      "true_gain": 0.674551727697712,
+      "source_certificate": 0.009320223730856475,
+      "pointwise": 0.11448734652611388,
+      "gradient_error": 0.0,
+      "agreement_abs_x": 0.0001663730418411946
+    },
+    "informative_feedback_1200": {
+      "step": 8,
+      "x": 0.8003798302240238,
+      "y": 0.0006299647598365553,
+      "guidance_phi": 0.8233115909308792,
+      "true_gain": 0.6746626064550645,
+      "source_certificate": 0.035994029224468954,
+      "pointwise": 0.11438802340001589,
+      "gradient_error": 0.0,
+      "agreement_abs_x": 5.632157463086873e-05
+    },
+    "bounded_guidance": {
+      "step": 8,
+      "guidance_phi": 0.8426443202033037,
+      "true_gain": 0.6747098717556601,
+      "source_certificate": 0.06021181505947623,
+      "pointwise": 0.11433726430402498,
+      "gradient_error": 0.0,
+      "agreement_abs_x": 7.231238152716202e-08
+    },
+    "source_labels_no_sensitivity": {
+      "phi_hat": null,
+      "weight": [
+        0.0,
+        0.0
+      ],
+      "true_gain": 0.674243456162643,
+      "note": "Zero-contrast source labels do not move the reward head off its zero initialization."
+    }
+  },
+  "scope": "Four-outcome bandit. No Walker, Meta-World, or language model.",
+  "source_sha": "a6d00ff3ae4feb428984fe6b77e4994f343d7b8c",
+  "runtime_seconds": 0.013858610764145851,
+  "max_rss_kib": 80652
+}

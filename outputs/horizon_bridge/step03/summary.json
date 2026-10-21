@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "command": "python experiments/bridge/03_guidance_updates.py --out outputs/horizon_bridge/step03",
+  "published_identity_error": 7.728262474415715e-13,
+  "informative_interval": [
+    -0.19245962944052997,
+    0.19245962944053022
+  ],
+  "table": [
+    {
+      "method": "no_calibration",
+      "m": 0,
+      "movement_budget": 0.0,
+      "source_only_first_loss": 3.35,
+      "after_feedback_first_loss": null,
+      "realized_max_movement": 0.0,
+      "ideal_envelope_first_loss": 3.35,
+      "phi_at_last_step": 0.0,
+      "c_at_last_step": 1.7940000000000014,
+      "terminal_source_certificate": -0.7940000000000014,
+      "terminal_updated_certificate": 0.6547274247836885
+    },
+    {
+      "method": "clipped_calibration",
+      "m": 1,
+      "movement_budget": 0.002,
+      "source_only_first_loss": 4.55,
+      "after_feedback_first_loss": null,
+      "realized_max_movement": 0.0020000000000000018,
+      "ideal_envelope_first_loss": 5.050000000000001,
+      "phi_at_last_step": 0.5613692245903906,
+      "c_at_last_step": 1.7940000000000014,
+      "terminal_source_certificate": -0.23263077540961064,
+      "terminal_updated_certificate": 0.7627683377276729
+    },
+    {
+      "method": "clipped_calibration",
+      "m": 2,
+      "movement_budget": 0.004,
+      "source_only_first_loss": 7.8500000000000005,
+      "after_feedback_first_loss": null,
+      "realized_max_movement": 0.0040000000000000036,
+      "ideal_envelope_first_loss": 10.05,
+      "phi_at_last_step": 1.1082984193279821,
+      "c_at_last_step": 1.7940000000000014,
+      "terminal_source_certificate": 0.31429841932798075,
+      "terminal_updated_certificate": 0.8680301278770773
+    },
+    {
+      "method": "clipped_calibration",
+      "m": 3,
+      "movement_budget": 0.006,
+      "source_only_first_loss": null,
+      "after_feedback_first_loss": null,
+      "realized_max_movement": 0.00599203967002504,
+      "ideal_envelope_first_loss": null,
+      "phi_at_last_step": 1.5967880726675237,
+      "c_at_last_step": 1.7940000000000014,
+      "terminal_source_certificate": 0.8027880726675223,
+      "terminal_updated_certificate": 0.9620446655443385
+    },
+    {
+      "method": "robust_same_budget",
+      "m": 1,
+      "movement_budget": 0.002,
+      "source_only_first_loss": 5.050000000000001,
+      "after_feedback_first_loss": null,
+      "realized_max_movement": 0.0020000000000000018,
+      "ideal_envelope_first_loss": 5.050000000000001,
+      "phi_at_last_step": 0.5980000000000004,
+      "c_at_last_step": 1.7940000000000014,
+      "terminal_source_certificate": -0.19600000000000106,
+      "terminal_updated_certificate": 0.7698182831891256,
+      "max_abs_phi_gap_versus_clipped_m1": 0.03663077540960981,
+      "interval": [
+        -0.19245962944052997,
+        0.19245962944053022
+      ],
+      "note": "The interval contains 0, so the robust target is c and this controller spends the full movement budget. Clipped calibration uses step eta*clip(phi-c), which is smaller than the budget while the lag is below G. The phi paths therefore differ: robust loss matches the ideal envelope, clipped loss is earlier."
+    },
+    {
+      "method": "btl_fitted_information_and_guidance",
+      "m": 1,
+      "movement_budget": 0.002,
+      "source_only_first_loss": 5.050000000000001,
+      "after_feedback_first_loss": 9.950000000000001,
+      "realized_max_movement": 0.0020000000000000018,
+      "ideal_envelope_first_loss": 5.050000000000001,
+      "phi_at_last_step": 0.6000000000000004,
+      "c_at_last_step": 1.7940000000000014,
+      "terminal_source_certificate": -0.19400000000000084,
+      "terminal_updated_certificate": 0.3966737150864377,
+      "delta_hat": 0.3077960571437491,
+      "wins": 675,
+      "interval": [
+        0.11420433908637705,
+        0.5052983960750099
+      ],
+      "phi_final": 0.6000000000000004,
+      "max_abs_phi_gap_versus_clipped_m1": 0.03863077540960981,
+      "note": "delta_hat is the BTL point estimate from seed 0. phi is the guidance state and is not delta_hat. The controller sees only the confidence interval. Hidden delta is not an input to the update."
+    }
+  ],
+  "no_information_control": {
+    "method": "no_information_labels",
+    "m": 1,
+    "movement_budget": 0.002,
+    "source_only_first_loss": 4.55,
+    "after_feedback_first_loss": 4.55,
+    "realized_max_movement": 0.0020000000000000018,
+    "ideal_envelope_first_loss": 5.050000000000001,
+    "phi_at_last_step": 0.5613692245903906,
+    "c_at_last_step": 1.7940000000000014,
+    "terminal_source_certificate": -0.23263077540961064,
+    "terminal_updated_certificate": -0.23263077540961064
+  },
+  "no_ambiguity_m0_terminal_true_gain": 1.0,
+  "scope": "Clipped calibration reused from discrete_resource_check.py. Labels do not retrain the policy.",
+  "source_sha": "a6d00ff3ae4feb428984fe6b77e4994f343d7b8c",
+  "runtime_seconds": 0.2608215808868408,
+  "max_rss_kib": 102584
+}

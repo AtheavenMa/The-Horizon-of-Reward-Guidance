@@ -1,0 +1,66 @@
+{
+  "e1": {
+    "Deep-Sea-Treasure": {
+      "seeds": 5,
+      "loss": 1.0,
+      "fraction_positive_V": 1.0,
+      "true_gain_at_loss": -0.014842570493352383,
+      "coverage": 0.9666666666666667,
+      "formal": true,
+      "gamma_pos": 0.005206517836178311,
+      "gamma_note": "0.1 times median positive development finite-step gain"
+    },
+    "Resource-Gathering": {
+      "seeds": 5,
+      "loss": 0.0,
+      "fraction_positive_V": 1.0,
+      "true_gain_at_loss": -0.008333333333333326,
+      "coverage": 0.9666666666666667,
+      "formal": true,
+      "gamma_pos": 0.005000000000000001,
+      "gamma_note": "0.1 times median positive development finite-step gain"
+    }
+  },
+  "rows": [
+    {
+      "task": "Walker Walk",
+      "baseline": "normal",
+      "comparison": "diagnosis",
+      "labels_matched": true,
+      "compute_matched": true,
+      "difference": "-5.653 (sd 5.136)",
+      "replicated": true,
+      "baseline_mean": 35.93374334026655,
+      "comparison_mean": 30.280356385274132
+    },
+    {
+      "task": "Cheetah Run",
+      "baseline": "normal",
+      "comparison": "diagnosis",
+      "labels_matched": true,
+      "compute_matched": true,
+      "difference": "-6.676 (sd 8.644)",
+      "replicated": true,
+      "baseline_mean": 14.754239882517183,
+      "comparison_mean": 8.078325132127912
+    },
+    {
+      "task": "verifiable instructions / Qwen2.5-1.5B",
+      "baseline": "Fixed-feature reward baseline",
+      "comparison": "Policy-relevant selection",
+      "labels_matched": true,
+      "compute_matched": true,
+      "difference": "-2.776e-17 (sd 0.04082)",
+      "replicated": true
+    },
+    {
+      "task": "TL;DR / Pythia-1B",
+      "baseline": "Fixed learned reward",
+      "comparison": "Fixed-period new feedback",
+      "labels_matched": true,
+      "compute_matched": true,
+      "difference": "-0.001562 (sd 0.01666)",
+      "replicated": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Pins for experiments/real. The paper reproduction stays on requirements.txt.
+torch==2.11.0+cu128
+transformers==5.20.1
+peft==0.21.2
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+PyYAML==6.0.3
+mo-gymnasium==1.3.2
+dm-control==1.0.49
+mujoco==3.16.0
+gymnasium==1.4.0
+metaworld==3.0.0

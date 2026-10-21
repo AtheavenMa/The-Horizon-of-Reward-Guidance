@@ -1,0 +1,257 @@
+{
+  "alpha": 0.01,
+  "gamma_pos": 0.0004196952089500494,
+  "initial_information": "source interval remains [0,1]. P3 update 1 was uncertified. Later positive worst-case gains are properties of those policy steps, not a repaired horizon.",
+  "groups": {
+    "20|none": {
+      "n": 3,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 1.0,
+      "phi_changed_rate": 0.0,
+      "one_step_difference": 0.0,
+      "gain20_difference": 0.0,
+      "gain20_source": 0.0412587890626838,
+      "gain20_updated": 0.0412587890626838,
+      "gain20_mle": 0.043836120199209384,
+      "certificate_old": 0.0018219263781253197,
+      "certificate_new": 0.0018219263781253197,
+      "source_certified_rate": 1.0
+    },
+    "20|fisher": {
+      "n": 24,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 0.760009464256313,
+      "phi_changed_rate": 0.5833333333333334,
+      "one_step_difference": 1.59964730990179e-05,
+      "gain20_difference": -1.7275448719942615e-05,
+      "gain20_source": 0.0412587890626838,
+      "gain20_updated": 0.04124151361396386,
+      "gain20_mle": 0.05049124183669081,
+      "certificate_old": 0.0018219263781253197,
+      "certificate_new": 0.0018450938600279576,
+      "source_certified_rate": 1.0
+    },
+    "20|uniform": {
+      "n": 24,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 0.9424769004323797,
+      "phi_changed_rate": 0.2916666666666667,
+      "one_step_difference": 1.4335137243914886e-10,
+      "gain20_difference": 8.731303643057704e-11,
+      "gain20_source": 0.0412587890626838,
+      "gain20_updated": 0.04125878914999684,
+      "gain20_mle": 0.04882115418991816,
+      "certificate_old": 0.0018219263781253197,
+      "certificate_new": 0.0018219263781253197,
+      "source_certified_rate": 1.0
+    },
+    "40|fisher": {
+      "n": 24,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 0.6309007840026367,
+      "phi_changed_rate": 0.7083333333333334,
+      "one_step_difference": 2.1029981360591124e-06,
+      "gain20_difference": -0.0002143508975994135,
+      "gain20_source": 0.029862897955180934,
+      "gain20_updated": 0.02964854705758152,
+      "gain20_mle": 0.03349625129281387,
+      "certificate_old": 0.001621345696504628,
+      "certificate_new": 0.0016592845510765702,
+      "source_certified_rate": 1.0
+    },
+    "40|uniform": {
+      "n": 24,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 0.9145172824660461,
+      "phi_changed_rate": 0.125,
+      "one_step_difference": -7.472235793078616e-12,
+      "gain20_difference": -3.059130263919722e-11,
+      "gain20_source": 0.029862897955180934,
+      "gain20_updated": 0.02986289792458963,
+      "gain20_mle": 0.032663102146602875,
+      "certificate_old": 0.001621345696504628,
+      "certificate_new": 0.0016309863260067319,
+      "source_certified_rate": 1.0
+    },
+    "60|fisher": {
+      "n": 24,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 0.758458318498842,
+      "phi_changed_rate": 0.4583333333333333,
+      "one_step_difference": 4.697663554450078e-12,
+      "gain20_difference": 5.099312776677319e-05,
+      "gain20_source": 0.018046091893565836,
+      "gain20_updated": 0.01809708502133261,
+      "gain20_mle": 0.02994127799842072,
+      "certificate_old": 0.0010787358300567613,
+      "certificate_new": 0.0010902380076406731,
+      "source_certified_rate": 1.0
+    },
+    "60|uniform": {
+      "n": 24,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 0.9693378728554501,
+      "phi_changed_rate": 0.041666666666666664,
+      "one_step_difference": 1.4310682268832882e-12,
+      "gain20_difference": -4.113713536479935e-11,
+      "gain20_source": 0.018046091893565836,
+      "gain20_updated": 0.0180460918524287,
+      "gain20_mle": 0.027172152346688506,
+      "certificate_old": 0.0010787358300567613,
+      "certificate_new": 0.0010787358300567613,
+      "source_certified_rate": 1.0
+    },
+    "80|fisher": {
+      "n": 24,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 0.7472084336844169,
+      "phi_changed_rate": 0.5,
+      "one_step_difference": -2.032840562549154e-11,
+      "gain20_difference": -2.087457336615491e-10,
+      "gain20_source": 0.010623923594544634,
+      "gain20_updated": 0.0106239233857989,
+      "gain20_mle": 0.022783793639995536,
+      "certificate_old": 0.0006341746989847833,
+      "certificate_new": 0.0006382139576480474,
+      "source_certified_rate": 1.0
+    },
+    "80|uniform": {
+      "n": 24,
+      "parents": 3,
+      "width_old": 1.0,
+      "width_new": 0.9519736524748973,
+      "phi_changed_rate": 0.125,
+      "one_step_difference": 6.150122078274478e-12,
+      "gain20_difference": -2.252918684941818e-11,
+      "gain20_source": 0.010623923594544634,
+      "gain20_updated": 0.010623923572015448,
+      "gain20_mle": 0.026318480488835606,
+      "certificate_old": 0.0006341746989847833,
+      "certificate_new": 0.0006354635588867869,
+      "source_certified_rate": 1.0
+    }
+  },
+  "sampled": [
+    {
+      "seed": 0,
+      "draw": 0,
+      "mode": "source",
+      "return_gain": 0.028248086441166054
+    },
+    {
+      "seed": 0,
+      "draw": 0,
+      "mode": "updated",
+      "return_gain": 0.028248086468704914
+    },
+    {
+      "seed": 0,
+      "draw": 1,
+      "mode": "source",
+      "return_gain": 0.030586104552004056
+    },
+    {
+      "seed": 0,
+      "draw": 1,
+      "mode": "updated",
+      "return_gain": 0.030586104588337104
+    },
+    {
+      "seed": 0,
+      "draw": 2,
+      "mode": "source",
+      "return_gain": 0.03006765356779384
+    },
+    {
+      "seed": 0,
+      "draw": 2,
+      "mode": "updated",
+      "return_gain": 0.03006765349923657
+    },
+    {
+      "seed": 1,
+      "draw": 0,
+      "mode": "source",
+      "return_gain": 0.028744021728966396
+    },
+    {
+      "seed": 1,
+      "draw": 0,
+      "mode": "updated",
+      "return_gain": 0.028744021789317564
+    },
+    {
+      "seed": 1,
+      "draw": 1,
+      "mode": "source",
+      "return_gain": 0.029016808269873517
+    },
+    {
+      "seed": 1,
+      "draw": 1,
+      "mode": "updated",
+      "return_gain": 0.029016808295615926
+    },
+    {
+      "seed": 1,
+      "draw": 2,
+      "mode": "source",
+      "return_gain": 0.02773626054293843
+    },
+    {
+      "seed": 1,
+      "draw": 2,
+      "mode": "updated",
+      "return_gain": 0.027736260582695738
+    },
+    {
+      "seed": 2,
+      "draw": 0,
+      "mode": "source",
+      "return_gain": 0.030737565903667607
+    },
+    {
+      "seed": 2,
+      "draw": 0,
+      "mode": "updated",
+      "return_gain": 0.030737565764549668
+    },
+    {
+      "seed": 2,
+      "draw": 1,
+      "mode": "source",
+      "return_gain": 0.03170875836157527
+    },
+    {
+      "seed": 2,
+      "draw": 1,
+      "mode": "updated",
+      "return_gain": 0.026236547955242884
+    },
+    {
+      "seed": 2,
+      "draw": 2,
+      "mode": "source",
+      "return_gain": 0.03162962448093021
+    },
+    {
+      "seed": 2,
+      "draw": 2,
+      "mode": "updated",
+      "return_gain": 0.03162962412796233
+    }
+  ],
+  "max_frozen_return_gap": 0.0,
+  "stage_runtime_seconds": 508.27659630961716,
+  "source_sha": "110981935565f494488cf0836d232371bff8c57c",
+  "runtime_seconds": 508.2778347916901,
+  "max_rss_kib": 96848
+}

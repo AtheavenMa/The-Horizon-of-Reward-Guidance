@@ -1,0 +1,24 @@
+{
+  "guarantee_type": "exact_finite",
+  "rows": [
+    {
+      "checkpoint_step": 0,
+      "true_return": 0.5,
+      "phi": null,
+      "source_certificate": 7.5,
+      "updated_certificate": null,
+      "population_gain": null,
+      "sampled_gain": null,
+      "movement_budget": 0.0,
+      "guarantee_type": "exact_finite",
+      "verification_status": "COMPUTED",
+      "computed_source_certificate": 7.5
+    }
+  ],
+  "first_unsupported_checkpoint": "censored",
+  "censored": true,
+  "movement_budget": 0.0,
+  "pointwise_available": null,
+  "path_feasible": null,
+  "flag_status": "computed_rows"
+}

@@ -1,0 +1,4 @@
+task: push-v3
+method: extra_feedback
+seed: 1
+steps: 6000

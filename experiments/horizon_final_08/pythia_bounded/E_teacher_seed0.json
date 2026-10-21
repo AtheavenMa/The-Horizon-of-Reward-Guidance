@@ -1,0 +1,43 @@
+{
+  "seed": 0,
+  "method": "E_teacher",
+  "new_ai_labels": 0,
+  "updates": 16,
+  "events": [],
+  "max_per_event_rms": 0.0,
+  "cumulative_rms_vs_initial": 0.0,
+  "curve": [
+    {
+      "rouge_l": 0.1608561651395194,
+      "mean_tokens": 46.828125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.45260825093760654,
+      "reference_kl_mean_per_token": 0.0,
+      "sampled_rouge_l": 0.14855973954973348,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 0
+    },
+    {
+      "rouge_l": 0.1614128790293008,
+      "mean_tokens": 46.53125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.4420041180507893,
+      "reference_kl_mean_per_token": 0.008641750014930949,
+      "sampled_rouge_l": 0.1458582284447664,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 16,
+      "reference_kl_on_train_batch": 0.002757286303676665
+    }
+  ],
+  "fixed_eval": 0.1614128790293008,
+  "evaluator": "rouge_l_vs_dataset_completion",
+  "kl_steps_stopped": 0,
+  "guarantee_type": "empirical_proxy",
+  "empirical_reuse_endpoint": "CENSORED",
+  "censor_reason": "No DEV-frozen failure of independent ROUGE-L was declared as a neural support horizon, and none is inferred.",
+  "max_new_tokens": 64,
+  "label_source": "frozen AI teacher, development diagnostic, not human",
+  "historical_wp07_B": "NOT A VALID BOUNDED CLAIM"
+}

@@ -1,0 +1,10 @@
+rerun extra_labels seed 1
+/venv/main/lib/python3.12/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'X11: The DISPLAY environment variable is missing'
+  warnings.warn(message, GLFWError)
+31.216069679178077 1873
+rerun extra_labels seed 2
+24.986153753752443 1873
+rerun extra_labels seed 3
+22.1596519083241 1873
+UPDATED
+EXIT:0

@@ -1,0 +1,14 @@
+{
+  "gain": 1.0,
+  "required_gain": 0.6,
+  "uncertainty_radius": 1.0,
+  "drift_speed": 0.12,
+  "adaptation_speed": 0.04,
+  "target_horizon": 15.0,
+  "support_horizon": 5.000000000000001,
+  "minimum_required_speed": 0.09333333333333332,
+  "pointwise_feasible": true,
+  "trajectory_feasible": false,
+  "source_certificate_at_target": -0.19999999999999973,
+  "assumptions": "Scalar symmetric source set and nonbinding amplitude."
+}

@@ -1,0 +1,312 @@
+{
+  "status": "complete",
+  "stage": "confirm",
+  "results": [
+    {
+      "heldout_n": 995,
+      "accuracy": 0.5829145728643216,
+      "accuracy_ci95": [
+        0.5475665942378882,
+        0.6152362637933003
+      ],
+      "nll": 0.6836034814888462,
+      "brier": 0.24523973216033368,
+      "ece": 0.0643338552733522,
+      "calibration_bins": [
+        {
+          "bin": 0.30000000000000004,
+          "count": 4,
+          "gap": 0.38741341668099133
+        },
+        {
+          "bin": 0.4,
+          "count": 550,
+          "gap": 0.0537432094427473
+        },
+        {
+          "bin": 0.5,
+          "count": 439,
+          "gap": 0.07204925933606021
+        },
+        {
+          "bin": 0.6000000000000001,
+          "count": 2,
+          "gap": 0.6370711441100055
+        }
+      ],
+      "length_correlation": -0.6680948019906893,
+      "truncation_rate": 0.0,
+      "documents": 662,
+      "ci_unit": "document bootstrap, not independent seeds",
+      "name": "logistic_257",
+      "seed": 0,
+      "train_pairs": 257,
+      "passes": 20,
+      "label_source": "human"
+    },
+    {
+      "heldout_n": 995,
+      "accuracy": 0.5879396984924623,
+      "accuracy_ci95": [
+        0.5530222249752229,
+        0.6199212424325469
+      ],
+      "nll": 0.6779214598690032,
+      "brier": 0.24242814294119425,
+      "ece": 0.04883801280527381,
+      "calibration_bins": [
+        {
+          "bin": 0.2,
+          "count": 4,
+          "gap": 0.28635976176757655
+        },
+        {
+          "bin": 0.30000000000000004,
+          "count": 39,
+          "gap": 0.04349102925260995
+        },
+        {
+          "bin": 0.4,
+          "count": 522,
+          "gap": 0.03612344919620286
+        },
+        {
+          "bin": 0.5,
+          "count": 396,
+          "gap": 0.05131943321611332
+        },
+        {
+          "bin": 0.6000000000000001,
+          "count": 32,
+          "gap": 0.15832902984436825
+        },
+        {
+          "bin": 0.7000000000000001,
+          "count": 2,
+          "gap": 0.7533842821533963
+        }
+      ],
+      "length_correlation": -0.6816059121503146,
+      "truncation_rate": 0.0,
+      "documents": 662,
+      "ci_unit": "document bootstrap, not independent seeds",
+      "name": "logistic_257",
+      "seed": 1,
+      "train_pairs": 257,
+      "passes": 20,
+      "label_source": "human"
+    },
+    {
+      "heldout_n": 995,
+      "accuracy": 0.4100502512562814,
+      "accuracy_ci95": [
+        0.37944495879278484,
+        0.4413221660069381
+      ],
+      "nll": 0.7084561130750179,
+      "brier": 0.2576134046719692,
+      "ece": 0.11398588667276649,
+      "calibration_bins": [
+        {
+          "bin": 0.30000000000000004,
+          "count": 6,
+          "gap": 0.2864213624367988
+        },
+        {
+          "bin": 0.4,
+          "count": 492,
+          "gap": 0.10710230308501834
+        },
+        {
+          "bin": 0.5,
+          "count": 494,
+          "gap": 0.11569469533696375
+        },
+        {
+          "bin": 0.6000000000000001,
+          "count": 3,
+          "gap": 0.6166388168309157
+        }
+      ],
+      "length_correlation": 0.3621108695927126,
+      "truncation_rate": 0.0,
+      "documents": 662,
+      "ci_unit": "document bootstrap, not independent seeds",
+      "name": "logistic_257",
+      "seed": 2,
+      "train_pairs": 257,
+      "passes": 20,
+      "label_source": "human"
+    },
+    {
+      "heldout_n": 995,
+      "accuracy": 0.5869346733668341,
+      "accuracy_ci95": [
+        0.5527525707005854,
+        0.6163877494856305
+      ],
+      "nll": 0.6806084398440871,
+      "brier": 0.24143624395415952,
+      "ece": 0.04532905056688349,
+      "calibration_bins": [
+        {
+          "bin": 0.0,
+          "count": 6,
+          "gap": 0.055123042973381164
+        },
+        {
+          "bin": 0.1,
+          "count": 26,
+          "gap": 0.15568160696272798
+        },
+        {
+          "bin": 0.2,
+          "count": 88,
+          "gap": 0.15488766375023322
+        },
+        {
+          "bin": 0.30000000000000004,
+          "count": 146,
+          "gap": 0.006944378353649527
+        },
+        {
+          "bin": 0.4,
+          "count": 260,
+          "gap": 0.01605758871662316
+        },
+        {
+          "bin": 0.5,
+          "count": 217,
+          "gap": 0.04815073193835412
+        },
+        {
+          "bin": 0.6000000000000001,
+          "count": 146,
+          "gap": 0.008602425970244965
+        },
+        {
+          "bin": 0.7000000000000001,
+          "count": 69,
+          "gap": 0.0929738276861789
+        },
+        {
+          "bin": 0.8,
+          "count": 30,
+          "gap": 0.04076702466390292
+        },
+        {
+          "bin": 0.9,
+          "count": 7,
+          "gap": 0.36601581238006253
+        }
+      ],
+      "length_correlation": -0.6181414969698162,
+      "truncation_rate": 0.0,
+      "documents": 662,
+      "ci_unit": "document bootstrap, not independent seeds",
+      "name": "logistic_4098",
+      "seed": 0,
+      "train_pairs": 4098,
+      "passes": 20,
+      "label_source": "human"
+    },
+    {
+      "heldout_n": 995,
+      "accuracy": 0.5718592964824121,
+      "accuracy_ci95": [
+        0.5368180581851408,
+        0.606307801367058
+      ],
+      "nll": 0.6849121100260288,
+      "brier": 0.24588900184968263,
+      "ece": 0.050910957095223336,
+      "calibration_bins": [
+        {
+          "bin": 0.30000000000000004,
+          "count": 5,
+          "gap": 0.18717992953236756
+        },
+        {
+          "bin": 0.4,
+          "count": 518,
+          "gap": 0.046877235160603825
+        },
+        {
+          "bin": 0.5,
+          "count": 470,
+          "gap": 0.0513868926702542
+        },
+        {
+          "bin": 0.6000000000000001,
+          "count": 2,
+          "gap": 0.6431276469365617
+        }
+      ],
+      "length_correlation": -0.7070386431382513,
+      "truncation_rate": 0.0,
+      "documents": 662,
+      "ci_unit": "document bootstrap, not independent seeds",
+      "name": "logistic_4098",
+      "seed": 1,
+      "train_pairs": 4098,
+      "passes": 20,
+      "label_source": "human"
+    },
+    {
+      "heldout_n": 995,
+      "accuracy": 0.5909547738693467,
+      "accuracy_ci95": [
+        0.5584890999756598,
+        0.6223754725288072
+      ],
+      "nll": 0.6733833659475496,
+      "brier": 0.24018209136071328,
+      "ece": 0.04551520217350717,
+      "calibration_bins": [
+        {
+          "bin": 0.2,
+          "count": 6,
+          "gap": 0.2701063477153713
+        },
+        {
+          "bin": 0.30000000000000004,
+          "count": 54,
+          "gap": 0.018489536884984448
+        },
+        {
+          "bin": 0.4,
+          "count": 460,
+          "gap": 0.0447647474780562
+        },
+        {
+          "bin": 0.5,
+          "count": 416,
+          "gap": 0.050151987555861144
+        },
+        {
+          "bin": 0.6000000000000001,
+          "count": 55,
+          "gap": 0.0033073713715497943
+        },
+        {
+          "bin": 0.7000000000000001,
+          "count": 4,
+          "gap": 0.2579092489947309
+        }
+      ],
+      "length_correlation": -0.5690249602120395,
+      "truncation_rate": 0.0,
+      "documents": 662,
+      "ci_unit": "document bootstrap, not independent seeds",
+      "name": "logistic_4098",
+      "seed": 2,
+      "train_pairs": 4098,
+      "passes": 20,
+      "label_source": "human"
+    }
+  ],
+  "equal_compute": "not a neural equal-compute contrast; this is the length/overlap baseline",
+  "runtime_seconds": 2.4016015315428376,
+  "source_sha": "d5377ae30d16e30c6e40b5f0027bd149dae18ed2",
+  "guarantee_type": "empirical_proxy"
+}

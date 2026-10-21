@@ -1,0 +1,290 @@
+{
+  "config": {
+    "n_steps": 32,
+    "h": 0.0005,
+    "kappa": 0.05,
+    "lambda": 0.2,
+    "phi0": 0.8428043202033038,
+    "gamma": 0.06,
+    "optimizer_xatol": 1e-12,
+    "half_step_run": false,
+    "half_step_reason": "crossing margin is larger than 1e-8",
+    "n512_run": false,
+    "bounded_controller_run": false,
+    "bounded_controller_reason": "N=128 did not change the robust direction in G3 or G4; repeating that controller is not a new question"
+  },
+  "agreement": {
+    "kappa0": 0.0,
+    "kappa005": 0.0,
+    "sampled_2048": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0
+    }
+  },
+  "kappa0_24": {
+    "first_loss": 0.008,
+    "step": 16,
+    "last_certified_start": 0.0075,
+    "source_gain_at_loss": 0.05994737776227055,
+    "finite_step_pointwise_at_loss": 0.1139322945680199,
+    "instantaneous_pointwise_at_loss": 0.11394514894017459,
+    "true_gain_at_loss": 0.11602958826828491,
+    "phi": 0.8431243202033037,
+    "x": 0.8008706972822701,
+    "y": 0.0012563641769591214,
+    "zeta": 0.0,
+    "min_probability": 0.009943956189760626,
+    "last_step_source_gain": 0.05939034212909533,
+    "censored": false
+  },
+  "kappa005_24": {
+    "first_loss": null,
+    "last_certified_start": 0.0115,
+    "source_gain_at_loss": null,
+    "finite_step_pointwise_at_loss": null,
+    "instantaneous_pointwise_at_loss": null,
+    "true_gain_at_loss": null,
+    "phi": null,
+    "x": null,
+    "y": null,
+    "zeta": null,
+    "min_probability": null,
+    "last_step_source_gain": 0.06001474111627658,
+    "censored": true
+  },
+  "kappa005_25": {
+    "first_loss": 0.012,
+    "step": 24,
+    "last_certified_start": 0.0115,
+    "source_gain_at_loss": 0.05993539929027847,
+    "finite_step_pointwise_at_loss": 0.11416756461612998,
+    "instantaneous_pointwise_at_loss": 0.11418037207440873,
+    "true_gain_at_loss": 0.11629425477344135,
+    "phi": 0.8432843202033038,
+    "x": 0.8013036443771987,
+    "y": 0.001883590747543275,
+    "zeta": 0.00030004338330326223,
+    "min_probability": 0.009916104650288983,
+    "last_step_source_gain": 0.05993539929027847,
+    "censored": false
+  },
+  "kappa005_32": {
+    "first_loss": 0.012,
+    "step": 24,
+    "last_certified_start": 0.0115,
+    "source_gain_at_loss": 0.05993539929027847,
+    "finite_step_pointwise_at_loss": 0.11416756461612998,
+    "instantaneous_pointwise_at_loss": 0.11418037207440873,
+    "true_gain_at_loss": 0.11629425477344135,
+    "phi": 0.8432843202033038,
+    "x": 0.8013036443771987,
+    "y": 0.001883590747543275,
+    "zeta": 0.00030004338330326223,
+    "min_probability": 0.009916104650288983,
+    "last_step_source_gain": 0.059381828219517985,
+    "censored": false
+  },
+  "kappa0_32": {
+    "first_loss": 0.008,
+    "step": 16,
+    "last_certified_start": 0.0075,
+    "source_gain_at_loss": 0.05994737776227055,
+    "finite_step_pointwise_at_loss": 0.1139322945680199,
+    "instantaneous_pointwise_at_loss": 0.11394514894017459,
+    "true_gain_at_loss": 0.11602958826828491,
+    "phi": 0.8431243202033037,
+    "x": 0.8008706972822701,
+    "y": 0.0012563641769591214,
+    "zeta": 0.0,
+    "min_probability": 0.009943956189760626,
+    "last_step_source_gain": 0.05875764159579688,
+    "censored": false
+  },
+  "prediction_check": {
+    "t_0_0115": 0.06001474111627658,
+    "t_0_0120": 0.05993539929027847,
+    "true_gain_t_0_0120": 0.11629425477344135,
+    "finite_pointwise_t_0_0120": 0.11416756461612998
+  },
+  "max_pointwise_grid_gap": 0.00039223902939319877,
+  "feedback": {
+    "source": {
+      "name": "source",
+      "labels": 0,
+      "pairings": 1,
+      "original_first_loss": [
+        0.012
+      ],
+      "updated_first_loss": [
+        0.012
+      ],
+      "updated_last_step": [
+        0.059381828219517985
+      ],
+      "entire_fraction": 0.0,
+      "suffix_fraction": 0.0,
+      "true_gain_changed": false
+    },
+    "repeated_source": {
+      "name": "repeated_source",
+      "labels": 128,
+      "pairings": 5,
+      "original_first_loss": [
+        0.012,
+        0.012,
+        0.012,
+        0.012,
+        0.012
+      ],
+      "updated_first_loss": [
+        0.012,
+        0.012,
+        0.012,
+        0.012,
+        0.012
+      ],
+      "updated_last_step": [
+        0.059381828219517985,
+        0.059381828219517985,
+        0.059381828219517985,
+        0.059381828219517985,
+        0.059381828219517985
+      ],
+      "entire_fraction": 0.0,
+      "suffix_fraction": 0.0,
+      "true_gain_changed": false
+    },
+    "informative": {
+      "name": "informative",
+      "labels": 128,
+      "pairings": 5,
+      "original_first_loss": [
+        0.012,
+        0.012,
+        0.012,
+        0.012,
+        0.012
+      ],
+      "updated_first_loss": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "updated_last_step": [
+        0.10771420955735245,
+        0.11032220760109901,
+        0.09510980251814516,
+        0.10063242174096487,
+        0.10771420955735245
+      ],
+      "entire_fraction": 1.0,
+      "suffix_fraction": 1.0,
+      "true_gain_changed": false
+    },
+    "intervals": {
+      "100": [
+        0.6499217036622524,
+        1.0118023713175432
+      ],
+      "101": [
+        0.6246679527059594,
+        0.9584795800233521
+      ],
+      "102": [
+        0.7310500490592848,
+        1.269510450300928
+      ],
+      "103": [
+        0.7029109190401399,
+        1.1565956906879067
+      ],
+      "104": [
+        0.6499217036622524,
+        1.0118023713175432
+      ]
+    }
+  },
+  "sampled": {
+    "realized_first_loss": [
+      0.0005,
+      0.0,
+      0.0
+    ],
+    "population_first_loss": [
+      0.012,
+      0.012,
+      0.012
+    ],
+    "mean_gradient_error": 0.021322330470716366,
+    "informative": {
+      "name": "sampled_informative",
+      "labels": 128,
+      "pairings": 15,
+      "original_first_loss": [
+        0.0005,
+        0.0005,
+        0.0005,
+        0.0005,
+        0.0005,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "updated_first_loss": [
+        0.0005,
+        0.0005,
+        0.0005,
+        0.0005,
+        0.0005,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "updated_last_step": [
+        0.10772867628117133,
+        0.11069998714607898,
+        0.0933683849964062,
+        0.09966034466191154,
+        0.10772867628117133,
+        0.11062787073279345,
+        0.11206056429124978,
+        0.10370368886380987,
+        0.10673751820378108,
+        0.11062787073279345,
+        0.1028246140166722,
+        0.10470210751534204,
+        0.09375072213879676,
+        0.09772644662575658,
+        0.1028246140166722
+      ],
+      "entire_fraction": 0.0,
+      "suffix_fraction": 1.0,
+      "true_gain_changed": false
+    },
+    "true_gain_at_0_012": [
+      0.1187475277739658,
+      0.11133781144057053,
+      0.11204595523262029
+    ]
+  },
+  "source_sha": "6506b13f8023f5fa787abbffa8a797e14627c17e",
+  "runtime_seconds": 0.784499678760767,
+  "max_rss_kib": 136872
+}

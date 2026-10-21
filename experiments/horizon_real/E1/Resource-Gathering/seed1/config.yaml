@@ -1,0 +1,29 @@
+env_id: resource-gathering-v0
+low:
+- -1.0
+- 0.0
+- 0.0
+high:
+- 0.0
+- 1.0
+- 1.0
+w_star:
+- 0.2
+- 0.2
+- 0.6000000000000001
+beta: 1.0
+pair_median_abs_half: 0.0
+gamma: 0.0
+gamma_pos: 0.005000000000000001
+gamma_note: 0.1 times median positive development finite-step gain
+coverage_development: 0.9666666666666667
+certificate_formal: true
+n_actions: 4
+max_steps: 40
+dim: 3
+positive_development_gains:
+- 0.025
+- 0.07500000000000001
+seed: 1
+rounds: 4
+n_pairs: 48

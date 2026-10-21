@@ -1,0 +1,25 @@
+# Run outputs and caches are regenerated; reference datasets are tracked.
+# The theorem bridge keeps its small exact tables. Everything else under outputs stays ignored.
+outputs/*
+!outputs/horizon_bridge/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.coverage
+htmlcov/
+.DS_Store
+
+# Large training states stay on the volume; aggregate tables and figures are tracked.
+experiments/horizon_real/**/checkpoints/
+experiments/horizon_real/**/cache/
+
+# Keep unpublished manuscript sources out of the public repository.
+/paper/
+/main.pdf
+/main.tex

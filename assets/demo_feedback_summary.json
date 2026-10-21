@@ -1,0 +1,14 @@
+{
+  "labels": 1200,
+  "successes": 600,
+  "alpha": 0.05,
+  "query_time": 4.0,
+  "two_sided_delta_interval": [
+    -0.19245962944052974,
+    0.19245962944053016
+  ],
+  "post_query_min_certificate": 0.682,
+  "required_progress": 0.6,
+  "fixed_batch_one_sided_test_certifies_T15": true,
+  "scope": "Fixed independent pure BTL comparisons, paper illustrative data; no neural RLHF training."
+}

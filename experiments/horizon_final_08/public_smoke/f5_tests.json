@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "test": "test_budget (experiments.final08.f5_tests.AuditTests.test_budget)",
+      "status": "PASS"
+    },
+    {
+      "test": "test_cpu_import_has_no_torch (experiments.final08.f5_tests.AuditTests.test_cpu_import_has_no_torch)",
+      "status": "PASS"
+    },
+    {
+      "test": "test_false_certificate_is_rejected (experiments.final08.f5_tests.AuditTests.test_false_certificate_is_rejected)",
+      "status": "PASS"
+    },
+    {
+      "test": "test_historical_manifest_is_unverified (experiments.final08.f5_tests.AuditTests.test_historical_manifest_is_unverified)",
+      "status": "PASS"
+    },
+    {
+      "test": "test_non_simplex_is_not_a_grid_minimum (experiments.final08.f5_tests.AuditTests.test_non_simplex_is_not_a_grid_minimum)",
+      "status": "PASS"
+    },
+    {
+      "test": "test_paired_interval_and_mismatch (experiments.final08.f5_tests.AuditTests.test_paired_interval_and_mismatch)",
+      "status": "PASS"
+    },
+    {
+      "test": "test_perturbing_probabilities_changes_the_gain (experiments.final08.f5_tests.AuditTests.test_perturbing_probabilities_changes_the_gain)",
+      "status": "PASS"
+    },
+    {
+      "test": "test_scalar_horizon (experiments.final08.f5_tests.AuditTests.test_scalar_horizon)",
+      "status": "PASS"
+    },
+    {
+      "test": "test_simplex_uses_vertices_only (experiments.final08.f5_tests.AuditTests.test_simplex_uses_vertices_only)",
+      "status": "PASS"
+    }
+  ],
+  "failures": 0,
+  "example_status": "COMPUTED"
+}

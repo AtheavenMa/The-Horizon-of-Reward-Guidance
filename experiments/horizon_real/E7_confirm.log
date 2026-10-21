@@ -1,0 +1,25 @@
+E7 seed 1
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:  40%|████      | 79/196 [00:00<00:00, 786.62it/s]Loading weights:  92%|█████████▏| 181/196 [00:00<00:00, 919.98it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 923.29it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:  26%|██▌       | 50/196 [00:00<00:00, 494.63it/s]Loading weights:  74%|███████▍  | 146/196 [00:00<00:00, 766.31it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 778.26it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer GPTNeoXTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+Fixed learned reward 0.1925131807020078
+More reward updates, same labels 0.17284720216509952
+Fixed-period new feedback 0.20242632113821138
+Diagnosis-based allocation 0.1717620387742339
+E7 seed 2
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   4%|▍         | 8/196 [00:00<00:02, 78.41it/s]Loading weights:  74%|███████▍  | 145/196 [00:00<00:00, 812.67it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 796.45it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   1%|          | 2/196 [00:00<00:10, 19.32it/s]Loading weights:  68%|██████▊   | 134/196 [00:00<00:00, 765.63it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 735.07it/s]
+Fixed learned reward 0.16561176298748723
+More reward updates, same labels 0.13985605038236618
+Fixed-period new feedback 0.1636763502454992
+Diagnosis-based allocation 0.1504585622889485
+E7 seed 3
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:  37%|███▋      | 73/196 [00:00<00:00, 708.14it/s]Loading weights:  77%|███████▋  | 151/196 [00:00<00:00, 734.05it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 778.47it/s]
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:  24%|██▍       | 48/196 [00:00<00:00, 475.02it/s]Loading weights:  67%|██████▋   | 132/196 [00:00<00:00, 669.67it/s]Loading weights: 100%|██████████| 196/196 [00:00<00:00, 689.11it/s]
+Fixed learned reward 0.17580744635357573
+More reward updates, same labels 0.14498001998001997
+Fixed-period new feedback 0.16314402651611953
+Diagnosis-based allocation 0.1444155446756426
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   4%|▎         | 14/398 [00:00<00:02, 136.72it/s]Loading weights:  17%|█▋        | 66/398 [00:00<00:00, 358.44it/s]Loading weights:  26%|██▌       | 102/398 [00:00<00:00, 337.79it/s]Loading weights:  34%|███▍      | 136/398 [00:00<00:00, 326.50it/s]Loading weights:  42%|████▏     | 169/398 [00:00<00:00, 313.88it/s]Loading weights:  55%|█████▍    | 218/398 [00:00<00:00, 369.08it/s]Loading weights:  73%|███████▎  | 291/398 [00:00<00:00, 481.85it/s]Loading weights:  94%|█████████▍| 375/398 [00:00<00:00, 591.95it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 451.02it/s]
+EXIT:0

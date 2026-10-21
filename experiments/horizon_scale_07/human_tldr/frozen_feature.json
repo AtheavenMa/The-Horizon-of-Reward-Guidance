@@ -1,0 +1,30 @@
+{
+  "model": "frozen_length_and_overlap_logistic",
+  "train_pairs": 257,
+  "validation_pairs": 2048,
+  "seeds": [
+    {
+      "seed": 0,
+      "accuracy": 0.56396484375,
+      "nll": 0.6853827663756072,
+      "brier": 0.24611592742994085,
+      "weight": [
+        -0.08934956134409214,
+        -0.03650250027630884
+      ]
+    },
+    {
+      "seed": 1,
+      "accuracy": 0.56689453125,
+      "nll": 0.6814732924712374,
+      "brier": 0.24410585280223973,
+      "weight": [
+        -0.1953755506717109,
+        -0.05832402392883332
+      ]
+    }
+  ],
+  "label_source": "human",
+  "guarantee_type": "empirical_proxy",
+  "runtime_seconds": 0.3889778908342123
+}

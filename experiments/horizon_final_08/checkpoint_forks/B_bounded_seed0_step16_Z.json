@@ -1,0 +1,40 @@
+{
+  "parent": "B_bounded_seed0_step16.pt",
+  "parent_step": 16,
+  "seed": 0,
+  "arm": "Z",
+  "optimizer_restored": true,
+  "rng_restored": true,
+  "repeat_decode_identical": true,
+  "no_actor_update_identical": true,
+  "anchor_hashes_match_f2": true,
+  "label_origin": "same 32 AI pairs as A; candidate was not deployed",
+  "rm_steps": 32,
+  "label_count": 32,
+  "movement": {
+    "mode": "b0",
+    "alpha": null,
+    "per_event_rms": 0.0,
+    "proposal_rms": 0.27263447642326355,
+    "applied": false,
+    "status": "NOT_DEPLOYED",
+    "weight_interpolation_stable": null,
+    "architecture": null
+  },
+  "parent_rouge_l": 0.16159933697854204,
+  "after_rouge_l": 0.16297430001451446,
+  "delta": 0.0013749630359724263,
+  "reference_kl": 0.006341868381241511,
+  "mean_tokens": 46.7734375,
+  "train_kl_stopped": 0,
+  "human_holdout": {
+    "accuracy": 0.5798994974874372,
+    "nll": 0.6828578886749157,
+    "brier": 0.2441556313193192,
+    "ece": 0.04573331609293445,
+    "heldout_n": 995
+  },
+  "fit_seconds": 3.9412571182474494,
+  "evaluator": "rouge_l_vs_dataset_completion",
+  "guarantee_type": "empirical_proxy"
+}

@@ -1,0 +1,61 @@
+{
+  "version_added": "1.0",
+  "inherited_model": "v0.6 five-output policy",
+  "h_policy": 0.05,
+  "reward_step_size": 0.01,
+  "gradient_clip": 0.2,
+  "g": 1.0,
+  "gamma": 0.6,
+  "source_radius": 1.0,
+  "policy_drift_v": 0.12,
+  "time_window": [
+    0.0,
+    15.0
+  ],
+  "iterations_per_run": 300,
+  "deterministic": true,
+  "runs": [
+    {
+      "reward_steps_per_policy_step": 0,
+      "max_reward_displacement_per_policy_step": 0.0,
+      "capacity_per_policy_time": 0.0,
+      "observed_max_displacement": 0.0,
+      "first_uncertified_policy_step_time": 3.35,
+      "ideal_budget_envelope_first_uncertified_time": 3.35,
+      "minimum_output_probability": 0.11686156123669385,
+      "minimum_preconditioner_eigenvalue": 1.7596426387591402
+    },
+    {
+      "reward_steps_per_policy_step": 1,
+      "max_reward_displacement_per_policy_step": 0.002,
+      "capacity_per_policy_time": 0.04,
+      "observed_max_displacement": 0.0020000000000000018,
+      "first_uncertified_policy_step_time": 4.55,
+      "ideal_budget_envelope_first_uncertified_time": 5.050000000000001,
+      "minimum_output_probability": 0.12252858579812187,
+      "minimum_preconditioner_eigenvalue": 1.7596426387591402
+    },
+    {
+      "reward_steps_per_policy_step": 2,
+      "max_reward_displacement_per_policy_step": 0.004,
+      "capacity_per_policy_time": 0.08,
+      "observed_max_displacement": 0.0040000000000000036,
+      "first_uncertified_policy_step_time": 7.8500000000000005,
+      "ideal_budget_envelope_first_uncertified_time": 10.05,
+      "minimum_output_probability": 0.127921268365454,
+      "minimum_preconditioner_eigenvalue": 1.7596426387591402
+    },
+    {
+      "reward_steps_per_policy_step": 3,
+      "max_reward_displacement_per_policy_step": 0.006,
+      "capacity_per_policy_time": 0.12,
+      "observed_max_displacement": 0.00599203967002504,
+      "first_uncertified_policy_step_time": null,
+      "ideal_budget_envelope_first_uncertified_time": null,
+      "minimum_output_probability": 0.13237523064394094,
+      "minimum_preconditioner_eigenvalue": 1.7596426387591402
+    }
+  ],
+  "maximum_exact_step_identity_error": 7.728262474415715e-13,
+  "scope": "Exact stepwise mean-gain test in an affine finite-output policy; not continuous interpolation, BTL fitting, PPO, or a neural experiment."
+}

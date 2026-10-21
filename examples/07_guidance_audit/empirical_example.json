@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "experiment_id": "empirical_only_example",
+  "task_id": "neural_reward_without_btl_model",
+  "source_type": "human",
+  "evaluator_type": "heldout_human",
+  "guarantee_type": "empirical_proxy",
+  "dataset_id": "openai/summarize_from_feedback",
+  "checkpoint_step": 0,
+  "new_label_count": 256,
+  "status": "complete",
+  "original_certified_gain": null,
+  "updated_certified_gain": null
+}

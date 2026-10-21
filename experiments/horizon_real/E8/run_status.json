@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "e1": {
+    "Deep-Sea-Treasure": {
+      "seeds": 5,
+      "loss": 1.0,
+      "fraction_positive_V": 1.0,
+      "true_gain_at_loss": -0.014842570493352383,
+      "coverage": 0.9666666666666667,
+      "formal": true,
+      "gamma_pos": 0.005206517836178311,
+      "gamma_note": "0.1 times median positive development finite-step gain"
+    },
+    "Resource-Gathering": {
+      "seeds": 5,
+      "loss": 0.0,
+      "fraction_positive_V": 1.0,
+      "true_gain_at_loss": -0.008333333333333326,
+      "coverage": 0.9666666666666667,
+      "formal": true,
+      "gamma_pos": 0.005000000000000001,
+      "gamma_note": "0.1 times median positive development finite-step gain"
+    }
+  }
+}

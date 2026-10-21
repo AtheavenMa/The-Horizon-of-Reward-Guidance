@@ -1,0 +1,23 @@
+{
+  "name": "source_only",
+  "seed": 0,
+  "deployed_weight": [
+    0.4870523211974919,
+    0.512947678802508
+  ],
+  "final": {
+    "episodes": 100,
+    "goal_success": 1.0,
+    "mean_steps": 11.0,
+    "true_utility": 0.478515625,
+    "success_count": 100
+  },
+  "information_only_same_policy": true,
+  "env_steps_after_fork": 92160,
+  "parent_env_steps": 8192,
+  "source_pairs": 32,
+  "new_pairs": 0,
+  "fit_steps": 30,
+  "guarantee_type": "empirical_proxy",
+  "teacher": "synthetic_btl_evaluator_only"
+}

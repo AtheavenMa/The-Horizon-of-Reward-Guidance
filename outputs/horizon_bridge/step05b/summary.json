@@ -1,0 +1,302 @@
+{
+  "frozen_original_loss": 0.008,
+  "frozen_terminal_source_certificate": 0.05939034212909533,
+  "frozen_true_finite_step_gain_near_contact": 0.11602958826828491,
+  "source_repetition": {
+    "wins": 0,
+    "labels": 512,
+    "informative": false,
+    "delta_hat": null,
+    "a_hat": null,
+    "interval": [
+      -1.0,
+      2.0
+    ],
+    "empty": false,
+    "note": "Source pairs with q=s have logit 2 for every a, so the set stays [-1, 2]."
+  },
+  "per_seed": [
+    {
+      "labels": 32,
+      "seed": 100,
+      "a_hat": 0.7345674096482325,
+      "interval": [
+        0.478656347435024,
+        1.2870054083250029
+      ],
+      "covers_a_star": true,
+      "wins": 23,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.0940933195745508,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 32,
+      "seed": 101,
+      "a_hat": 0.6971143400910675,
+      "interval": [
+        0.44722417724001645,
+        1.137526732006536
+      ],
+      "covers_a_star": true,
+      "wins": 22,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.10136876765387548,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 32,
+      "seed": 102,
+      "a_hat": 0.9864775372638284,
+      "interval": [
+        0.6383448721323141,
+        2.0
+      ],
+      "covers_a_star": true,
+      "wins": 28,
+      "original_loss": 0.008,
+      "updated_loss": 0.008,
+      "terminal_updated": 0.05939034212909533,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 32,
+      "seed": 103,
+      "a_hat": 0.9215997383925572,
+      "interval": [
+        0.6051943941862125,
+        2.0
+      ],
+      "covers_a_star": true,
+      "wins": 27,
+      "original_loss": 0.008,
+      "updated_loss": 0.008,
+      "terminal_updated": 0.05939034212909533,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 32,
+      "seed": 104,
+      "a_hat": 0.7345674096482325,
+      "interval": [
+        0.478656347435024,
+        1.2870054083250029
+      ],
+      "covers_a_star": true,
+      "wins": 23,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.0940933195745508,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 128,
+      "seed": 100,
+      "a_hat": 0.7959425242521041,
+      "interval": [
+        0.6499217036622524,
+        1.0118023713175432
+      ],
+      "covers_a_star": true,
+      "wins": 98,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.10748804219584684,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 128,
+      "seed": 101,
+      "a_hat": 0.7643423325335151,
+      "interval": [
+        0.6246679527059594,
+        0.9584795800233521
+      ],
+      "covers_a_star": true,
+      "wins": 95,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.11008337692230974,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 128,
+      "seed": 102,
+      "a_hat": 0.9070765991846208,
+      "interval": [
+        0.7310500490592848,
+        1.269510450300928
+      ],
+      "covers_a_star": true,
+      "wins": 107,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.09494483674021836,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 128,
+      "seed": 103,
+      "a_hat": 0.8665842671983568,
+      "interval": [
+        0.7029109190401399,
+        1.1565956906879067
+      ],
+      "covers_a_star": true,
+      "wins": 104,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.1004406404974123,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 128,
+      "seed": 104,
+      "a_hat": 0.7959425242521041,
+      "interval": [
+        0.6499217036622524,
+        1.0118023713175432
+      ],
+      "covers_a_star": true,
+      "wins": 98,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.10748804219584684,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 512,
+      "seed": 100,
+      "a_hat": 0.8211078064985587,
+      "interval": [
+        0.7400763542670896,
+        0.9206023265482481
+      ],
+      "covers_a_star": true,
+      "wins": 401,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.11192694416450877,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 512,
+      "seed": 101,
+      "a_hat": 0.8633918854318289,
+      "interval": [
+        0.775355833545875,
+        0.976495447422091
+      ],
+      "covers_a_star": true,
+      "wins": 415,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.10920650597934234,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 512,
+      "seed": 102,
+      "a_hat": 0.8602246237886856,
+      "interval": [
+        0.7727547741239691,
+        0.9721896551133832
+      ],
+      "covers_a_star": true,
+      "wins": 414,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.10941607813474974,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 512,
+      "seed": 103,
+      "a_hat": 0.8268971699293848,
+      "interval": [
+        0.7449760417212159,
+        0.9280656999186438
+      ],
+      "covers_a_star": true,
+      "wins": 403,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.11156368575981901,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    },
+    {
+      "labels": 512,
+      "seed": 104,
+      "a_hat": 0.8327645581611582,
+      "interval": [
+        0.7499197360455321,
+        0.9356870457360851
+      ],
+      "covers_a_star": true,
+      "wins": 405,
+      "original_loss": 0.008,
+      "updated_loss": null,
+      "terminal_updated": 0.1111927384975786,
+      "terminal_true_gain_changed": false,
+      "true_gain_near_contact": 0.11602958826828491
+    }
+  ],
+  "binomial": {
+    "32": {
+      "win_probability": 0.7975767524052352,
+      "exact_coverage": 0.9993584778004931,
+      "exact_probability_terminal_certificate_meets_gamma": 0.3141609854292582,
+      "mean_terminal_certificate": 0.06899149755011519,
+      "empty_probability": 0.0
+    },
+    "128": {
+      "win_probability": 0.7975767524052352,
+      "exact_coverage": 0.9993211200328442,
+      "exact_probability_terminal_certificate_meets_gamma": 0.9919782700150774,
+      "mean_terminal_certificate": 0.10146171793879646,
+      "empty_probability": 0.0
+    },
+    "512": {
+      "win_probability": 0.7975767524052352,
+      "exact_coverage": 0.9993232388562953,
+      "exact_probability_terminal_certificate_meets_gamma": 1.0000000000000004,
+      "mean_terminal_certificate": 0.11045742992343771,
+      "empty_probability": 0.0
+    }
+  },
+  "true_gain_identical_across_information": true,
+  "status": "PASS",
+  "stage": "5B",
+  "command": "python experiments/bridge/06_online_bandit.py --stage 5B --out outputs/horizon_bridge/step05b",
+  "phi0": 0.8428043202033038,
+  "a_star_evaluator_only": 0.8428043202033038,
+  "gamma": 0.06,
+  "rho": 0.04,
+  "h": 0.0005,
+  "steps": 24,
+  "feedback_step": 8,
+  "source_set": [
+    -1.0,
+    2.0
+  ],
+  "scope": "Four-outcome Theorem 2 bridge. No Walker, Meta-World, or language run.",
+  "source_sha": "7807ac1c43d8a3cbd7bd1b7b50694887f8a3a1fa",
+  "runtime_seconds": 0.016363629139959812,
+  "max_rss_kib": 101704
+}

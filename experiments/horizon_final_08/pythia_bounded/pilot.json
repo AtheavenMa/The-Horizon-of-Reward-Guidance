@@ -1,0 +1,128 @@
+{
+  "status": "complete",
+  "stage": "pilot",
+  "rows": [
+    {
+      "seed": 0,
+      "method": "B_bounded",
+      "new_ai_labels": 32,
+      "updates": 8,
+      "events": [
+        {
+          "mode": "weight_interpolation",
+          "alpha": 0.078125,
+          "per_event_rms": 0.048580195754766464,
+          "accepted": true,
+          "weight_interpolation_stable": true,
+          "step": 4,
+          "new_ai_labels": 32,
+          "label_source": "AI feedback",
+          "initial_margins_rms_vs_source": 0.0,
+          "applied": true,
+          "status": "APPLIED"
+        }
+      ],
+      "max_per_event_rms": 0.048580195754766464,
+      "cumulative_rms_vs_initial": 0.048580195754766464,
+      "curve": [
+        {
+          "rouge_l": 0.16480177946272617,
+          "mean_tokens": 47.5,
+          "empty_rate": 0.0,
+          "distinct_bigram": 0.6532258064516129,
+          "reference_kl_mean_per_token": 0.0,
+          "sampled_rouge_l": 0.1390341937449037,
+          "evaluator": "rouge_l_vs_dataset_completion",
+          "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+          "step": 0
+        },
+        {
+          "rouge_l": 0.1633803009509233,
+          "mean_tokens": 46.0,
+          "empty_rate": 0.0,
+          "distinct_bigram": 0.6583333333333333,
+          "reference_kl_mean_per_token": 0.005445039889309555,
+          "sampled_rouge_l": 0.15049092510058937,
+          "evaluator": "rouge_l_vs_dataset_completion",
+          "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+          "step": 8,
+          "reference_kl_on_train_batch": 0.0010916663450188935
+        }
+      ],
+      "fixed_eval": 0.1633803009509233,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "kl_steps_stopped": 0,
+      "guarantee_type": "empirical_proxy",
+      "empirical_reuse_endpoint": "CENSORED",
+      "censor_reason": "No DEV-frozen failure of independent ROUGE-L was declared as a neural support horizon, and none is inferred.",
+      "max_new_tokens": 64,
+      "label_source": "AI feedback",
+      "historical_wp07_B": "NOT A VALID BOUNDED CLAIM"
+    },
+    {
+      "seed": 0,
+      "method": "C_b0",
+      "new_ai_labels": 32,
+      "updates": 8,
+      "events": [
+        {
+          "step": 4,
+          "mode": "b0",
+          "per_event_rms": 0.0,
+          "applied": false,
+          "new_ai_labels": 32
+        }
+      ],
+      "max_per_event_rms": 0.0,
+      "cumulative_rms_vs_initial": 0.0,
+      "curve": [
+        {
+          "rouge_l": 0.16480177946272617,
+          "mean_tokens": 47.5,
+          "empty_rate": 0.0,
+          "distinct_bigram": 0.6532258064516129,
+          "reference_kl_mean_per_token": 0.0,
+          "sampled_rouge_l": 0.1390341937449037,
+          "evaluator": "rouge_l_vs_dataset_completion",
+          "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+          "step": 0
+        },
+        {
+          "rouge_l": 0.1569049109435762,
+          "mean_tokens": 45.875,
+          "empty_rate": 0.0,
+          "distinct_bigram": 0.6685236768802229,
+          "reference_kl_mean_per_token": 0.0012210475688334554,
+          "sampled_rouge_l": 0.14265186069069657,
+          "evaluator": "rouge_l_vs_dataset_completion",
+          "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+          "step": 8,
+          "reference_kl_on_train_batch": 0.0011629927612375468
+        }
+      ],
+      "fixed_eval": 0.1569049109435762,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "kl_steps_stopped": 0,
+      "guarantee_type": "empirical_proxy",
+      "empirical_reuse_endpoint": "CENSORED",
+      "censor_reason": "No DEV-frozen failure of independent ROUGE-L was declared as a neural support horizon, and none is inferred.",
+      "max_new_tokens": 64,
+      "label_source": "AI feedback",
+      "historical_wp07_B": "NOT A VALID BOUNDED CLAIM"
+    }
+  ],
+  "b": 0.05,
+  "epsilon": 0.0001,
+  "max_new_tokens": 64,
+  "token_boundary": {
+    "direct_equals_glued": true,
+    "separate_prompt_length": 9,
+    "direct_length": 12,
+    "policy_loss_uses": "token ids of the prompt concatenated with generated continuation ids"
+  },
+  "source_rm": "/workspace/The-Horizon-of-Reward-Guidance/experiments/horizon_final_08/human_final_holdout/human_4098_seed0",
+  "runtime_seconds": 31.11847068183124,
+  "source_sha": "d5377ae30d16e30c6e40b5f0027bd149dae18ed2",
+  "passed": true,
+  "guarantee_type": "empirical_proxy"
+}

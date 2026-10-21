@@ -1,0 +1,1154 @@
+[
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.47207109087524485,
+    "true_one_step": 0.0017560591924619118
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.47207109087524485,
+    "true_one_step": 0.0017560591924619118
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.49827125224342045,
+    "true_one_step": 0.0016129520592274016
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.4582712522434204,
+    "true_one_step": 0.0018313876003466234
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.311968215235985,
+    "true_one_step": 0.0007270050264515104
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.311968215235985,
+    "true_one_step": 0.0007270050264515104
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.33371283328777923,
+    "true_one_step": 0.0007994765435204165
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.33371283328777923,
+    "true_one_step": 0.0007994765435204165
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.2505600808319704,
+    "true_one_step": 0.0002879987569734954
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.2505600808319704,
+    "true_one_step": 0.0002879987569734954
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.2719318290558602,
+    "true_one_step": 0.0004159574124498189
+  },
+  {
+    "seed": 0,
+    "method": "S",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.2719318290558602,
+    "true_one_step": 0.0004159574124498189
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.47320130693494333,
+    "true_one_step": 0.001750852007910697
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.47320127519055155,
+    "true_one_step": 0.0017508521827895862
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.45812538191128666,
+    "true_one_step": 0.0018338832989863718
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.45812538191128666,
+    "true_one_step": 0.0018338832989863718
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.309854895883186,
+    "true_one_step": 0.0007572677028997443
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.30985488127714683,
+    "true_one_step": 0.0007572676520445354
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.3322241793399814,
+    "true_one_step": 0.0008352497661695546
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.3322241793399814,
+    "true_one_step": 0.0008352497661695546
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.24843537024644427,
+    "true_one_step": 0.00029735217380666423
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.24843532261488466,
+    "true_one_step": 0.0002973518812522391
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.26978002355618796,
+    "true_one_step": 0.0004285299546086252
+  },
+  {
+    "seed": 0,
+    "method": "I",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.26978002355618796,
+    "true_one_step": 0.0004285299546086252
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.48,
+    "true_one_step": 0.004606521670445063
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.43999999999999995,
+    "true_one_step": 0.0047108344607412755
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.43999999999999995,
+    "true_one_step": 0.0047108344607412755
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.43999999999999995,
+    "true_one_step": 0.0047108344607412755
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.3298274448306891,
+    "true_one_step": 0.0008128629078005822
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.3298274448306891,
+    "true_one_step": 0.0008128629078005822
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.36982744483068913,
+    "true_one_step": 0.0008437139360140122
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.36982744483068913,
+    "true_one_step": 0.0008437139360140122
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.3298274448306891,
+    "true_one_step": 0.00030636560098018517
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.36982744483068913,
+    "true_one_step": 0.00031736947270455396
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.36982744483068913,
+    "true_one_step": 0.00031736947270455396
+  },
+  {
+    "seed": 0,
+    "method": "M",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.36982744483068913,
+    "true_one_step": 0.00031736947270455396
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 0.0004169137014542468
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 0.0004663744276732773
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.395,
+    "true_one_step": 0.0004169137014542468
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 0.0004663744276732773
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 9.276597248164542e-05
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 0.00010399498082569458
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.395,
+    "true_one_step": 9.276597248164542e-05
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 0.00010399498082569458
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 4.388271457433923e-05
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 4.926087673018387e-05
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.395,
+    "true_one_step": 4.388271457433923e-05
+  },
+  {
+    "seed": 0,
+    "method": "O",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 4.926087673018387e-05
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.4716150492265118,
+    "true_one_step": 0.0016990591876304695
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.4716150492265118,
+    "true_one_step": 0.0016990591876304695
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.45686933910210714,
+    "true_one_step": 0.0017777747935665555
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.45686933910210714,
+    "true_one_step": 0.0017777747935665555
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.3070825944605022,
+    "true_one_step": 0.0006345025408649452
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.3070825944605022,
+    "true_one_step": 0.0006345025408649452
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.28907700525354874,
+    "true_one_step": 0.0005726160961991855
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.32907700525354877,
+    "true_one_step": 0.0007102885900545086
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.25065659387710576,
+    "true_one_step": 0.0002552444755062888
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.25065659387710576,
+    "true_one_step": 0.0002552444755062888
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.2315744447398619,
+    "true_one_step": 0.00014557472604481703
+  },
+  {
+    "seed": 1,
+    "method": "S",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.2715744447398619,
+    "true_one_step": 0.00037566295789392967
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.4492036921283116,
+    "true_one_step": 0.001950655592771744
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.4492036621309741,
+    "true_one_step": 0.0019506557191354412
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.4362380602594361,
+    "true_one_step": 0.002005277071409295
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.4362380602594361,
+    "true_one_step": 0.002005277071409295
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.2927804592962192,
+    "true_one_step": 0.0007072426502061635
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.29278046439118305,
+    "true_one_step": 0.0007072426724608061
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.3147010025836479,
+    "true_one_step": 0.0008030689244746814
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.3147010025836479,
+    "true_one_step": 0.0008030689244746814
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.2395080415826352,
+    "true_one_step": 0.0002749602672575957
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.23950805430385205,
+    "true_one_step": 0.00027496035120488926
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.26025304882788547,
+    "true_one_step": 0.0004119060438950717
+  },
+  {
+    "seed": 1,
+    "method": "I",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.26025304882788547,
+    "true_one_step": 0.0004119060438950717
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.4048270507125287,
+    "true_one_step": 0.0002635239531072475
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.3648270507125287,
+    "true_one_step": 0.0002943857672599304
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.3648270507125287,
+    "true_one_step": 0.0002943857672599304
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.3648270507125287,
+    "true_one_step": 0.0002943857672599304
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.38231101566950726,
+    "true_one_step": 7.954246987884606e-05
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.3423110156695072,
+    "true_one_step": 8.838534394794983e-05
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.3423110156695072,
+    "true_one_step": 8.838534394794983e-05
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.3423110156695072,
+    "true_one_step": 8.838534394794983e-05
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.38231101566950726,
+    "true_one_step": 3.8918091860851156e-05
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.3423110156695072,
+    "true_one_step": 4.330549872622047e-05
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.3423110156695072,
+    "true_one_step": 4.330549872622047e-05
+  },
+  {
+    "seed": 1,
+    "method": "M",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.3423110156695072,
+    "true_one_step": 4.330549872622047e-05
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 0.0004063826372707746
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 0.0004547932030872781
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.355,
+    "true_one_step": 0.0004547932030872781
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 0.0004547932030872781
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 0.00011391049420184096
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 0.00012798593454754759
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.355,
+    "true_one_step": 0.00012798593454754759
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 0.00012798593454754759
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 5.0605746206189295e-05
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 5.694066414740906e-05
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.355,
+    "true_one_step": 5.694066414740906e-05
+  },
+  {
+    "seed": 1,
+    "method": "O",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 5.694066414740906e-05
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.4478388086453906,
+    "true_one_step": 0.0019393305802414273
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.4478388086453906,
+    "true_one_step": 0.0019393305802414273
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.435626826122833,
+    "true_one_step": 0.001989801302119343
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.435626826122833,
+    "true_one_step": 0.001989801302119343
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.2839744533935048,
+    "true_one_step": 0.0006289367717140504
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.2839744533935048,
+    "true_one_step": 0.0006289367717140504
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.2660975276690853,
+    "true_one_step": 0.0005444766286675229
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.3060975276690853,
+    "true_one_step": 0.000733612392081473
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.23618769443039728,
+    "true_one_step": 0.0002613255493162381
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.23618769443039728,
+    "true_one_step": 0.0002613255493162381
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.2172162692023458,
+    "true_one_step": 0.00013388945591663592
+  },
+  {
+    "seed": 2,
+    "method": "S",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.2572162692023458,
+    "true_one_step": 0.0004026747549306098
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.46347372468505,
+    "true_one_step": 0.0017642532580091075
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.46347370461939696,
+    "true_one_step": 0.0017642533568877905
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.45008885657361997,
+    "true_one_step": 0.0018302028026183637
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.45008885657361997,
+    "true_one_step": 0.0018302028026183637
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.30651504805133156,
+    "true_one_step": 0.0007307975029386959
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.3065150198099966,
+    "true_one_step": 0.000730797400516181
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.32871342660975983,
+    "true_one_step": 0.0008114014077249543
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.32871342660975983,
+    "true_one_step": 0.0008114014077249543
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.24685537265371138,
+    "true_one_step": 0.0002684117913411832
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.2468554002215512,
+    "true_one_step": 0.00026841195971083476
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.26785323860029114,
+    "true_one_step": 0.00039674509064990815
+  },
+  {
+    "seed": 2,
+    "method": "I",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.26785323860029114,
+    "true_one_step": 0.00039674509064990815
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.2681213957560524,
+    "true_one_step": 0.00030759118160794685
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.22812139575605242,
+    "true_one_step": 0.00033303780822158124
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.22812139575605242,
+    "true_one_step": 0.00033303780822158124
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.22812139575605242,
+    "true_one_step": 0.00033303780822158124
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.3556074203568674,
+    "true_one_step": 7.55511631089778e-05
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.31560742035686734,
+    "true_one_step": 8.318513871652389e-05
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.31560742035686734,
+    "true_one_step": 8.318513871652389e-05
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.31560742035686734,
+    "true_one_step": 8.318513871652389e-05
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.3556074203568674,
+    "true_one_step": 3.8309353684873315e-05
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.31560742035686734,
+    "true_one_step": 4.221072286059169e-05
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.31560742035686734,
+    "true_one_step": 4.221072286059169e-05
+  },
+  {
+    "seed": 2,
+    "method": "M",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.31560742035686734,
+    "true_one_step": 4.221072286059169e-05
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 40,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 0.0004227422560832972
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 40,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 0.0004731125611509013
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 40,
+    "controller": "A_mle",
+    "phi": 0.355,
+    "true_one_step": 0.0004731125611509013
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 40,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 0.0004731125611509013
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 80,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 0.00010612264452614095
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 80,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 0.00011916495172936692
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 80,
+    "controller": "A_mle",
+    "phi": 0.355,
+    "true_one_step": 0.00011916495172936692
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 80,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 0.00011916495172936692
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 120,
+    "controller": "A_source",
+    "phi": 0.395,
+    "true_one_step": 4.785651728811402e-05
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 120,
+    "controller": "A_updated",
+    "phi": 0.355,
+    "true_one_step": 5.381998637798979e-05
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 120,
+    "controller": "A_mle",
+    "phi": 0.355,
+    "true_one_step": 5.381998637798979e-05
+  },
+  {
+    "seed": 2,
+    "method": "O",
+    "update": 120,
+    "controller": "A_true",
+    "phi": 0.355,
+    "true_one_step": 5.381998637798979e-05
+  }
+]

@@ -1,0 +1,47 @@
+seed,method,added_pairs,reward_steps,overlap,teacher_score,response_length,sample_prompt,sample_summary,online_label_source
+3,Fixed learned reward,0,4,0.17580745,0.081787109,29,"SUBREDDIT: r/AskReddit
+
+TITLE: Reddit, I need some opinions on a big life changer for me.
+
+POST: I have a best friend in Edmonton, AB. I plan on visiting him this may long weekend, I also have a extremely pretty and talented female friend from my hometown here in Winnipeg, MB out in Nanaimo, BC. We got talking today and she wants to see me badly enough to come out to Edmonton this weekend while I'm out there. Me and her have talked many times before about me moving out to her and staying with her and starting a new chapter in my life, much like she did. Well we got talking and I let it slip that I would consider canceling my return flight home and just continuing the journey back with her! Which is something I'm totally down to do...I have a few set backs, barely no cash in the bank, all my stuff here in Winnipeg, MB and I've never done something like this before!! I like this girl and I can tell she likes me (clearly) so, What do you guys think??? last second ditch of my current life to pursue this with her out in beautiful BC after visiting my BFF in Edmonton??? 
+
+Its seriously a big crazy idea that I kinda want to do, but do you guys see this going over well????
+
+please and thanks for the responses.
+
+TL;DR:"," I have a best friend in Edmonton, AB, a girl I want to see in beautiful BC, I want to move out there to start a new chapter in",AI feedback
+3,"More reward updates, same labels",0,16,0.14498002,0.081787109,23,"SUBREDDIT: r/AskReddit
+
+TITLE: Reddit, I need some opinions on a big life changer for me.
+
+POST: I have a best friend in Edmonton, AB. I plan on visiting him this may long weekend, I also have a extremely pretty and talented female friend from my hometown here in Winnipeg, MB out in Nanaimo, BC. We got talking today and she wants to see me badly enough to come out to Edmonton this weekend while I'm out there. Me and her have talked many times before about me moving out to her and staying with her and starting a new chapter in my life, much like she did. Well we got talking and I let it slip that I would consider canceling my return flight home and just continuing the journey back with her! Which is something I'm totally down to do...I have a few set backs, barely no cash in the bank, all my stuff here in Winnipeg, MB and I've never done something like this before!! I like this girl and I can tell she likes me (clearly) so, What do you guys think??? last second ditch of my current life to pursue this with her out in beautiful BC after visiting my BFF in Edmonton??? 
+
+Its seriously a big crazy idea that I kinda want to do, but do you guys see this going over well????
+
+please and thanks for the responses.
+
+TL;DR:"," I have a best friend who will be visiting me out in BC and I'm considering moving to her out in Edmonton.
+
+TL;DR:",AI feedback
+3,Fixed-period new feedback,8,4,0.16314403,0.081787109,29,"SUBREDDIT: r/AskReddit
+
+TITLE: Reddit, I need some opinions on a big life changer for me.
+
+POST: I have a best friend in Edmonton, AB. I plan on visiting him this may long weekend, I also have a extremely pretty and talented female friend from my hometown here in Winnipeg, MB out in Nanaimo, BC. We got talking today and she wants to see me badly enough to come out to Edmonton this weekend while I'm out there. Me and her have talked many times before about me moving out to her and staying with her and starting a new chapter in my life, much like she did. Well we got talking and I let it slip that I would consider canceling my return flight home and just continuing the journey back with her! Which is something I'm totally down to do...I have a few set backs, barely no cash in the bank, all my stuff here in Winnipeg, MB and I've never done something like this before!! I like this girl and I can tell she likes me (clearly) so, What do you guys think??? last second ditch of my current life to pursue this with her out in beautiful BC after visiting my BFF in Edmonton??? 
+
+Its seriously a big crazy idea that I kinda want to do, but do you guys see this going over well????
+
+please and thanks for the responses.
+
+TL;DR:"," I have a best friend in Edmonton, AB that I want to visit this weekend, I got talking with her today, she wants to see me out in Edmonton",AI feedback
+3,Diagnosis-based allocation,0,16,0.14441554,0.081787109,30,"SUBREDDIT: r/AskReddit
+
+TITLE: Reddit, I need some opinions on a big life changer for me.
+
+POST: I have a best friend in Edmonton, AB. I plan on visiting him this may long weekend, I also have a extremely pretty and talented female friend from my hometown here in Winnipeg, MB out in Nanaimo, BC. We got talking today and she wants to see me badly enough to come out to Edmonton this weekend while I'm out there. Me and her have talked many times before about me moving out to her and staying with her and starting a new chapter in my life, much like she did. Well we got talking and I let it slip that I would consider canceling my return flight home and just continuing the journey back with her! Which is something I'm totally down to do...I have a few set backs, barely no cash in the bank, all my stuff here in Winnipeg, MB and I've never done something like this before!! I like this girl and I can tell she likes me (clearly) so, What do you guys think??? last second ditch of my current life to pursue this with her out in beautiful BC after visiting my BFF in Edmonton??? 
+
+Its seriously a big crazy idea that I kinda want to do, but do you guys see this going over well????
+
+please and thanks for the responses.
+
+TL;DR:", I want to be with this amazing girl in BC for a while and I'm thinking of moving back with her out there after I visit my BFF in Edmonton,AI feedback

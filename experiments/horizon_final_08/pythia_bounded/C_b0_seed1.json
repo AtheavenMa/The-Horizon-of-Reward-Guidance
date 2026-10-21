@@ -1,0 +1,101 @@
+{
+  "seed": 1,
+  "method": "C_b0",
+  "new_ai_labels": 96,
+  "updates": 64,
+  "events": [
+    {
+      "step": 16,
+      "mode": "b0",
+      "per_event_rms": 0.0,
+      "applied": false,
+      "new_ai_labels": 32
+    },
+    {
+      "step": 32,
+      "mode": "b0",
+      "per_event_rms": 0.0,
+      "applied": false,
+      "new_ai_labels": 32
+    },
+    {
+      "step": 48,
+      "mode": "b0",
+      "per_event_rms": 0.0,
+      "applied": false,
+      "new_ai_labels": 32
+    }
+  ],
+  "max_per_event_rms": 0.0,
+  "cumulative_rms_vs_initial": 0.0,
+  "curve": [
+    {
+      "rouge_l": 0.1608561651395194,
+      "mean_tokens": 46.828125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.45260825093760654,
+      "reference_kl_mean_per_token": 0.0,
+      "sampled_rouge_l": 0.14197155642866163,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 0
+    },
+    {
+      "rouge_l": 0.15791430153933916,
+      "mean_tokens": 47.078125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.4299762631400475,
+      "reference_kl_mean_per_token": 0.0024657705412209907,
+      "sampled_rouge_l": 0.1396414562210337,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 16,
+      "reference_kl_on_train_batch": 0.0051683445781236514
+    },
+    {
+      "rouge_l": 0.1610698277477921,
+      "mean_tokens": 47.03125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.46028513238289204,
+      "reference_kl_mean_per_token": 0.003900170267570502,
+      "sampled_rouge_l": 0.1432704362950428,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 32,
+      "reference_kl_on_train_batch": 0.004151646367972717
+    },
+    {
+      "rouge_l": 0.15584143600739675,
+      "mean_tokens": 46.9296875,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.45024664058513353,
+      "reference_kl_mean_per_token": 0.0035115059340569132,
+      "sampled_rouge_l": 0.14495768230021305,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 48,
+      "reference_kl_on_train_batch": -0.0009787302697077394
+    },
+    {
+      "rouge_l": 0.161419271166955,
+      "mean_tokens": 46.828125,
+      "empty_rate": 0.0,
+      "distinct_bigram": 0.45704057279236276,
+      "reference_kl_mean_per_token": 0.007438324395479867,
+      "sampled_rouge_l": 0.14628622320720586,
+      "evaluator": "rouge_l_vs_dataset_completion",
+      "decoding": "deterministic primary; temperature 0.7 sampled secondary",
+      "step": 64,
+      "reference_kl_on_train_batch": 0.006808126927353442
+    }
+  ],
+  "fixed_eval": 0.161419271166955,
+  "evaluator": "rouge_l_vs_dataset_completion",
+  "kl_steps_stopped": 0,
+  "guarantee_type": "empirical_proxy",
+  "empirical_reuse_endpoint": "CENSORED",
+  "censor_reason": "No DEV-frozen failure of independent ROUGE-L was declared as a neural support horizon, and none is inferred.",
+  "max_new_tokens": 64,
+  "label_source": "AI feedback",
+  "historical_wp07_B": "NOT A VALID BOUNDED CLAIM"
+}

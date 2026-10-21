@@ -1,0 +1,86 @@
+[
+  {
+    "name": "oracle",
+    "seed": 1,
+    "optimizer_restored": true,
+    "parent_env_steps": 8192,
+    "fork_env_steps": 92160,
+    "deployed_weight": [
+      0.5,
+      0.5
+    ],
+    "final": {
+      "episodes": 100,
+      "goal_success": 1.0,
+      "mean_steps": 11.0,
+      "true_utility": 0.478515625,
+      "success_count": 100
+    },
+    "new_pairs": 0,
+    "guarantee_type": "empirical_proxy",
+    "teacher": "synthetic_btl_evaluator_only"
+  },
+  {
+    "name": "source_only",
+    "seed": 1,
+    "optimizer_restored": true,
+    "parent_env_steps": 8192,
+    "fork_env_steps": 92160,
+    "deployed_weight": [
+      0.5342821381686285,
+      0.46571786183137154
+    ],
+    "final": {
+      "episodes": 100,
+      "goal_success": 1.0,
+      "mean_steps": 11.0,
+      "true_utility": 0.478515625,
+      "success_count": 100
+    },
+    "new_pairs": 0,
+    "guarantee_type": "empirical_proxy",
+    "teacher": "synthetic_btl_evaluator_only"
+  },
+  {
+    "name": "new_32",
+    "seed": 1,
+    "optimizer_restored": true,
+    "parent_env_steps": 8192,
+    "fork_env_steps": 92160,
+    "deployed_weight": [
+      0.49802157348446907,
+      0.5019784265155309
+    ],
+    "final": {
+      "episodes": 100,
+      "goal_success": 1.0,
+      "mean_steps": 11.0,
+      "true_utility": 0.478515625,
+      "success_count": 100
+    },
+    "new_pairs": 32,
+    "guarantee_type": "empirical_proxy",
+    "teacher": "synthetic_btl_evaluator_only"
+  },
+  {
+    "name": "extra_fit_same_source",
+    "seed": 1,
+    "optimizer_restored": true,
+    "parent_env_steps": 8192,
+    "fork_env_steps": 92160,
+    "deployed_weight": [
+      0.8329616244002038,
+      0.16703837559979617
+    ],
+    "final": {
+      "episodes": 100,
+      "goal_success": 1.0,
+      "mean_steps": 11.0,
+      "true_utility": 0.478515625,
+      "success_count": 100
+    },
+    "new_pairs": 0,
+    "guarantee_type": "empirical_proxy",
+    "teacher": "synthetic_btl_evaluator_only"
+  }
+]

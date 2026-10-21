@@ -1,0 +1,8 @@
+{
+  "env": "MiniGrid-DoorKey-6x6-v0",
+  "status": "NOT LEARNED",
+  "learned": false,
+  "source": "experiments/horizon_scale_07/minigrid/doorkey.json",
+  "oracle_40k_goal_success": 0.0,
+  "claim": "DoorKey is removed from any Horizon claim. No new sweep was run."
+}

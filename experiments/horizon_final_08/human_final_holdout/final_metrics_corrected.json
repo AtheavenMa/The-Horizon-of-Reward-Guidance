@@ -1,0 +1,239 @@
+{
+  "note": "metrics.json final NLL, Brier, ECE and CI were computed on the last eval batch only. These rows recompute those fields on all 995 FINAL pairs. Accuracy in metrics.json was already the full split. Selection used development accuracy and is unchanged.",
+  "rows": [
+    {
+      "name": "extra_257_seed0",
+      "seed": 0,
+      "train_pairs": 257,
+      "dev_accuracy": 0.501953125,
+      "final_accuracy": 0.5226130653266332,
+      "final_nll_T1": 1.368773201779058,
+      "final_nll": 0.9113807211522406,
+      "final_brier": 0.3090555594030639,
+      "final_ece": 0.20998372405875082,
+      "final_accuracy_ci95": [
+        0.4891594334179194,
+        0.553149206734057
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.7716195297737917
+    },
+    {
+      "name": "extra_257_seed1",
+      "seed": 1,
+      "train_pairs": 257,
+      "dev_accuracy": 0.5390625,
+      "final_accuracy": 0.542713567839196,
+      "final_nll_T1": 1.419407001121048,
+      "final_nll": 0.9293073191798886,
+      "final_brier": 0.3097182842392615,
+      "final_ece": 0.2001692663748332,
+      "final_accuracy_ci95": [
+        0.5104264942232913,
+        0.5729015525918366
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.8678713887929916
+    },
+    {
+      "name": "extra_257_seed2",
+      "seed": 2,
+      "train_pairs": 257,
+      "dev_accuracy": 0.51953125,
+      "final_accuracy": 0.5165829145728643,
+      "final_nll_T1": 1.2984046655941381,
+      "final_nll": 0.8851195627975572,
+      "final_brier": 0.3061320114566405,
+      "final_ece": 0.20837479462968791,
+      "final_accuracy_ci95": [
+        0.4820269585253456,
+        0.5458531194832564
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.6079627921183904
+    },
+    {
+      "name": "human_1024_seed0",
+      "seed": 0,
+      "train_pairs": 1024,
+      "dev_accuracy": 0.54296875,
+      "final_accuracy": 0.549748743718593,
+      "final_nll_T1": 0.8771446254090921,
+      "final_nll": 0.7320747540280896,
+      "final_brier": 0.26128130477932865,
+      "final_ece": 0.08496087819581206,
+      "final_accuracy_ci95": [
+        0.5157640871656017,
+        0.5824969319462876
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.5001627604166666
+    },
+    {
+      "name": "human_1024_seed1",
+      "seed": 1,
+      "train_pairs": 1024,
+      "dev_accuracy": 0.533203125,
+      "final_accuracy": 0.5547738693467337,
+      "final_nll_T1": 0.8292464141698844,
+      "final_nll": 0.7161265255555735,
+      "final_brier": 0.2571829461379054,
+      "final_ece": 0.07061320364512688,
+      "final_accuracy_ci95": [
+        0.5208134775171066,
+        0.5880565436736096
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.5327057292064031
+    },
+    {
+      "name": "human_1024_seed2",
+      "seed": 2,
+      "train_pairs": 1024,
+      "dev_accuracy": 0.529296875,
+      "final_accuracy": 0.542713567839196,
+      "final_nll_T1": 0.8496895067393779,
+      "final_nll": 0.7239858753455045,
+      "final_brier": 0.25947583356988846,
+      "final_ece": 0.08409535714130308,
+      "final_accuracy_ci95": [
+        0.5107611688329786,
+        0.5759784268404461
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.5652788132429123
+    },
+    {
+      "name": "human_257_seed0",
+      "seed": 0,
+      "train_pairs": 257,
+      "dev_accuracy": 0.521484375,
+      "final_accuracy": 0.5095477386934674,
+      "final_nll_T1": 1.0384103525700235,
+      "final_nll": 0.7971870269457898,
+      "final_brier": 0.28676070552370675,
+      "final_ece": 0.15047443732619287,
+      "final_accuracy_ci95": [
+        0.47801793592494046,
+        0.5383122847301951
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.5731673737366995
+    },
+    {
+      "name": "human_257_seed1",
+      "seed": 1,
+      "train_pairs": 257,
+      "dev_accuracy": 0.5078125,
+      "final_accuracy": 0.5165829145728643,
+      "final_nll_T1": 1.0497138144523572,
+      "final_nll": 0.7984844936310646,
+      "final_brier": 0.28695505214643585,
+      "final_ece": 0.14803913944592728,
+      "final_accuracy_ci95": [
+        0.4839702139515943,
+        0.5451275727234056
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.6027299066384634
+    },
+    {
+      "name": "human_257_seed2",
+      "seed": 2,
+      "train_pairs": 257,
+      "dev_accuracy": 0.498046875,
+      "final_accuracy": 0.4894472361809045,
+      "final_nll_T1": 1.0466650256410888,
+      "final_nll": 0.8052068999851468,
+      "final_brier": 0.29215367460506647,
+      "final_ece": 0.16529770736119254,
+      "final_accuracy_ci95": [
+        0.4574890680153838,
+        0.5195982362794364
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.5755928854147593
+    },
+    {
+      "name": "human_4098_seed0",
+      "seed": 0,
+      "train_pairs": 4098,
+      "dev_accuracy": 0.634765625,
+      "final_accuracy": 0.5738693467336683,
+      "final_nll_T1": 0.7194224137681813,
+      "final_nll": 0.6833255131340507,
+      "final_brier": 0.24434087068658922,
+      "final_ece": 0.044157912960304094,
+      "final_accuracy_ci95": [
+        0.5399781595732166,
+        0.6035947685350076
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 1.7000000000000002,
+      "archived_final_nll_last_batch_only": 0.9440632263819376
+    },
+    {
+      "name": "human_4098_seed1",
+      "seed": 1,
+      "train_pairs": 4098,
+      "dev_accuracy": 0.587890625,
+      "final_accuracy": 0.5728643216080402,
+      "final_nll_T1": 0.7095877992391736,
+      "final_nll": 0.6725290315534601,
+      "final_brier": 0.2395398430311092,
+      "final_ece": 0.047045058858155,
+      "final_accuracy_ci95": [
+        0.540132691784304,
+        0.6056676378358499
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.6250689029693604
+    },
+    {
+      "name": "human_4098_seed2",
+      "seed": 2,
+      "train_pairs": 4098,
+      "dev_accuracy": 0.591796875,
+      "final_accuracy": 0.542713567839196,
+      "final_nll_T1": 0.7328352250533188,
+      "final_nll": 0.6887730659851476,
+      "final_brier": 0.2473081354548537,
+      "final_ece": 0.03626258999259028,
+      "final_accuracy_ci95": [
+        0.5106338467016825,
+        0.5734417295137733
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.9697612921396891
+    },
+    {
+      "name": "pilot_257",
+      "seed": 0,
+      "train_pairs": 108,
+      "dev_accuracy": 0.65625,
+      "final_accuracy": 0.5095477386934674,
+      "final_nll_T1": 1.012868890363633,
+      "final_nll": 0.7908803630433041,
+      "final_brier": 0.28731797328235453,
+      "final_ece": 0.13986744327873138,
+      "final_accuracy_ci95": [
+        0.47623187510689646,
+        0.5422075246893792
+      ],
+      "heldout_n": 995,
+      "temperature_frozen_on_dev": 2.0,
+      "archived_final_nll_last_batch_only": 0.8065818138420582
+    }
+  ]
+}

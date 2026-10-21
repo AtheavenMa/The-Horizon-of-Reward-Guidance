@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "experiment_id": "false_certificate",
+  "task_id": "reject_stored",
+  "source_type": "synthetic_btl",
+  "evaluator_type": "exact_finite",
+  "guarantee_type": "exact_finite",
+  "dataset_id": "examples/08_guidance_audit/intentionally_false_certificate.json",
+  "checkpoint_step": 0,
+  "new_label_count": 0,
+  "status": "invalid",
+  "step_rule": "recorded_exact",
+  "compatible_reward_set": {"required_gain": 0.0, "kind": "affine_interval", "interval": [0.0, 0.0]},
+  "checkpoints": [
+    {
+      "checkpoint_step": 0,
+      "policy_id": "false",
+      "true_return": 0.0,
+      "source_certificate": 5.0,
+      "outcome_probabilities": [0.25, 0.25, 0.25, 0.25],
+      "reward_base": [0, 0, 0, 0],
+      "reward_slope": [0, 0, 0, 0]
+    }
+  ]
+}

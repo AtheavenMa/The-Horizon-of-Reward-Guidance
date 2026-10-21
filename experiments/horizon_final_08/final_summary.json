@@ -1,0 +1,41 @@
+{
+  "status": "MILESTONE_COMPLETE_SCOPED",
+  "passed": true,
+  "figures": [
+    "fig1_horizon.png",
+    "fig2_dst.png",
+    "fig3_human_pythia.png"
+  ],
+  "spot": {
+    "finite_status": "COMPUTED",
+    "optimizer_tensors": 32,
+    "sft": "cleanrl/EleutherAI_pythia-1b-deduped__sft__tldr",
+    "corrected_accuracy_matches_archived_full_split": true,
+    "archived_final_nll_is_not_the_full_split": true
+  },
+  "paired_B_minus_A": {
+    "metric": "fixed_eval",
+    "pair_by": "seed",
+    "n_seeds": 2,
+    "paired_ids": [
+      "0",
+      "1"
+    ],
+    "deltas": [
+      -0.002836727621434304,
+      -0.0006070287529597873
+    ],
+    "paired_mean": -0.0017218781871970457,
+    "sample_sd": 0.0015766351899023027,
+    "interval_95": [
+      -0.01588715509861565,
+      0.012443398724221559
+    ],
+    "interval_method": "paired_t",
+    "fraction_positive_seeds": 0.0,
+    "note": "Seed-level interval only. Prompt-level bootstrap is a different unit and is not this number."
+  },
+  "source_sha_at_pack": "d5377ae30d16e30c6e40b5f0027bd149dae18ed2",
+  "paper_pdf_revised": false,
+  "work_plan_09": false
+}

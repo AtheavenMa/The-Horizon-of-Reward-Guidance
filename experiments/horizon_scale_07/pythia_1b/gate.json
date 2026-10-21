@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "nonempty": true,
+  "adapter_changed": true,
+  "finite_advantage": true,
+  "responses_separated": true,
+  "kl_defined": true,
+  "adapter_norm_before": 6.547658340823358,
+  "adapter_norm_after": 6.553183689325604,
+  "updates": 8,
+  "runtime_seconds": 21.86045556794852,
+  "source_sha": "aa7709f54d552b15219cff39695794654f88d690",
+  "guarantee_type": "empirical_proxy",
+  "online_label_source": "AI feedback from the frozen CleanRL TL;DR reward model",
+  "note": "The 8-update gate checks the pipeline. It is not a support horizon."
+}

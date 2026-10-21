@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "experiment_id": "finite_computed_16",
+  "task_id": "recomputed_finite",
+  "source_type": "synthetic_btl",
+  "evaluator_type": "exact_finite",
+  "guarantee_type": "exact_finite",
+  "dataset_id": "examples/08_guidance_audit/finite_computed.json",
+  "checkpoint_step": 0,
+  "new_label_count": 0,
+  "status": "complete",
+  "step_rule": "recorded_exact",
+  "compatible_reward_set": {"required_gain": 0.0, "kind": "affine_interval", "interval": [-1.0, 1.0]},
+  "checkpoints": [
+    {
+      "checkpoint_step": 0,
+      "policy_id": "uniform-16",
+      "true_return": 0.5,
+      "outcome_probabilities": [0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625, 0.0625],
+      "reward_base": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "reward_slope": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "source_certificate": 7.5
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="392.87952pt" height="169.97976pt" viewBox="0 0 392.87952 169.97976" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-20T18:48:51.009325</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 169.97976 
+L 392.87952 169.97976 
+L 392.87952 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.190281 144.031041 
+L 188.939661 144.031041 
+L 188.939661 47.80472 
+L 37.190281 47.80472 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m24d0e64290" d="M 0 0 
+L 0 -3 
+" style="stroke: #000000; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m24d0e64290" x="37.190281" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- $\mathdefault{0}$ -->
+      <g transform="translate(34.940281 153.578041)">
+       <text>
+        <tspan x="0" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m24d0e64290" x="75.127626" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- $\mathdefault{16}$ -->
+      <g transform="translate(70.627626 153.578041)">
+       <text>
+        <tspan x="0" y="-0.84375" style="font-size: 9px; font-family: 'TeX Gyre Termes'">1</tspan>
+        <tspan x="4.500031" y="-0.84375" style="font-size: 9px; font-family: 'TeX Gyre Termes'">6</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m24d0e64290" x="113.064971" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- $\mathdefault{32}$ -->
+      <g transform="translate(108.564971 153.578041)">
+       <text>
+        <tspan x="0" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">3</tspan>
+        <tspan x="4.500031" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m24d0e64290" x="151.002316" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- $\mathdefault{48}$ -->
+      <g transform="translate(146.502316 153.578041)">
+       <text>
+        <tspan x="0" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">4</tspan>
+        <tspan x="4.500031" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">8</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m24d0e64290" x="188.939661" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- $\mathdefault{64}$ -->
+      <g transform="translate(184.439661 153.578041)">
+       <text>
+        <tspan x="0" y="-0.84375" style="font-size: 9px; font-family: 'TeX Gyre Termes'">6</tspan>
+        <tspan x="4.500031" y="-0.84375" style="font-size: 9px; font-family: 'TeX Gyre Termes'">4</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: middle" x="113.064971" y="166.578041" transform="rotate(-0 113.064971 166.578041)">Policy update</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 37.190281 144.031041 
+L 188.939661 144.031041 
+" clip-path="url(#pd0a02553ca)" style="fill: none; stroke: #c8c8c8; stroke-opacity: 0.6; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <defs>
+       <path id="m8f76801ee7" d="M 0 0 
+L 3 0 
+" style="stroke: #000000; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m8f76801ee7" x="37.190281" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: end" x="34.690281" y="147.554541" transform="rotate(-0 34.690281 147.554541)">0.047</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 37.190281 117.301508 
+L 188.939661 117.301508 
+" clip-path="url(#pd0a02553ca)" style="fill: none; stroke: #c8c8c8; stroke-opacity: 0.6; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m8f76801ee7" x="37.190281" y="117.301508" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: end" x="34.690281" y="120.825008" transform="rotate(-0 34.690281 120.825008)">0.048</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 37.190281 90.571974 
+L 188.939661 90.571974 
+" clip-path="url(#pd0a02553ca)" style="fill: none; stroke: #c8c8c8; stroke-opacity: 0.6; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m8f76801ee7" x="37.190281" y="90.571974" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: end" x="34.690281" y="94.095474" transform="rotate(-0 34.690281 94.095474)">0.049</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 37.190281 63.84244 
+L 188.939661 63.84244 
+" clip-path="url(#pd0a02553ca)" style="fill: none; stroke: #c8c8c8; stroke-opacity: 0.6; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m8f76801ee7" x="37.190281" y="63.84244" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: end" x="34.690281" y="67.36594" transform="rotate(-0 34.690281 67.36594)">0.050</text>
+     </g>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: middle" x="8.487" y="95.917881" transform="rotate(-90 8.487 95.917881)">Reward movement on comparison set</text>
+    </g>
+   </g>
+   <g id="line2d_14">
+    <path d="M 37.190281 63.84244 
+L 188.939661 63.84244 
+" clip-path="url(#pd0a02553ca)" style="fill: none; stroke-dasharray: 3.33,1.44; stroke-dashoffset: 0; stroke: #333333; stroke-width: 0.9"/>
+   </g>
+   <g id="line2d_15">
+    <defs>
+     <path id="m1cbb76d943" d="M 0 2.2 
+C 0.583447 2.2 1.143076 1.968194 1.555635 1.555635 
+C 1.968194 1.143076 2.2 0.583447 2.2 0 
+C 2.2 -0.583447 1.968194 -1.143076 1.555635 -1.555635 
+C 1.143076 -1.968194 0.583447 -2.2 0 -2.2 
+C -0.583447 -2.2 -1.143076 -1.968194 -1.555635 -1.555635 
+C -1.968194 -1.143076 -2.2 -0.583447 -2.2 0 
+C -2.2 0.583447 -1.968194 1.143076 -1.555635 1.555635 
+C -1.143076 1.968194 -0.583447 2.2 0 2.2 
+z
+" style="stroke: #882266; stroke-width: 0.6"/>
+    </defs>
+    <g clip-path="url(#pd0a02553ca)">
+     <use xlink:href="#m1cbb76d943" x="72.282325" y="88.5138" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+     <use xlink:href="#m1cbb76d943" x="110.21967" y="99.36599" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+     <use xlink:href="#m1cbb76d943" x="148.157015" y="73.277966" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+    </g>
+   </g>
+   <g id="line2d_16">
+    <defs>
+     <path id="maf1fdb4e24" d="M -2.2 2.2 
+L 2.2 2.2 
+L 2.2 -2.2 
+L -2.2 -2.2 
+z
+" style="stroke: #882266; stroke-width: 0.6; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#pd0a02553ca)">
+     <use xlink:href="#maf1fdb4e24" x="77.972927" y="102.600264" style="fill: #882266; stroke: #882266; stroke-width: 0.6; stroke-linejoin: miter"/>
+     <use xlink:href="#maf1fdb4e24" x="115.910272" y="98.27008" style="fill: #882266; stroke: #882266; stroke-width: 0.6; stroke-linejoin: miter"/>
+     <use xlink:href="#maf1fdb4e24" x="153.847617" y="71.246521" style="fill: #882266; stroke: #882266; stroke-width: 0.6; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.190281 144.031041 
+L 37.190281 47.80472 
+" style="fill: none; stroke: #000000; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 37.190281 144.031041 
+L 188.939661 144.031041 
+" style="fill: none; stroke: #000000; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <!-- $b = 0.05$ per event -->
+    <g style="fill: #333333" transform="translate(121.048577 57.85301)">
+     <text>
+      <tspan x="0" y="-0.8125" style="font-style: italic; font-size: 9px; font-family: 'STIXGeneral'; fill: #333333">b</tspan>
+      <tspan x="6.300031" y="-0.8125" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #333333">=</tspan>
+      <tspan x="14.26507" y="-0.8125" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #333333">0</tspan>
+      <tspan x="18.7651" y="-0.8125" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #333333">.</tspan>
+      <tspan x="21.015115" y="-0.8125" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #333333">0</tspan>
+      <tspan x="25.515146" y="-0.8125" style="font-size: 9px; font-family: 'STIXGeneral'; fill: #333333">5</tspan>
+      <tspan x="30.015176" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333"> </tspan>
+      <tspan x="32.265192" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333">p</tspan>
+      <tspan x="36.765222" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333">e</tspan>
+      <tspan x="40.761255" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333">r</tspan>
+      <tspan x="43.758279" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333"> </tspan>
+      <tspan x="46.008295" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333">e</tspan>
+      <tspan x="50.004327" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333">v</tspan>
+      <tspan x="54.504358" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333">e</tspan>
+      <tspan x="58.500391" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333">n</tspan>
+      <tspan x="63.000421" y="-0.8125" style="font-size: 9px; font-family: 'TeX Gyre Termes'; fill: #333333">t</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: start" x="37.190281" y="42.80472" transform="rotate(-0 37.190281 42.80472)">(a)</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_17">
+     <g>
+      <use xlink:href="#m1cbb76d943" x="99.946536" y="132.628041" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: start" x="108.946536" y="135.778041" transform="rotate(-0 108.946536 135.778041)">Seed 0</text>
+    </g>
+    <g id="line2d_18">
+     <g>
+      <use xlink:href="#maf1fdb4e24" x="149.393098" y="132.628041" style="fill: #882266; stroke: #882266; stroke-width: 0.6; stroke-linejoin: miter"/>
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: start" x="158.393098" y="135.778041" transform="rotate(-0 158.393098 135.778041)">Seed 1</text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 235.190141 144.031041 
+L 386.93952 144.031041 
+L 386.93952 47.80472 
+L 235.190141 47.80472 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 273.127485 144.031041 
+L 273.127485 47.80472 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #c8c8c8; stroke-width: 0.8"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 311.06483 144.031041 
+L 311.06483 47.80472 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #c8c8c8; stroke-width: 0.8"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 349.002175 144.031041 
+L 349.002175 47.80472 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #c8c8c8; stroke-width: 0.8"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_6">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m24d0e64290" x="235.190141" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <!-- $\mathdefault{0}$ -->
+      <g transform="translate(232.940141 153.578041)">
+       <text>
+        <tspan x="0" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m24d0e64290" x="273.127485" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <!-- $\mathdefault{16}$ -->
+      <g transform="translate(268.627485 153.578041)">
+       <text>
+        <tspan x="0" y="-0.84375" style="font-size: 9px; font-family: 'TeX Gyre Termes'">1</tspan>
+        <tspan x="4.500031" y="-0.84375" style="font-size: 9px; font-family: 'TeX Gyre Termes'">6</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m24d0e64290" x="311.06483" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <!-- $\mathdefault{32}$ -->
+      <g transform="translate(306.56483 153.578041)">
+       <text>
+        <tspan x="0" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">3</tspan>
+        <tspan x="4.500031" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">2</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#m24d0e64290" x="349.002175" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <!-- $\mathdefault{48}$ -->
+      <g transform="translate(344.502175 153.578041)">
+       <text>
+        <tspan x="0" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">4</tspan>
+        <tspan x="4.500031" y="-0.921875" style="font-size: 9px; font-family: 'TeX Gyre Termes'">8</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m24d0e64290" x="386.93952" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <!-- $\mathdefault{64}$ -->
+      <g transform="translate(382.43952 153.578041)">
+       <text>
+        <tspan x="0" y="-0.84375" style="font-size: 9px; font-family: 'TeX Gyre Termes'">6</tspan>
+        <tspan x="4.500031" y="-0.84375" style="font-size: 9px; font-family: 'TeX Gyre Termes'">4</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: middle" x="311.06483" y="166.578041" transform="rotate(-0 311.06483 166.578041)">Policy updates</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_5">
+     <g id="line2d_27">
+      <path d="M 235.190141 144.031041 
+L 386.93952 144.031041 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #c8c8c8; stroke-opacity: 0.6; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m8f76801ee7" x="235.190141" y="144.031041" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: end" x="232.690141" y="147.554541" transform="rotate(-0 232.690141 147.554541)">0.156</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_29">
+      <path d="M 235.190141 111.955601 
+L 386.93952 111.955601 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #c8c8c8; stroke-opacity: 0.6; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m8f76801ee7" x="235.190141" y="111.955601" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: end" x="232.690141" y="115.479101" transform="rotate(-0 232.690141 115.479101)">0.160</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_31">
+      <path d="M 235.190141 79.88016 
+L 386.93952 79.88016 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #c8c8c8; stroke-opacity: 0.6; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m8f76801ee7" x="235.190141" y="79.88016" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: end" x="232.690141" y="83.40366" transform="rotate(-0 232.690141 83.40366)">0.164</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_33">
+      <path d="M 235.190141 47.80472 
+L 386.93952 47.80472 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #c8c8c8; stroke-opacity: 0.6; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m8f76801ee7" x="235.190141" y="47.80472" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: end" x="232.690141" y="51.32822" transform="rotate(-0 232.690141 51.32822)">0.168</text>
+     </g>
+    </g>
+    <g id="text_26">
+     <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: middle" x="206.487141" y="95.917881" transform="rotate(-90 206.487141 95.917881)">Held-out ROUGE-L</text>
+    </g>
+   </g>
+   <g id="line2d_35">
+    <path d="M 235.190141 105.091457 
+L 273.127485 68.333002 
+L 311.06483 91.050433 
+L 349.002175 82.349969 
+L 386.93952 61.412726 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #336bb0; stroke-opacity: 0.55; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_36">
+    <path d="M 235.190141 105.091457 
+L 273.127485 107.841926 
+L 311.06483 127.183416 
+L 349.002175 116.470219 
+L 386.93952 95.308447 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #336bb0; stroke-opacity: 0.55; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_37">
+    <path d="M 235.190141 105.091457 
+L 273.127485 88.087464 
+L 311.06483 109.116924 
+L 349.002175 99.410094 
+L 386.93952 78.360586 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #336bb0; stroke-width: 1.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m0fc7a53c62" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #336bb0; stroke-width: 0.6"/>
+    </defs>
+    <g clip-path="url(#p098fce6a71)">
+     <use xlink:href="#m0fc7a53c62" x="235.190141" y="105.091457" style="fill: #336bb0; stroke: #336bb0; stroke-width: 0.6"/>
+     <use xlink:href="#m0fc7a53c62" x="273.127485" y="88.087464" style="fill: #336bb0; stroke: #336bb0; stroke-width: 0.6"/>
+     <use xlink:href="#m0fc7a53c62" x="311.06483" y="109.116924" style="fill: #336bb0; stroke: #336bb0; stroke-width: 0.6"/>
+     <use xlink:href="#m0fc7a53c62" x="349.002175" y="99.410094" style="fill: #336bb0; stroke: #336bb0; stroke-width: 0.6"/>
+     <use xlink:href="#m0fc7a53c62" x="386.93952" y="78.360586" style="fill: #336bb0; stroke: #336bb0; stroke-width: 0.6"/>
+    </g>
+   </g>
+   <g id="line2d_38">
+    <path d="M 235.190141 105.091457 
+L 273.127485 99.133444 
+L 311.06483 73.55328 
+L 349.002175 60.715085 
+L 386.93952 84.162232 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #882266; stroke-opacity: 0.55; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_39">
+    <path d="M 235.190141 105.091457 
+L 273.127485 124.176344 
+L 311.06483 129.877753 
+L 349.002175 119.132481 
+L 386.93952 100.175895 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #882266; stroke-opacity: 0.55; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_40">
+    <path d="M 235.190141 105.091457 
+L 273.127485 111.654894 
+L 311.06483 101.715516 
+L 349.002175 89.923783 
+L 386.93952 92.169064 
+" clip-path="url(#p098fce6a71)" style="fill: none; stroke: #882266; stroke-width: 1.7; stroke-linecap: square"/>
+    <defs>
+     <path id="m211e8d554b" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #882266; stroke-width: 0.6"/>
+    </defs>
+    <g clip-path="url(#p098fce6a71)">
+     <use xlink:href="#m211e8d554b" x="235.190141" y="105.091457" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+     <use xlink:href="#m211e8d554b" x="273.127485" y="111.654894" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+     <use xlink:href="#m211e8d554b" x="311.06483" y="101.715516" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+     <use xlink:href="#m211e8d554b" x="349.002175" y="89.923783" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+     <use xlink:href="#m211e8d554b" x="386.93952" y="92.169064" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+    </g>
+   </g>
+   <g id="patch_6">
+    <path d="M 235.190141 144.031041 
+L 235.190141 47.80472 
+" style="fill: none; stroke: #000000; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 235.190141 144.031041 
+L 386.93952 144.031041 
+" style="fill: none; stroke: #000000; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: start" x="235.190141" y="42.80472" transform="rotate(-0 235.190141 42.80472)">(b)</text>
+   </g>
+  </g>
+  <g id="legend_2">
+   <g id="line2d_41">
+    <path d="M 53.196322 10.197 
+L 61.296322 10.197 
+L 69.396322 10.197 
+" style="fill: none; stroke: #336bb0; stroke-width: 1.7; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m0fc7a53c62" x="61.296322" y="10.197" style="fill: #336bb0; stroke: #336bb0; stroke-width: 0.6"/>
+    </g>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: start" x="73.896322" y="13.347" transform="rotate(-0 73.896322 13.347)">Fixed reward (original preference data)</text>
+   </g>
+   <g id="line2d_42">
+    <path d="M 53.196322 21.905719 
+L 61.296322 21.905719 
+L 69.396322 21.905719 
+" style="fill: none; stroke: #882266; stroke-width: 1.7; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m211e8d554b" x="61.296322" y="21.905719" style="fill: #882266; stroke: #882266; stroke-width: 0.6"/>
+    </g>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: start" x="73.896322" y="25.055719" transform="rotate(-0 73.896322 25.055719)">Updated reward (additional preference feedback)</text>
+   </g>
+   <g id="line2d_43">
+    <path d="M 263.648666 10.197 
+L 271.748666 10.197 
+L 279.848666 10.197 
+" style="fill: none; stroke: #666666; stroke-opacity: 0.7; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: start" x="284.348666" y="13.347" transform="rotate(-0 284.348666 13.347)">Individual seed</text>
+   </g>
+   <g id="line2d_44">
+    <path d="M 263.648666 21.897 
+L 271.748666 21.897 
+L 279.848666 21.897 
+" style="fill: none; stroke-dasharray: 0.8,1.32; stroke-dashoffset: 0; stroke: #c8c8c8; stroke-width: 0.8"/>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 9px; font-family: 'Times New Roman', 'Nimbus Roman', 'TeX Gyre Termes', 'STIXGeneral', serif; text-anchor: start" x="284.348666" y="25.047" transform="rotate(-0 284.348666 25.047)">Feedback event</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd0a02553ca">
+   <rect x="37.190281" y="47.80472" width="151.749379" height="96.226321"/>
+  </clipPath>
+  <clipPath id="p098fce6a71">
+   <rect x="235.190141" y="47.80472" width="151.749379" height="96.226321"/>
+  </clipPath>
+ </defs>
+</svg>

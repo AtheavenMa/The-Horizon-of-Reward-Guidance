@@ -1,0 +1,271 @@
+{
+  "stage": "core",
+  "summary": {
+    "early|source_mle": {
+      "n": 8,
+      "return_increase_mean": 0.0752719025768551,
+      "return_increase_sd": 0.0029186050697359465,
+      "minus_fisher_mle": 0.006722446139571403,
+      "final_phi_mean": 0.05393522433185725,
+      "final_source_mean": -0.0005924389042596774,
+      "final_updated_mean": -0.0005924389042596774,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "early|source_mle_extra": {
+      "n": 8,
+      "return_increase_mean": 0.07527190262560818,
+      "return_increase_sd": 0.0029186049318414885,
+      "minus_fisher_mle": 0.006722446188324488,
+      "final_phi_mean": 0.053935223406135116,
+      "final_source_mean": -0.0005924389054760967,
+      "final_updated_mean": -0.0005924389054760967,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "early|uniform_mle": {
+      "n": 8,
+      "return_increase_mean": 0.0646634889632956,
+      "return_increase_sd": 0.009589546704723555,
+      "minus_fisher_mle": -0.003885967473988089,
+      "final_phi_mean": 0.439434146842346,
+      "final_source_mean": -0.0006244454026449048,
+      "final_updated_mean": -0.0006244454026449048,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "early|fisher_mle": {
+      "n": 8,
+      "return_increase_mean": 0.06854945643728369,
+      "return_increase_sd": 0.00681588179625139,
+      "minus_fisher_mle": 0.0,
+      "final_phi_mean": 0.3888899037175723,
+      "final_source_mean": -0.0004981570405089286,
+      "final_updated_mean": 7.538927806276935e-05,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "early|fisher_robust": {
+      "n": 8,
+      "return_increase_mean": 0.06125702110209284,
+      "return_increase_sd": 0.009548534011820466,
+      "minus_fisher_mle": -0.007292435335190847,
+      "final_phi_mean": 0.37892068959673336,
+      "final_source_mean": 0.0007139109927625127,
+      "final_updated_mean": 0.0009017921143488483,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "early|fisher_old_fit": {
+      "n": 8,
+      "return_increase_mean": 0.06823983385535334,
+      "return_increase_sd": 0.00667015391965315,
+      "minus_fisher_mle": -0.00030962258193034664,
+      "final_phi_mean": 0.39855849348256256,
+      "final_source_mean": -0.000495691506450166,
+      "final_updated_mean": 7.792367397058825e-05,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "early|fisher_mle_b05": {
+      "n": 8,
+      "return_increase_mean": 0.07038510788451584,
+      "return_increase_sd": 0.007260278286349216,
+      "minus_fisher_mle": 0.0018356514472321478,
+      "final_phi_mean": 0.3888899037175723,
+      "final_source_mean": -0.0003256910516475364,
+      "final_updated_mean": 8.912993837144334e-05,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "early|fisher_robust_b05": {
+      "n": 8,
+      "return_increase_mean": 0.06462818047941246,
+      "return_increase_sd": 0.01242226008962396,
+      "minus_fisher_mle": -0.003921275957871229,
+      "final_phi_mean": 0.31569992907323685,
+      "final_source_mean": 0.0006538045616311166,
+      "final_updated_mean": 0.0007693481405395067,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "early|oracle": {
+      "n": 1,
+      "return_increase_mean": 0.07339162670111465,
+      "return_increase_sd": 0.0,
+      "minus_fisher_mle": 0.004842170263830964,
+      "final_phi_mean": 0.375,
+      "final_source_mean": null,
+      "final_updated_mean": null,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0012058660016983913
+    },
+    "later|source_mle": {
+      "n": 5,
+      "return_increase_mean": 0.023806806765742983,
+      "return_increase_sd": 0.0020105774721318136,
+      "minus_fisher_mle": 0.005066138476032479,
+      "final_phi_mean": 0.08629635893095963,
+      "final_source_mean": -0.000284228793623946,
+      "final_updated_mean": -0.000284228793623946,
+      "uncertified_at_init": true,
+      "init_source_gain": 0.0002301816491894204
+    },
+    "later|source_mle_extra": {
+      "n": 5,
+      "return_increase_mean": 0.023806806802627457,
+      "return_increase_sd": 0.0020105773896556866,
+      "minus_fisher_mle": 0.005066138512916953,
+      "final_phi_mean": 0.08629635744981619,
+      "final_source_mean": -0.00028422879436012377,
+      "final_updated_mean": -0.00028422879436012377,
+      "uncertified_at_init": true,
+      "init_source_gain": 0.0002301816491894204
+    },
+    "later|uniform_mle": {
+      "n": 5,
+      "return_increase_mean": 0.015646628675887418,
+      "return_increase_sd": 0.015968223451009487,
+      "minus_fisher_mle": -0.003094039613823086,
+      "final_phi_mean": 0.36516164623482045,
+      "final_source_mean": -0.000680877702093087,
+      "final_updated_mean": -2.0387826598439185e-05,
+      "uncertified_at_init": true,
+      "init_source_gain": 0.0002301816491894204
+    },
+    "later|fisher_mle": {
+      "n": 5,
+      "return_increase_mean": 0.018740668289710504,
+      "return_increase_sd": 0.005965519714504194,
+      "minus_fisher_mle": 0.0,
+      "final_phi_mean": 0.4269923115647935,
+      "final_source_mean": -0.00023271142604240348,
+      "final_updated_mean": -1.2375555553201245e-05,
+      "uncertified_at_init": true,
+      "init_source_gain": 0.0002301816491894204
+    },
+    "later|fisher_robust": {
+      "n": 5,
+      "return_increase_mean": 0.01577502893323579,
+      "return_increase_sd": 0.008152791308734959,
+      "minus_fisher_mle": -0.0029656393564747134,
+      "final_phi_mean": 0.35185378041319637,
+      "final_source_mean": 3.118810370621727e-05,
+      "final_updated_mean": 0.00019914821703318487,
+      "uncertified_at_init": true,
+      "init_source_gain": 0.0002301816491894204
+    },
+    "later|fisher_old_fit": {
+      "n": 5,
+      "return_increase_mean": 0.01002521503288516,
+      "return_increase_sd": 0.01438023452256324,
+      "minus_fisher_mle": -0.008715453256825344,
+      "final_phi_mean": 0.5868865677980006,
+      "final_source_mean": -0.0008320121137200834,
+      "final_updated_mean": -0.000331225012824532,
+      "uncertified_at_init": true,
+      "init_source_gain": 0.0002301816491894204
+    },
+    "later|oracle": {
+      "n": 1,
+      "return_increase_mean": 0.0227867689283745,
+      "return_increase_sd": 0.0,
+      "minus_fisher_mle": 0.004046100638663997,
+      "final_phi_mean": 0.375,
+      "final_source_mean": null,
+      "final_updated_mean": null,
+      "uncertified_at_init": false,
+      "init_source_gain": 0.0002301816491894204
+    }
+  },
+  "source_sha": "f06a38a444f0449484d23f868ceccd53baa031bd",
+  "runtime_seconds": 6.5791906444355845,
+  "max_rss_kib": 123840,
+  "sampled": [
+    {
+      "seed": 110,
+      "mode": "fisher_mle",
+      "return_increase": 0.07213308020009912,
+      "final_phi": 0.3237879435399525
+    },
+    {
+      "seed": 110,
+      "mode": "fisher_robust",
+      "return_increase": 0.0767401415741239,
+      "final_phi": 0.0
+    },
+    {
+      "seed": 111,
+      "mode": "fisher_mle",
+      "return_increase": 0.05222604939673914,
+      "final_phi": 0.5921320868658875
+    },
+    {
+      "seed": 111,
+      "mode": "fisher_robust",
+      "return_increase": 0.05390479892493005,
+      "final_phi": 0.49347416358775265
+    },
+    {
+      "seed": 112,
+      "mode": "fisher_mle",
+      "return_increase": 0.07296874595987124,
+      "final_phi": 0.3008488660945319
+    },
+    {
+      "seed": 112,
+      "mode": "fisher_robust",
+      "return_increase": 0.07584252709835626,
+      "final_phi": 0.0
+    }
+  ],
+  "stages": {
+    "learned": {
+      "learned_20|fisher_mle": {
+        "n": 5,
+        "return_increase_mean": 0.07733919931313582,
+        "return_increase_sd": 0.02509246918356055,
+        "minus_fisher_mle": 0.0,
+        "final_phi_mean": 0.42369900489933715,
+        "final_source_mean": -0.00014094984705482482,
+        "final_updated_mean": -0.00014094984705482482,
+        "uncertified_at_init": false,
+        "init_source_gain": 0.0019741880393879807
+      },
+      "learned_20|fisher_robust": {
+        "n": 5,
+        "return_increase_mean": 0.07876104444478856,
+        "return_increase_sd": 0.02359281204343638,
+        "minus_fisher_mle": 0.0014218451316527353,
+        "final_phi_mean": 0.3255576053167552,
+        "final_source_mean": 0.0009498749257244559,
+        "final_updated_mean": 0.0011584013956569272,
+        "uncertified_at_init": false,
+        "init_source_gain": 0.0019741880393879807
+      },
+      "learned_60|fisher_mle": {
+        "n": 5,
+        "return_increase_mean": 0.06044594864847312,
+        "return_increase_sd": 0.014603730463786886,
+        "minus_fisher_mle": 0.0,
+        "final_phi_mean": 0.38606010483085756,
+        "final_source_mean": -0.00014055801269649004,
+        "final_updated_mean": -0.00014055801269649004,
+        "uncertified_at_init": false,
+        "init_source_gain": 0.001088975873741127
+      },
+      "learned_60|fisher_robust": {
+        "n": 5,
+        "return_increase_mean": 0.038783504704171176,
+        "return_increase_sd": 0.023556526043572716,
+        "minus_fisher_mle": -0.021662443944301946,
+        "final_phi_mean": 0.3035856531702133,
+        "final_source_mean": 0.00053780847562096,
+        "final_updated_mean": 0.0005378105758174434,
+        "uncertified_at_init": false,
+        "init_source_gain": 0.001088975873741127
+      }
+    }
+  },
+  "stage_added": "learned"
+}

@@ -1,0 +1,30 @@
+{
+  "env": "MiniGrid-Empty-8x8-v0",
+  "observation": "frozen 7x7x3 partial image plus direction; ImgObs-equivalent agent view, not the full map",
+  "w_star": [
+    0.5,
+    0.5
+  ],
+  "beta": 5.0,
+  "horizon": 256,
+  "untrained": {
+    "episodes": 100,
+    "goal_success": 0.0,
+    "mean_steps": 256.0,
+    "true_utility": -0.5,
+    "success_count": 0
+  },
+  "oracle_40k": {
+    "episodes": 100,
+    "goal_success": 1.0,
+    "mean_steps": 11.0,
+    "true_utility": 0.478515625,
+    "success_count": 100,
+    "env_steps": 40192
+  },
+  "learned": true,
+  "source_sha": "aa7709f54d552b15219cff39695794654f88d690",
+  "runtime_seconds": 13.684110878035426,
+  "scope": "empirical",
+  "note": "If learned is false, do not interpret a guidance horizon."
+}

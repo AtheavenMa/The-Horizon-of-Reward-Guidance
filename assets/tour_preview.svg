@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Reward Guidance in Five Minutes, Signal-style interactive slide preview">
+<defs>
+ <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse"><path d="M70 0H0V70" fill="none" stroke="#FFFFFF" stroke-opacity=".045" stroke-width="1"/></pattern>
+ <linearGradient id="band" x1="0" x2="1"><stop offset="0" stop-color="#C8A870" stop-opacity=".11"/><stop offset="1" stop-color="#C8A870" stop-opacity=".34"/></linearGradient>
+</defs>
+<rect width="1600" height="900" fill="#1C2644"/><rect width="1600" height="900" fill="url(#grid)"/>
+<text x="125" y="100" fill="#C8A870" font-family="monospace" font-size="19" letter-spacing="4">FIVE-MINUTE RESEARCH TOUR</text>
+<text x="125" y="242" fill="#E2DCD0" font-family="Georgia,serif" font-size="76" font-weight="600">The Limits of</text>
+<text x="125" y="338" fill="#C8A870" font-family="Georgia,serif" font-size="83" font-style="italic">Reward Guidance</text>
+<text x="125" y="422" fill="#E2DCD0" font-family="Georgia,serif" font-size="64">under Finite Adaptation</text>
+<text x="125" y="510" fill="#A9B2C1" font-family="Arial,sans-serif" font-size="25">A certifying reward can exist at every state,</text>
+<text x="125" y="547" fill="#A9B2C1" font-family="Arial,sans-serif" font-size="25">yet no admissible reward path can sustain it.</text>
+<g transform="translate(1010 160)">
+ <rect x="0" y="0" width="466" height="415" fill="#232F55" stroke="#44516D" stroke-width="1.5"/>
+ <text x="40" y="48" fill="#C8A870" font-family="monospace" font-size="15" letter-spacing="2">FINITE ADAPTATION</text>
+ <line x1="45" y1="310" x2="428" y2="310" stroke="#6A7893" stroke-width="2"/>
+ <path d="M54 260 L397 111" fill="none" stroke="#C8A870" stroke-opacity=".3" stroke-width="65"/>
+ <path d="M54 260 L397 111" fill="none" stroke="#C8A870" stroke-width="5"/>
+ <path d="M54 260 L397 236" fill="none" stroke="#E0735A" stroke-width="5"/>
+ <line x1="263" y1="165" x2="263" y2="316" stroke="#C8A870" stroke-width="1.5" stroke-dasharray="7 7"/>
+ <circle cx="397" cy="236" r="9" fill="#E0735A"/><circle cx="397" cy="111" r="9" fill="#C8A870"/>
+ <text x="39" y="370" fill="#A9B2C1" font-family="monospace" font-size="17">available ≠ reachable</text>
+ </g>
+<line x1="125" y1="670" x2="1475" y2="670" stroke="#394864" stroke-width="2"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#E2DCD0">
+ <text x="125" y="731">01  Preference uncertainty</text><text x="407" y="731">02  Feasibility</text><text x="640" y="731">03  Horizon</text><text x="833" y="731">04  Feedback</text><text x="1040" y="731">05  Training</text>
+</g>
+<line x1="125" y1="788" x2="1475" y2="788" stroke="#394864" stroke-width="2"/>
+<text x="125" y="842" fill="#C8A870" font-family="monospace" font-size="17" letter-spacing="2">HAOTIAN MA</text>
+<text x="1475" y="842" fill="#8A96A8" text-anchor="end" font-family="monospace" font-size="17" letter-spacing="2">UNIVERSITY OF WISCONSIN–MADISON</text>
+</svg>

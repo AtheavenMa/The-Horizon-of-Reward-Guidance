@@ -1,0 +1,5 @@
+sft: cleanrl/EleutherAI_pythia-1b-deduped__sft__tldr
+teacher: cleanrl/EleutherAI_pythia-1b-deduped__reward__tldr
+judge: Qwen/Qwen3-4B-Instruct-2507
+online_label_source: AI feedback
+stage: confirm

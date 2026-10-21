@@ -1,0 +1,31 @@
+seed,checkpoint_round,checkpoint_label,branch,new_pairs,reward_updates,original_certificate,updated_certificate_unchanged,true_finite_step_gain,candidate_value
+1,0,before loss,Original,0,4,0.021078775,0.021078775,0.06665541,0.051546706
+1,0,before loss,"More reward updates, same data",0,16,0.021078775,0.021078775,0.095585353,0.073989196
+1,0,before loss,"New feedback, matched updates",16,4,0.021078775,0.021078775,0.09124477,0.082833738
+1,0,before loss,New feedback + more updates,16,16,0.021078775,0.021078775,0.029621604,-0.023658066
+1,0,before loss,"Stronger guidance search, same data",0,4,0.021078775,0.021078775,-0.20923558,0.19194841
+1,1,near suspected loss,Original,0,4,-0.015212907,-0.015212907,-0.024268038,-0.065135936
+1,1,near suspected loss,"More reward updates, same data",0,16,-0.015212907,-0.015212907,-0.0096124532,-0.029688045
+1,1,near suspected loss,"New feedback, matched updates",16,4,-0.015212907,-0.015212907,0.11713576,0.072847683
+1,1,near suspected loss,New feedback + more updates,16,16,-0.015212907,-0.015212907,0.092802369,0.086336702
+1,1,near suspected loss,"Stronger guidance search, same data",0,4,-0.015212907,-0.015212907,-0.087187393,0.22208667
+2,0,before loss,Original,0,4,-0.11403509,-0.11403509,-0.099468455,-0.11842105
+2,0,before loss,"More reward updates, same data",0,16,-0.11403509,-0.11403509,-0.058350034,-0.058731264
+2,0,before loss,"New feedback, matched updates",16,4,-0.11403509,-0.11403509,0.20171445,0.19410945
+2,0,before loss,New feedback + more updates,16,16,-0.11403509,-0.11403509,-0.24363345,-0.26315789
+2,0,before loss,"Stronger guidance search, same data",0,4,-0.11403509,-0.11403509,0.083652839,0.068421053
+2,1,near suspected loss,Original,0,4,-0.023446031,-0.023446031,-0.11793634,-0.13157895
+2,1,near suspected loss,"More reward updates, same data",0,16,-0.023446031,-0.023446031,0.086430377,0.084297665
+2,1,near suspected loss,"New feedback, matched updates",16,4,-0.023446031,-0.023446031,-0.10022547,-0.21052632
+2,1,near suspected loss,New feedback + more updates,16,16,-0.023446031,-0.023446031,-0.033678981,-0.035047053
+2,1,near suspected loss,"Stronger guidance search, same data",0,4,-0.023446031,-0.023446031,0.039234057,0.1523295
+3,0,before loss,Original,0,4,0.05140438,0.05140438,0.082389334,0.061606831
+3,0,before loss,"More reward updates, same data",0,16,0.05140438,0.05140438,0.024671053,0.019736842
+3,0,before loss,"New feedback, matched updates",16,4,0.05140438,0.05140438,-0.11528407,-0.19736842
+3,0,before loss,New feedback + more updates,16,16,0.05140438,0.05140438,0.041428854,0.033308647
+3,0,before loss,"Stronger guidance search, same data",0,4,0.05140438,0.05140438,-0.16989805,0.19248868
+3,1,near suspected loss,Original,0,4,0.066443012,0.066443012,0.067330734,0.037142734
+3,1,near suspected loss,"More reward updates, same data",0,16,0.066443012,0.066443012,-0.0024671053,-0.078947368
+3,1,near suspected loss,"New feedback, matched updates",16,4,0.066443012,0.059556176,-0.16138027,-0.18431509
+3,1,near suspected loss,New feedback + more updates,16,16,0.066443012,0.059556176,0.032976429,0.032938306
+3,1,near suspected loss,"Stronger guidance search, same data",0,4,0.066443012,0.066443012,-0.060370555,0.12280702

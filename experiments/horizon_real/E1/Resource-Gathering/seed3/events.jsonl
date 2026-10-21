@@ -1,0 +1,9 @@
+{"type": "source_labels", "n": 48, "positive": 24}
+{"type": "checkpoint", "round": 0, "certificate": -0.04166666666666674, "true_gain": -1.5612511283791264e-17, "V_Q": 0.041666666666666664}
+{"type": "added_labels", "round": 0, "n": 12}
+{"type": "checkpoint", "round": 1, "certificate": -0.041666666666666664, "true_gain": -0.008333333333333349, "V_Q": 0.04166666666666663}
+{"type": "added_labels", "round": 1, "n": 12}
+{"type": "checkpoint", "round": 2, "certificate": 0.0, "true_gain": 0.008333333333333333, "V_Q": 0.0}
+{"type": "added_labels", "round": 2, "n": 12}
+{"type": "checkpoint", "round": 3, "certificate": -0.04166666666666663, "true_gain": -0.008333333333333326, "V_Q": 0.041666666666666664}
+{"type": "added_labels", "round": 3, "n": 12}

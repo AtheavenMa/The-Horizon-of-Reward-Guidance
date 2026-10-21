@@ -1,0 +1,33 @@
+{
+  "contact": 0.008,
+  "summary": {
+    "first_source_loss": 0.008,
+    "first_updated_loss": 0.008,
+    "first_instantaneous_source_loss": 0.008,
+    "pointwise_min": 0.11355472114308944,
+    "pointwise_above_gamma": true,
+    "true_finite_step_gain_near_contact": 0.11602958826828491,
+    "terminal_true_return": 0.6756382645167296,
+    "terminal_source_certificate": 0.05939034212909533,
+    "terminal_updated_certificate": 0.05939034212909533,
+    "max_gradient_error": 0.0,
+    "mean_gradient_error": 0.0,
+    "max_phi_step": 2.0000000000020002e-05,
+    "phi_within_budget": true
+  },
+  "half": {
+    "first_source_loss": 0.008,
+    "first_updated_loss": 0.008,
+    "first_instantaneous_source_loss": 0.008,
+    "pointwise_min": 0.11355478499946235,
+    "pointwise_above_gamma": true,
+    "true_finite_step_gain_near_contact": 0.11603515954750065,
+    "terminal_true_return": 0.6756381953771019,
+    "terminal_source_certificate": 0.05936386485760892,
+    "terminal_updated_certificate": 0.05936386485760892,
+    "max_gradient_error": 0.0,
+    "mean_gradient_error": 0.0,
+    "max_phi_step": 1.0000000000065512e-05,
+    "phi_within_budget": true
+  }
+}

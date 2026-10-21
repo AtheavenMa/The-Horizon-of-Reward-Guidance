@@ -1,0 +1,49 @@
+seed,method,added_pairs,reward_steps,overlap,teacher_score,response_length,sample_prompt,sample_summary,online_label_source
+2,Fixed learned reward,0,4,0.16561176,-0.017456055,28,"SUBREDDIT: r/jobs
+
+TITLE: Need help. What am I doing wrong?
+
+POST: Hey there. I've been out of work for many months, living with my parents. I have applied to a ridiculous number of positions near my home, or on campus but have yet to receive any real offers. 
+
+Background: Full time 3rd year computer science student. I don't have a car. Bus to school. My grades for CS are very good (around 3.8), but overall 2.9 GPA (I partied way too much during my gen eds). Have had many jobs in the past, but have never really left a good impression. Been fired from several jobs for non-serious, yet legit reasons (being late a few times, making a mistake on a credit card receipt). Basically, I have almost no acceptable work references, nearly nothing useful to put on a resume, and I can only really work within a 5 mile radius of my house, or on campus because of a lack of transportation. 
+
+What I'm looking for: Literally anything that isn't fast food. I have been turned down by everyone from CS internships to gas stations. My parents are pretty poor, and they don't like me living with them because I stopped going to their church, and they have essentially given me an ultimatum to leave their house. Awesome.
+
+TL;DR:"," I live with my parents who don't like me at all, I am unemployed, and I just want to try to get a job. What the hell am",AI feedback
+2,"More reward updates, same labels",0,16,0.13985605,-0.017456055,27,"SUBREDDIT: r/jobs
+
+TITLE: Need help. What am I doing wrong?
+
+POST: Hey there. I've been out of work for many months, living with my parents. I have applied to a ridiculous number of positions near my home, or on campus but have yet to receive any real offers. 
+
+Background: Full time 3rd year computer science student. I don't have a car. Bus to school. My grades for CS are very good (around 3.8), but overall 2.9 GPA (I partied way too much during my gen eds). Have had many jobs in the past, but have never really left a good impression. Been fired from several jobs for non-serious, yet legit reasons (being late a few times, making a mistake on a credit card receipt). Basically, I have almost no acceptable work references, nearly nothing useful to put on a resume, and I can only really work within a 5 mile radius of my house, or on campus because of a lack of transportation. 
+
+What I'm looking for: Literally anything that isn't fast food. I have been turned down by everyone from CS internships to gas stations. My parents are pretty poor, and they don't like me living with them because I stopped going to their church, and they have essentially given me an ultimatum to leave their house. Awesome.
+
+TL;DR:"," I'm unemployed, have no work references, can only work within 5 miles of the house due to transportation issues, and am looking for anything that isn't fast",AI feedback
+2,Fixed-period new feedback,8,4,0.16367635,-0.017456055,24,"SUBREDDIT: r/jobs
+
+TITLE: Need help. What am I doing wrong?
+
+POST: Hey there. I've been out of work for many months, living with my parents. I have applied to a ridiculous number of positions near my home, or on campus but have yet to receive any real offers. 
+
+Background: Full time 3rd year computer science student. I don't have a car. Bus to school. My grades for CS are very good (around 3.8), but overall 2.9 GPA (I partied way too much during my gen eds). Have had many jobs in the past, but have never really left a good impression. Been fired from several jobs for non-serious, yet legit reasons (being late a few times, making a mistake on a credit card receipt). Basically, I have almost no acceptable work references, nearly nothing useful to put on a resume, and I can only really work within a 5 mile radius of my house, or on campus because of a lack of transportation. 
+
+What I'm looking for: Literally anything that isn't fast food. I have been turned down by everyone from CS internships to gas stations. My parents are pretty poor, and they don't like me living with them because I stopped going to their church, and they have essentially given me an ultimatum to leave their house. Awesome.
+
+TL;DR:"," I have no idea what I'm doing. Can anyone offer any advice? I need help.
+
+What I did: Last night I took a job",AI feedback
+2,Diagnosis-based allocation,8,4,0.15045856,-0.017456055,21,"SUBREDDIT: r/jobs
+
+TITLE: Need help. What am I doing wrong?
+
+POST: Hey there. I've been out of work for many months, living with my parents. I have applied to a ridiculous number of positions near my home, or on campus but have yet to receive any real offers. 
+
+Background: Full time 3rd year computer science student. I don't have a car. Bus to school. My grades for CS are very good (around 3.8), but overall 2.9 GPA (I partied way too much during my gen eds). Have had many jobs in the past, but have never really left a good impression. Been fired from several jobs for non-serious, yet legit reasons (being late a few times, making a mistake on a credit card receipt). Basically, I have almost no acceptable work references, nearly nothing useful to put on a resume, and I can only really work within a 5 mile radius of my house, or on campus because of a lack of transportation. 
+
+What I'm looking for: Literally anything that isn't fast food. I have been turned down by everyone from CS internships to gas stations. My parents are pretty poor, and they don't like me living with them because I stopped going to their church, and they have essentially given me an ultimatum to leave their house. Awesome.
+
+TL;DR:"," I'm unemployed, and don't have a car, and I'm moving in with my parents. What job can I apply to?
+
+TL",AI feedback

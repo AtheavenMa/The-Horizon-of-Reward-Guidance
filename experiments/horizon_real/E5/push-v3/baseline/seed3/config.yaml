@@ -1,0 +1,4 @@
+task: push-v3
+method: baseline
+seed: 3
+steps: 6000

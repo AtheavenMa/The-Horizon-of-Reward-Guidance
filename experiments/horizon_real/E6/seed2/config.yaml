@@ -1,0 +1,10 @@
+model: Qwen/Qwen2.5-1.5B-Instruct
+seed: 2
+teacher: synthetic Bradley-Terry on hidden checkers
+weights:
+- 0.4
+- 0.2
+- 0.2
+- 0.2
+n_train: 24
+n_eval: 8
